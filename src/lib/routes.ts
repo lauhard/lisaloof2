@@ -1,0 +1,27 @@
+const Routes = [
+    {
+        path: "/",
+        name: "Startseite",
+    },
+    {
+        path: "/ueber-mich",
+        name: "Über mich",
+    },
+    {
+        path: "/hypnose-klagenfurt",
+        name: "Hypnose",
+    },
+    {
+        path: "/psychlogische-beratung",
+        name: "Psychologische Beratung",
+    },
+    {
+        path: "/kontakt",
+        name: "Kontakt",
+    },
+    {
+        path: "/info",
+        name: "Info",
+    }
+];
+export default Routes;

@@ -1,0 +1,452 @@
+@import "lib/css/zodiak.css";
+@import "lib/css/plus-jakarta-sans.css";
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  /*dark*/
+  --text-1-dark: #f0f5f3;
+  --text-2-dark: #d1d1d1;
+  --text-3-dark: #e1e1e1;
+  --text-1-light: #576662;
+  --text-2-light: #4e4949;
+  --text-3-light: #222020;
+  --primary-dark: #77B6BA;
+  --primary-background-dark: #007d72;
+  --primary-underline-dark: var(--primary-dark);
+  --primary-hover-dark: var(--accent);
+  --primary-hover-background-dark: #009b8f;
+  --primary-focus-dark: rgba(0, 125, 114, 0.375);
+  --primary-light: #77B6BA;
+  --primary-background-light: #5b92be;
+  --primary-underline-light: var(--primary-light);
+  --primary-hover-light: var(--accent-light);
+  --primary-hover-background-light: var(--accent-light);
+  --primary-focus-light: var(--accent-light);
+  --brand-dark: #d8a826;
+  --brand-light: #C4B26A;
+  --accent-dark: #378D93;
+  --accent-background-dark: #a07b15;
+  --accent-underline-dark: rgba(160, 123, 21, 0.5);
+  --accent-hover-dark: #ecc852;
+  --accent-hover-background-dark: #b08b17;
+  --accent-focus-dark: rgba(160, 123, 21, 0.375);
+  --accent-light: #378D93;
+  --accent-background-light: #d8a826;
+  --accent-underline-light: rgba(160, 123, 21, 0.5);
+  --accent-hover-light: #ecc852;
+  --accent-hover-background-light: #b08b17;
+  --accent-focus-light: rgba(160, 123, 21, 0.375);
+  --surface-1-dark: #25262B;
+  --surface-2-dark: #353333;
+  --surface-3-dark: #353333;
+  --surface-4-dark: #3a3a3a;
+  --sufgace-5-dark: #444444;
+  --shiki-dark-bg:#2d353b;
+  --surface-gradient-dark:linear-gradient(
+      95deg,
+          hsl(0deg 11% 15%) 0%,
+          hsl(0deg 11% 15%) 22%,
+          hsl(0deg 9% 16%) 43%,
+          hsl(0deg 9% 17%) 62%,
+          hsla(7, 9%, 19%, 0.95) 81%,
+          hsla(44, 11%, 19%, 0.90) 100%
+      );
+  --navigation-dark:var(--surface-1-dark);
+  --footer-dark:var(--surface-1-dark);
+  --surface-1-light: #ffffff;
+  --surface-2-light: #ffffff;
+  --surface-3-light: #C4B26A;
+  --surface-4-light: #c1c1c1;
+  --surface-5-light: #b1b1b1;
+  --shiki-light-bg:#FFFFFF;
+  --surface-gradient-light: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+  --footer-light:var(--primary-light);
+  /* settings */
+  --font-body: "PlusJakartaSans-Regular", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-mono: "Fira Mono", monospace;
+  --font-body-headings: "Zodiak-Bold", "PlusJakartaSans-Regular";
+  --content-width: 980px;
+  --base-font-size: 12px;
+  --line-height: normal;
+  --letter-spacing: normal;
+  --word-spacing: 0.12rem;
+  --animation-time: 200ms;
+  --scroll-padding-top: 8.5rem;
+  --scroll-margin-top: 8.5rem;
+  --shiki-color: var(--text-1);
+  --shiki-background-color: var(--surface-1);
+  --side: 0 2rem;
+  --top:1.5rem 0 0 0;
+}
+
+:root {
+  color-scheme: dark;
+  --brand: var(--brand-dark);
+  --primary: var(--primary-dark);
+  --accent: var(--accent-dark);
+  --text-1: var(--text-1-dark);
+  --text-2: var(--text-2-dark);
+  --text-3: var(--text-3-dark);
+  --text-invert:var(--text-1-light);
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --surface-3: var(--surface-3-dark);
+  --surface-4: var(--surface-4-dark);
+  --surface-5: var(--surface-5-dark);
+  --surface-gradient: var(--surface-gradient-dark);
+  --shiki-bg: var(--shiki-dark-bg);
+  --navigation: var(--navigation-dark);
+  --footer: var(--footer-dark);
+  --size-fluid-1: clamp(.5rem, 1vw, 1rem);
+  --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
+  --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
+  --size-fluid-4: clamp(2rem, 4vw, 3rem);
+  --size-fluid-5: clamp(4rem, 5vw, 5rem);
+  --size-fluid-6: clamp(5rem, 7vw, 7.5rem);
+  --size-fluid-7: clamp(7.5rem, 10vw, 10rem);
+  --size-fluid-8: clamp(10rem, 20vw, 15rem);
+  --size-fluid-9: clamp(15rem, 30vw, 20rem);
+  --size-fluid-10: clamp(20rem, 40vw, 30rem);
+  --shadow-1: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-2: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-3: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-4: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-5: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-6: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  /* Breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  /*override styles when needed... */
+  --pico-form-element-disabled-opacity: 0.5;
+  --pico-form-element-invalid-border-color: #964a50;
+  --pico-form-element-invalid-active-border-color: #b7403b;
+  --pico-form-element-invalid-focus-color: var(--pico-form-element-invalid-active-border-color);
+  --pico-form-element-valid-border-color: var(--accent) !important;
+  --pico-form-element-valid-active-border-color: var(--accent) !important;
+  --pico-form-element-valid-focus-color: var(--pico-form-element-valid-active-border-color);
+  --pico-switch-background-color: #333c4e;
+  --pico-switch-checked-background-color: var(--pico-primary-background);
+  --pico-switch-color: #fff;
+  --pico-switch-thumb-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  --pico-range-border-color: #202632;
+  --pico-range-active-border-color: #2a3140;
+  --pico-form-element-background-color:var(--surface-2);
+  --pico-form-element-active-background-color:var(--surface-1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --brand: var(--brand-light);
+    --primary: var(--primary-light);
+    --accent: var(--accent-light);
+    --text-1: var(--text-1-light);
+    --text-2: var(--text-2-light);
+    --text-3: var(--text-3-light);
+    --text-invert:var(--text-1-dark);
+    --surface-1: var(--surface-1-light);
+    --surface-2: var(--surface-2-light);
+    --surface-3: var(--surface-3-light);
+    --surface-4: var(--surface-4-light);
+    --surface-5: var(--surface-5-light);
+    --surface-gradient: var(--surface-gradient-light);
+    --shiki-bg: var(--shiki-light-bg);
+    --navigation: var(--navigation-light);
+    --footer: var(--footer-light);
+    --pico-primary: var(--primary-light);
+    --pico-primary-background: var(--primary-background-light);
+    --pico-primary-underline: var(--primary-underline-light);
+    --pico-primary-hover: var(--primary-hover-light);
+    --pico-primary-hover-background: var(--primary-hover-background-light);
+    --pico-primary-focus: var(--primary-focus-light);
+    --pico-primary-inverse: var(--text-2);
+  }
+  :root button {
+    color: var(--text-1-dark);
+  }
+}
+html[data-theme=dark] {
+  --brand: var(--brand-dark);
+  --primary: var(--primary-dark);
+  --accent: var(--accent-dark);
+  --text-1: var(--text-1-dark);
+  --text-2: var(--text-2-dark);
+  --text-3: var(--text-3-dark);
+  --text-invert:var(--text-1-light);
+  --surface-1: var(--surface-1-dark);
+  --surface-2: var(--surface-2-dark);
+  --surface-3: var(--surface-3-dark);
+  --surface-4: var(--surface-4-dark);
+  --surface-5: var(--surface-5-dark);
+  --surface-gradient: var(--surface-gradient-dark);
+  --shiki-bg: var(--shiki-dark-bg);
+  --navigation: var(--navigation-dark);
+  --footer: var(--footer-dark);
+  --pico-primary: var(--accent-dark);
+  --pico-primary-background: var(--accent-background-dark);
+  --pico-primary-underline: var(--accent-underline-dark);
+  --pico-primary-hover: var(--accent-hover-dark);
+  --pico-primary-hover-background: var(--accent-hover-background-dark);
+  --pico-primary-focus: var(--accent-focus-dark);
+  --pico-primary-inverse: var(--text-2);
+}
+html[data-theme=dark] .shiki, html[data-theme=dark] .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+  /* Optional, if you also want font styles */
+  font-style: var(--shiki-dark-font-style) !important;
+  font-weight: var(--shiki-dark-font-weight) !important;
+  -webkit-text-decoration: var(--shiki-dark-text-decoration) !important;
+          text-decoration: var(--shiki-dark-text-decoration) !important;
+}
+
+html[data-theme=light] {
+  --brand: var(--brand-light);
+  --primary: var(--primary-light);
+  --accent: var(--accent-light);
+  --text-1: var(--text-1-light);
+  --text-2: var(--text-2-light);
+  --text-3: var(--text-3-light);
+  --text-invert:var(--text-1-dark);
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --surface-3: var(--surface-3-light);
+  --surface-4: var(--surface-4-light);
+  --surface-5: var(--surface-5-light);
+  --surface-gradient: var(--surface-gradient-light);
+  --shiki-bg: var(--shiki-light-bg);
+  --navigation: var(--navigation-light);
+  --footer: var(--footer-light);
+  --pico-primary: var(--primary-light);
+  --pico-primary-background: var(--primary-background-light);
+  --pico-primary-underline: var(--primary-underline-light);
+  --pico-primary-hover: var(--primary-hover-light);
+  --pico-primary-hover-background: var(--primary-hover-background-light);
+  --pico-primary-focus: var(--primary-focus-light);
+  --pico-primary-inverse: var(--text-2);
+}
+
+[data-theme=light],
+:root:not([data-theme=dark]) {
+  --pico-primary: var(--primary-light);
+  --pico-primary-background: var(--primary-background-light);
+  --pico-primary-underline: var(--primary-underline-light);
+  --pico-primary-hover: var(--primary-hover-light);
+  --pico-primary-hover-background: var(--primary-hover-background-light);
+  --pico-primary-focus: var(--primary-focus-light);
+  --pico-primary-inverse: var(--text-2);
+}
+
+[data-theme=dark],
+:root:not([data-theme=light]) {
+  --pico-primary: var(--primary-dark);
+  --pico-primary-background: var(--primary-background-dark);
+  --pico-primary-underline: var(--primary-underline-dark);
+  --pico-primary-hover: var(--primary-hover-dark);
+  --pico-primary-hover-background: var(--primary-hover-background-dark);
+  --pico-primary-focus: var(--primary-focus-dark);
+  --pico-primary-inverse: var(--text-2);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding-top);
+  scroll-snap-type: proximity;
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  background-color: var(--surface-1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: calc(var(--base-font-size) + 0.28vw);
+  line-height: var(--line-height);
+  word-spacing: var(--word-spacing);
+  color: var(--text-1);
+  box-sizing: border-box;
+  letter-spacing: var(--letter-spacing);
+  text-wrap: pretty;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+html ::-webkit-scrollbar, body ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  -webkit-transition: all var(--animation-time) ease-in-out;
+  transition: all var(--animation-time) ease-in-out;
+}
+html ::-webkit-scrollbar-track, body ::-webkit-scrollbar-track {
+  background: var(--surface-2);
+}
+html ::-webkit-scrollbar-thumb, body ::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+html ::-webkit-scrollbar-thumb:hover, body ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+  -webkit-transition: background-color var(--animation-time) ease-in-out;
+  transition: background-color var(--animation-time) ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-body-headings);
+  color: var(--text-1);
+  /*margin-bottom: 1.5rem;
+  margin-top: 0.5rem;*/
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+hr {
+  width: 2.4rem;
+  border: none;
+  border-top: 2px solid var(--primary); /* Farbe und Dicke der Linie */
+  margin: 2rem auto; /* Abstand zum oberen und unteren Rand und Zentrierung */
+  border-radius: 2px; /* Abgerundete Ecken */
+}
+
+article:not(.pico) { /*resets pico article style*/
+  box-shadow: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  border-radius: 0;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+hgroup, p, a, article, section, header, footer, nav, aside, figure, figcaption, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, legend, button, input, textarea, form, table, th, td, iframe, video, embed, object, applet, canvas, script, code, abbr, acronym, address, bdo, cite, dfn, kbd, samp, var, mark, small, strong, sub, sup, tt, big, del, ins, em, i, q, s, strike, u, center, font, span {
+  color: var(--text-1);
+}
+
+p {
+  text-wrap: pretty;
+  text-rendering: geometricPrecision;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  text-justify: kashida;
+  text-spacing-trim: space-all;
+  -ms-text-justify: kashida;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  text-wrap-mode: wrap;
+  text-wrap-style: pretty;
+  color: var(--text-1);
+}
+
+.surface-1 {
+  background-color: var(--surface-1);
+  color: var(--text-1);
+}
+
+.surface-2 {
+  background-color: var(--surface-2);
+  color: var(--text-2);
+}
+
+.surface-3 {
+  background-color: var(--surface-3);
+  color: var(--text-3);
+}
+
+.surface-4 {
+  background-color: var(--surface-4);
+  color: var(--text-3);
+}
+
+.surface-5 {
+  background-color: var(--surface-5);
+  color: var(--text-3);
+}
+
+.surface-gradient {
+  /*background-color: var(--primary);*/
+  background-image: var(--surface-gradient);
+}
+
+.navigation {
+  background-color: var(--navigation);
+  color: var(--text-3);
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.brand {
+  color: var(--brand);
+}
+
+.background-svg {
+  position: absolute !important;
+  left: -16vw;
+  bottom: -55vh;
+}
+
+.hero {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.hero-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  overflow: hidden;
+}
+
+.heading {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  font-family: "Zodiak-Bold";
+  text-align: center;
+  color: var(--text-1);
+}
+
+.sub-heading {
+  font-family: PlusJakartaSans-Regular;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  text-align: center;
+  justify-self: center;
+  width: 80%;
+  color: var(--text-1);
+}/*# sourceMappingURL=app.css.map */
