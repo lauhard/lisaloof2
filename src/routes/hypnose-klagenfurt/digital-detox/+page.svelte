@@ -2,8 +2,8 @@
 </script>
 
 <section class="section">
-    <div class="grid">
-        <div class="cell hero">
+    <article>
+        <div class=" hero">
             <img
                 class="hero-image"
                 src="https://dummyimage.com/600x400/000/fff"
@@ -12,11 +12,15 @@
                 width="100%"
                 height="300px"
             />
-            <span>Digital Detox</span>
         </div>
         <div class="">
-            <h1 class="">Digital Detox</h1>
-            <p class="">Ein Tag ohne Smartphone ist kein Weltuntergang</p>
+            <hgroup>
+                <h1 class="heading">Digital Detox</h1>
+                <p class="sub-heading">
+                    Ein Tag ohne Smartphone ist kein Weltuntergang
+                </p>
+            </hgroup>
+
             <p class="">
                 Instagram, WhatsApp, TikTok und andere Soziale Medien
                 beeinflussen uns täglich auf unterschiedliche Weise. Dieses
@@ -43,7 +47,7 @@
             </p>
             <p class="">Ich freue mich darauf, Sie kennenzulernen.</p>
         </div>
-    </div>
+    </article>
 </section>
 
 <style lang="scss">

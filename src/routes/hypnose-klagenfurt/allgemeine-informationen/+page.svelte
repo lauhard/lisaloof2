@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
+    import Faq from "$lib/components/Faq.svelte";
 </script>
 
 <svelte:head>
@@ -17,66 +18,74 @@
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
-<section>
-    <aritcle class="raucherentwoehnung">
-        <div class="hero">
-            <img
-                class="hero-image"
-                src="https://dummyimage.com/600x400/000/fff"
-                alt="abgebrannte Zigarette"
-                srcset=""
-                width="100%"
-                height="300px"
-            />
-            <span>Allgemeine Informationen</span>
-        </div>
+<article class="">
+    <div class="hero">
+        <img
+            class="hero-image"
+            src="https://dummyimage.com/600x400/000/fff"
+            alt="abgebrannte Zigarette"
+            srcset=""
+            width="100%"
+            height="300px"
+        />
+        <span>Allgemeine Informationen</span>
+    </div>
 
-        <div class="">
-            <h1 class="">Allgemeine Informationen zu Hypnose</h1>
-            <p class="">So sind meine Sitzungen aufgebaut</p>
-            <p>
-                Die erste Einheit beinhaltet ein kostenloses und unverbindliches
-                Vorgespräch. Hierbei möchte ich mir ein Bild von Ihren
-                Erwartungen oder bereits vorhandenen Hypnose-Erfahrungen machen.
-                Danach werden wir gemeinsam Ihr persönliches Hypnose-Konzept
-                besprechen. Wenn Sie sich nach dem Vorgespräch dazu entscheiden,
-                mir Ihr Vertrauen zu schenken, stellen wir die Weichen, um
-                gemeinsam an Ihrem Thema zu arbeiten.
-            </p>
-            <hr />
-            <p>
-                In der zweiten Einheit können Gedanken und Gefühle, welche
-                nachträglich aufgekommen sind besprochen werden. Wir arbeiten
-                intensiv lösungs- und ressourcenorientiert an Ihrem Thema.
-            </p>
-            <hr />
-            <p>
-                In der dritten Einheit (optional) möchte ich Ihnen anbieten, je
-                nach Wunsch weiter an Ihren Themen zu arbeiten, neu
-                aufgekommenes zu besprechen oder die Selbsthypnose bei Ihnen zu
-                verankern, sodass Sie die Möglichkeit haben, auch selbst in
-                Hypnose zu gehen und zu arbeiten.
-            </p>
-            <hr />
+    <div class="">
+        <hgroup>
+            <h1 class="heading">Allgemeine Informationen zu Hypnose</h1>
+            <p class="sub-heading">So sind meine Sitzungen aufgebaut</p>
+        </hgroup>
+
+        <p>
+            Die erste Einheit beinhaltet ein kostenloses und unverbindliches
+            Vorgespräch. Hierbei möchte ich mir ein Bild von Ihren Erwartungen
+            oder bereits vorhandenen Hypnose-Erfahrungen machen. Danach werden
+            wir gemeinsam Ihr persönliches Hypnose-Konzept besprechen. Wenn Sie
+            sich nach dem Vorgespräch dazu entscheiden, mir Ihr Vertrauen zu
+            schenken, stellen wir die Weichen, um gemeinsam an Ihrem Thema zu
+            arbeiten.
+        </p>
+        <hr />
+        <p>
+            In der zweiten Einheit können Gedanken und Gefühle, welche
+            nachträglich aufgekommen sind besprochen werden. Wir arbeiten
+            intensiv lösungs- und ressourcenorientiert an Ihrem Thema.
+        </p>
+        <hr />
+        <p>
+            In der dritten Einheit (optional) möchte ich Ihnen anbieten, je nach
+            Wunsch weiter an Ihren Themen zu arbeiten, neu aufgekommenes zu
+            besprechen oder die Selbsthypnose bei Ihnen zu verankern, sodass Sie
+            die Möglichkeit haben, auch selbst in Hypnose zu gehen und zu
+            arbeiten.
+        </p>
+        <hr />
+        <div class="faqs">
+            <h2>FAQs</h2>
+            <Faq></Faq>
         </div>
-    </aritcle>
-</section>
+    </div>
+</article>
 
 <style lang="scss">
-    section {
+    article {
         display: flex;
-        height: var(--section-height);
         justify-content: center;
-        margin: 0 auto;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .raucherentwoehnung {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
+        justify-self: center;
+        max-width: var(--content-width);
+        padding: var(--side);
+        .faqs {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-self: center;
+        }
     }
 </style>

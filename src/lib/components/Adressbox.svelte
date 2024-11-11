@@ -3,9 +3,6 @@
 </script>
 
 <article class="contact-box">
-    <div class="image-wrapper">
-        <img src="https://dummyimage.com/600x400/000/fff" alt="" />
-    </div>
     <div class="contact-info">
         <!-- <div class="contact-wrapper" > -->
         <h3 class="headline-center">Praxisadresse</h3>

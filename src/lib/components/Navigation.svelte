@@ -20,8 +20,8 @@
     let anchors: NodeListOf<HTMLLIElement> | null = $state(null);
     let anchorSlider: HTMLDivElement | null = $state(null);
 
-    onMount(() => {
-        if (anchors === null) {
+    let hoverAnimation = ()=> {
+         if (anchors === null) {
             anchors = document.querySelectorAll(".route");
             console.log(anchors);
             anchorSlider = document.getElementById(
@@ -52,7 +52,18 @@
                 }
             });
         }
+    }
+    onMount(() => {
+        hoverAnimation();
     });
+    $effect(()=>{
+        if(innerWidth){
+            console.log("start hover animation");
+            setTimeout(()=>{
+                hoverAnimation();
+            }, 500);
+        }
+    })
 </script>
 
 <svelte:window bind:innerWidth={innerWidth} />
@@ -142,7 +153,6 @@
             </ul>
         {/if}
     </div>
-
 </nav>
 
 
@@ -157,15 +167,14 @@
 
 <style lang="scss">
     nav {
-        height: 5.5rem;
-        background-color: var(--surface-2);
+        height: 6rem;
+        background-color: var(--surface-1);
         box-sizing: border-box;
         position: fixed;
         z-index: 100;
         top:0;
         width: 100%;
         box-shadow: var(--shadow-2);
-
         .navigation{
             display: flex;
             justify-content: space-between;
@@ -182,10 +191,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
         li {
-
             margin:0;
             padding:0;
             display: flex;
@@ -201,12 +208,11 @@
             a{
                 text-decoration: none;
                 text-align: center;
-                color: #797979;
+                color: var(--text-1);
+                letter-spacing: 1px;
                 font-weight: lighter;
-
             }
         }
-
         .routes-desktop{
             display: flex;
             justify-content: center;
@@ -238,7 +244,7 @@
             height: 2px;
             background-color: var(--brand);
             position: absolute;
-            top: 2rem;
+            top: 2.25rem;
             left: 60%;
             z-index: 0;
             border-radius: 10px;
@@ -285,7 +291,7 @@
         color:var(--text-1);
         overflow-y: hidden;
         opacity: 1;
-        background-color: var(--surface-2);
+        background-color: var(--surface-1);
         transition: all var(--animation-time) ease-in-out;
     }
 

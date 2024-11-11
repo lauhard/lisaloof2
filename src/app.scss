@@ -6,21 +6,11 @@
 @import "lib/css/plus-jakarta-sans.css";
 html {
 
-    /*dark*/
-    --text-1-dark: #f0f5f3;
-    --text-2-dark: #d1d1d1;
-    --text-3-dark: #e1e1e1;
-
     --text-1-light: #576662;
+    --text-1-light: #4d5250;
     --text-2-light: #4e4949;
-    --text-3-light: #222020;
-
-    --primary-dark: #77B6BA;
-    --primary-background-dark: #007d72;
-    --primary-underline-dark: var(--primary-dark);
-    --primary-hover-dark: var(--accent);
-    --primary-hover-background-dark: #009b8f;
-    --primary-focus-dark: rgba(0, 125, 114, 0.375);
+    --text-3-light: #354c58;
+    --text-4-light: #1f2937;
 
     --primary-light: #77B6BA;
     --primary-background-light: #5b92be;
@@ -29,15 +19,8 @@ html {
     --primary-hover-background-light: var(--accent-light);
     --primary-focus-light: var(--accent-light);
 
-    --brand-dark: #d8a826;
+    --brand-light: #d8a826;
     --brand-light: #C4B26A;
-
-    --accent-dark: #378D93;
-    --accent-background-dark: #a07b15;
-    --accent-underline-dark: rgba(160, 123, 21, 0.5);
-    --accent-hover-dark: #ecc852;
-    --accent-hover-background-dark: #b08b17;
-    --accent-focus-dark: rgba(160, 123, 21, 0.375);
 
     --accent-light: #378D93;
     --accent-background-light: #d8a826;
@@ -46,31 +29,12 @@ html {
     --accent-hover-background-light: #b08b17;
     --accent-focus-light: rgba(160, 123, 21, 0.375);
 
-    --surface-1-dark: #25262B;
-    --surface-2-dark: #353333;
-    --surface-3-dark: #353333;
-    --surface-4-dark: #3a3a3a;
-    --sufgace-5-dark: #444444;
-    --shiki-dark-bg:#2d353b;
-    --surface-gradient-dark:linear-gradient(
-        95deg,
-            hsl(0deg 11% 15%) 0%,
-            hsl(0deg 11% 15%) 22%,
-            hsl(0deg 9% 16%) 43%,
-            hsl(0deg 9% 17%) 62%,
-            hsla(7, 9%, 19%, 0.95) 81%,
-            hsla(44, 11%, 19%, 0.90) 100%
-        );
-
-    --navigation-dark:var(--surface-1-dark);
-    --footer-dark:var(--surface-1-dark);
-
     --surface-1-light: #ffffff;
     --surface-2-light: #ffffff;
-    --surface-3-light: #C4B26A;
-    --surface-4-light: #c1c1c1;
-    --surface-5-light: #b1b1b1;
-    --shiki-light-bg:#FFFFFF;
+    --surface-3-light: #f3f1d7;
+    --surface-4-light: #4d929b;
+
+
      --surface-gradient-light: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
      --footer-light:var(--primary-light);
 
@@ -80,38 +44,20 @@ html {
     --font-body-headings: 'Zodiak-Bold', 'PlusJakartaSans-Regular';
 
     --content-width: 980px;
-    --base-font-size: 12px;
+    --base-font-size: 16px;
     --line-height: normal;
     --letter-spacing: normal;
     --word-spacing: 0.12rem;
     --animation-time: 200ms;
     --scroll-padding-top: 8.5rem;
     --scroll-margin-top: 8.5rem;
-    --shiki-color: var(--text-1);
-    --shiki-background-color: var(--surface-1);
 
     --side: 0 2rem;
     --top:1.5rem  0 0 0;
+
+
 }
 :root{
-    color-scheme: dark;
-    --brand: var(--brand-dark);
-    --primary: var(--primary-dark);
-    --accent: var(--accent-dark);
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
-    --text-3: var(--text-3-dark);
-    --text-invert:var(--text-1-light);
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--surface-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
-    --surface-5: var(--surface-5-dark);
-    --surface-gradient: var(--surface-gradient-dark);
-    --shiki-bg: var(--shiki-dark-bg);
-    --navigation: var(--navigation-dark);
-    --footer: var(--footer-dark);
-
     --size-fluid-1: clamp(.5rem, 1vw, 1rem);
     --size-fluid-2: clamp(1rem, 2vw, 1.5rem);
     --size-fluid-3: clamp(1.5rem, 3vw, 2rem);
@@ -173,56 +119,8 @@ html {
         --shiki-bg: var(--shiki-light-bg);
         --navigation: var(--navigation-light);
         --footer: var(--footer-light);
-
-        --pico-primary: var(--primary-light);
-        --pico-primary-background: var(--primary-background-light);
-        --pico-primary-underline: var(--primary-underline-light);
-        --pico-primary-hover: var(--primary-hover-light);
-        --pico-primary-hover-background: var(--primary-hover-background-light);
-        --pico-primary-focus: var(--primary-focus-light);
-        --pico-primary-inverse: var(--text-2);
-        button{
-            color: var(--text-1-dark);
-        }
     }
 }
-
-html[data-theme='dark']{
-    --brand: var(--brand-dark);
-    --primary: var(--primary-dark);
-    --accent: var(--accent-dark);
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
-    --text-3: var(--text-3-dark);
-    --text-invert:var(--text-1-light);
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--surface-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
-    --surface-5: var(--surface-5-dark);
-    --surface-gradient: var(--surface-gradient-dark);
-    --shiki-bg: var(--shiki-dark-bg);
-    --navigation: var(--navigation-dark);
-    --footer: var(--footer-dark);
-
-    --pico-primary: var(--accent-dark);
-    --pico-primary-background: var(--accent-background-dark);
-    --pico-primary-underline: var(--accent-underline-dark);
-    --pico-primary-hover: var(--accent-hover-dark);
-    --pico-primary-hover-background: var(--accent-hover-background-dark);
-    --pico-primary-focus: var(--accent-focus-dark);
-    --pico-primary-inverse: var(--text-2);
-
-    .shiki, .shiki span {
-        color: var(--shiki-dark) !important;
-        background-color: var(--shiki-dark-bg) !important;
-        /* Optional, if you also want font styles */
-        font-style: var(--shiki-dark-font-style) !important;
-        font-weight: var(--shiki-dark-font-weight) !important;
-        text-decoration: var(--shiki-dark-text-decoration) !important;
-    }
-}
-
 html[data-theme='light']{
     --brand: var(--brand-light);
     --primary: var(--primary-light);
@@ -237,7 +135,6 @@ html[data-theme='light']{
     --surface-4: var(--surface-4-light);
     --surface-5: var(--surface-5-light);
     --surface-gradient: var(--surface-gradient-light);
-    --shiki-bg: var(--shiki-light-bg);
     --navigation: var(--navigation-light);
     --footer: var(--footer-light);
 
@@ -262,18 +159,6 @@ html[data-theme='light']{
     --pico-primary-inverse: var(--text-2);
 }
 
-[data-theme=dark],
-:root:not([data-theme=light]) {
-    --pico-primary: var(--primary-dark);
-    --pico-primary-background: var(--primary-background-dark);
-    --pico-primary-underline: var(--primary-underline-dark);
-    --pico-primary-hover: var(--primary-hover-dark);
-    --pico-primary-hover-background: var(--primary-hover-background-dark);
-    --pico-primary-focus: var(--primary-focus-dark);
-    --pico-primary-inverse: var(--text-2);
-
-}
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding-top);
@@ -289,6 +174,7 @@ html, body{
     padding: 0;
     font-family: var(--font-body) ;
     font-size: calc(var(--base-font-size) + 0.28vw);
+    font-size: calc(var(--base-font-size));
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
     color: var(--text-1);
@@ -340,19 +226,24 @@ li{
 }
 
 hr {
-  width: 2.4rem;
+  width: 2rem;
   border: none;
   border-top: 2px solid var(--primary); /* Farbe und Dicke der Linie */
-  margin: 2rem auto;        /* Abstand zum oberen und unteren Rand und Zentrierung */
-  border-radius: 2px;         /* Abgerundete Ecken */
+  margin-block: 2rem;        /* Abstand zum oberen und unteren Rand und Zentrierung */
+  border-radius: 5px;
+  margin-inline: .2rem;       /* Abgerundete Ecken */
+  justify-self: center;
+  display: flex;
+  align-self: center;
 }
 
-article:not(.pico){ /*resets pico article style*/
+article{ /*resets pico article style*/
     box-shadow: none;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     border:none;
     border-radius: 0;
+    background-color: transparent;
 }
 section{
     margin: 0;
@@ -361,20 +252,22 @@ section{
 hgroup,p,a,article,section,header,footer,nav,aside,figure,figcaption,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,form,table,th,td,iframe,video,embed,object,applet,canvas,script,code,abbr,acronym,address,bdo,cite,dfn,kbd,samp,var,mark,small,strong,sub,sup,tt,big,del,ins,em,i,q,s,strike,u,center,font,span{
     color: var(--text-1);
 }
-
 p{
     text-wrap: pretty;
     text-rendering: geometricPrecision;
     text-size-adjust: 100%;
     text-justify: kashida;
-    text-spacing-trim: space-all;
     -ms-text-justify: kashida;
-    text-align-last: center;
-    text-wrap-mode: wrap;
-    text-wrap-style: pretty;
     color:var(--text-1);
+    font-size: 1.1rem;
 }
-
+.text{
+    text-align: justify;
+    max-width: 650px;
+    justify-self: center;
+    align-self: center;
+    text-align-last: center;
+}
 .surface-1{
     background-color: var(--surface-1);
     color: var(--text-1);
@@ -403,7 +296,6 @@ p{
     background-color: var(--navigation);
     color:var(--text-3);
 }
-
 .primary{
     color: var(--primary);
 }
@@ -415,15 +307,37 @@ p{
 }
 .background-svg {
     position: absolute !important;
-    left: -16vw;
-    bottom: -55vh;
+    bottom: -64.5%;
+    left: -15%;
 }
-
+.background-svg-about-me {
+    background-attachment: fixed; /* Keeps the background in a fixed position */
+    overflow-x: hidden; /* Avoids horizontal scroll, optional */
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Ensures the SVG covers the whole viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: -45%;
+    left: -15%;
+    opacity: 1;
+    z-index: 1;
+    transition: all 300ms ease-in-out;
+}
+.background-svg-down {
+    bottom: -55%;
+    transition: all 300ms ease-in-out;
+}
+ .background-svg-hide {
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
 .hero {
     margin-top: 3rem;
     margin-bottom: 4rem;
     width: 100%;
-    height: 420px;
+    max-height: 420px;
     overflow: hidden;
     border-radius: 1rem;
 }
@@ -444,22 +358,19 @@ p{
     font-family: PlusJakartaSans-Regular;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
-    line-height: 1.6rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem !important;
+    line-height: 2rem;
+    margin-top: 1rem;
     font-weight: 100;
     text-align: center;
     justify-self: center;
     width: 80%;
     color:var(--text-1);
-
 }
-
-
 
 @media (max-width: 767.98px) {
     :root {
-
+        /*--base-font-size: 18px;*/
     }
 }
 

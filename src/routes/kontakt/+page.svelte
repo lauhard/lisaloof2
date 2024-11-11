@@ -50,176 +50,175 @@
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
-<section class="section">
-    <div class="grid">
-        <div class="cell hero-contact">
-            <article class="contact-box">
-                <div class="image-wrapper">
-                    <!--
+<article class="">
+    <div class="cell hero-contact">
+        <article class="contact-box">
+            <div class="image-wrapper">
+                <!--
                     <img class="" src={LisaContact} alt="" />
                     -->
-                </div>
-                <div class="contact-info">
-                    <h1 class="headline-center">Terminanfrage</h1>
-                    <p class="text text-center attention">
-                        Buchen Sie Ihren Termin oder rufen Sie mich an
-                    </p>
-                    <p class="text text-center attention mb1">
-                        Ich freue mich von Ihnen zu hören
-                    </p>
+            </div>
+            <div class="contact-info">
+                <h1 class="headline-center">Terminanfrage</h1>
+                <p class="text text-center attention">
+                    Buchen Sie Ihren Termin oder rufen Sie mich an
+                </p>
+                <p class="text text-center attention mb1">
+                    Ich freue mich von Ihnen zu hören
+                </p>
 
-                    <a
-                        class="cta"
-                        type="button"
-                        title="Telefonnummer anrufen"
-                        aria-label="phone link"
-                        href="tel:+4367761750953"
-                    >
-                        <Phone />
-                        +43 67761750953
-                    </a>
-                </div>
-            </article>
-        </div>
-        <div class="cell service">
-            <h2 class="decorator-center">Kontaktformular</h2>
-            <p class="important-paragraph text-center mb2">
-                Schicken Sie eine unverbindliche Anfrage für Ihr kostenloses
-                Erstgespräch oder einen Termin.
-            </p>
-            <Form
-                bind:myForm
-                on:formaction={formActionResult}
-                --form-width="100%"
-                {action}
-            >
-                <div class="block">
-                    <label for="serviceType"
-                        >Wählen Sie einen Termintyp
-                        <Dropdown
-                            id={"serviceType"}
-                            tabindex={0}
-                            options={[
-                                {
-                                    id: 1,
-                                    key: "Terminanfrage",
-                                    value: "Terminanfrage",
-                                },
-                                {
-                                    id: 2,
-                                    key: "Erstgespräch",
-                                    value: "kostenloses Erstgespräch",
-                                },
-                            ]}
-                            on:change={(e) => {
-                                console.log(e);
-                            }}
-                        />
-                    </label>
-                    <label for="hypnoseLeistungen">
-                        Wählen Sie eine Leistung
-                        <Dropdown
-                            id={"hypnoseLeistungen"}
-                            tabindex={0}
-                            on:change={(e) => {
-                                console.log(e);
-                            }}
-                        />
-                    </label>
-                    <input
-                        id="id"
-                        type={action === "update" ? "text" : "hidden"}
-                        name="id"
-                        readonly
-                    />
-                    <label for="url">
-                        Nachname
-                        <input
-                            type="text"
-                            tabindex="0"
-                            id="lastName"
-                            name="lastName"
-                            placeholder=""
-                            required
-                            on:input={(e) => {
-                                lastnameError = validate(e);
-                            }}
-                        />
-                        <FormError
-                            {form}
-                            field="lastName"
-                            error={lastnameError}
-                        />
-                    </label>
-                    <label for="name">
-                        Vorname
-                        <input
-                            type="text"
-                            tabindex="0"
-                            id="firstName"
-                            name="firstName"
-                            placeholder=""
-                            required
-                            on:input={(e) => {
-                                firstnameError = validate(e);
-                            }}
-                        />
-                        <FormError
-                            {form}
-                            field="firstName"
-                            error={firstnameError}
-                        />
-                    </label>
-                    <label for="name">
-                        Email
-                        <input
-                            type="text"
-                            tabindex="0"
-                            id="email"
-                            name="email"
-                            placeholder=""
-                            required
-                            on:input={(e) => {
-                                emailError = validate(e);
-                            }}
-                        />
-                        <FormError {form} field="email" error={emailError} />
-                    </label>
-                    <label for="name">
-                        Telefon
-                        <input
-                            type="text"
-                            tabindex="0"
-                            id="phone"
-                            name="phone"
-                            placeholder=""
-                            required
-                            on:input={(e) => {
-                                phoneError = validate(e);
-                            }}
-                        />
-                        <FormError {form} field="phone" error={phoneError} />
-                    </label>
-                    <label for="contact_callback">
-                        <Checkbox
-                            id="contact_callback"
-                            labelText="Bitte um Rückruf"
-                        />
-                    </label>
-                </div>
-                <button tabindex="0" class="cta" type="submit"
-                    >Abschicken</button
+                <a
+                    class="cta"
+                    type="button"
+                    title="Telefonnummer anrufen"
+                    aria-label="phone link"
+                    href="tel:+4367761750953"
                 >
-                {#if form?.prismaError}
-                    <FormError error={form?.prismaError} />
-                {/if}
-            </Form>
-        </div>
-        <div class="cell address">
-            <Adressbox></Adressbox>
-        </div>
+                    <Phone />
+                    +43 67761750953
+                </a>
+            </div>
+        </article>
     </div>
-</section>
+    <div class="cell service">
+        <h2 class="decorator-center">Kontaktformular</h2>
+        <p class="important-paragraph text-center mb2">
+            Schicken Sie eine unverbindliche Anfrage für Ihr kostenloses
+            Erstgespräch oder einen Termin.
+        </p>
+        <Form
+            bind:myForm
+            on:formaction={formActionResult}
+            --form-width="100%"
+            {action}
+        >
+            <div class="block">
+                <label for="serviceType"
+                    >Wählen Sie einen Termintyp
+                    <Dropdown
+                        id={"serviceType"}
+                        tabindex={0}
+                        options={[
+                            {
+                                id: 1,
+                                key: "Terminanfrage",
+                                value: "Terminanfrage",
+                            },
+                            {
+                                id: 2,
+                                key: "Erstgespräch",
+                                value: "kostenloses Erstgespräch",
+                            },
+                        ]}
+                        on:change={(e) => {
+                            console.log(e);
+                        }}
+                    />
+                </label>
+                <label for="hypnoseLeistungen">
+                    Wählen Sie eine Leistung
+                    <Dropdown
+                        id={"hypnoseLeistungen"}
+                        tabindex={0}
+                        on:change={(e) => {
+                            console.log(e);
+                        }}
+                    />
+                </label>
+                <input
+                    id="id"
+                    type={action === "update" ? "text" : "hidden"}
+                    name="id"
+                    readonly
+                />
+                <label for="url">
+                    Nachname
+                    <input
+                        type="text"
+                        tabindex="0"
+                        id="lastName"
+                        name="lastName"
+                        placeholder=""
+                        required
+                        on:input={(e) => {
+                            lastnameError = validate(e);
+                        }}
+                    />
+                    <FormError {form} field="lastName" error={lastnameError} />
+                </label>
+                <label for="name">
+                    Vorname
+                    <input
+                        type="text"
+                        tabindex="0"
+                        id="firstName"
+                        name="firstName"
+                        placeholder=""
+                        required
+                        on:input={(e) => {
+                            firstnameError = validate(e);
+                        }}
+                    />
+                    <FormError
+                        {form}
+                        field="firstName"
+                        error={firstnameError}
+                    />
+                </label>
+                <label for="name">
+                    Email
+                    <input
+                        type="text"
+                        tabindex="0"
+                        id="email"
+                        name="email"
+                        placeholder=""
+                        required
+                        on:input={(e) => {
+                            emailError = validate(e);
+                        }}
+                    />
+                    <FormError {form} field="email" error={emailError} />
+                </label>
+                <label for="name">
+                    Telefon
+                    <input
+                        type="text"
+                        tabindex="0"
+                        id="phone"
+                        name="phone"
+                        placeholder=""
+                        required
+                        on:input={(e) => {
+                            phoneError = validate(e);
+                        }}
+                    />
+                    <FormError {form} field="phone" error={phoneError} />
+                </label>
+                <label for="contact_callback">
+                    <Checkbox
+                        id="contact_callback"
+                        labelText="Bitte um Rückruf"
+                    />
+                </label>
+            </div>
+            <button tabindex="0" class="cta" type="submit">Abschicken</button>
+            {#if form?.prismaError}
+                <FormError error={form?.prismaError} />
+            {/if}
+        </Form>
+    </div>
+    <div class="cell address">
+        <Adressbox></Adressbox>
+    </div>
+</article>
 
 <style lang="scss">
+    article {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        padding: var(--side);
+        align-self: center;
+        width: var(--content-width);
+        justify-self: center;
+    }
 </style>

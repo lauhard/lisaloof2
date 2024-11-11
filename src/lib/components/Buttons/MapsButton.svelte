@@ -1,12 +1,21 @@
+<script lang="ts">
+    let {
+        address = "Karte öffnen",
+        title = "Karte öffnen",
+        arialLabel = "navigate to contact",
+        href = "https://maps.app.goo.gl/pRxEHQqSaaTQySaW6",
+    } = $props();
+</script>
+
 <div class="contact-wrapper flex-center">
     <a
         type="button"
-        href="https://maps.app.goo.gl/pRxEHQqSaaTQySaW6"
+        {href}
         class="contact circle flex-center"
         target="_blank"
         rel="noopener noreferrer"
-        title="Karte öffnen"
-        aria-label="navigate to contact"
+        {title}
+        aria-label={arialLabel}
     >
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
             ><defs
@@ -31,43 +40,40 @@
             ></svg
         >
     </a>
-    <div class="number flex-center leading-relaxed">
-        <p>Karte öffnen</p>
+    <div class="description flex-center">
+        <p>{address}</p>
     </div>
 </div>
 
-<style lang="postcss">
+<style lang="scss">
     .contact {
-        width: 4rem;
-        height: 4rem;
         background: inherit;
-        border: 1px solid var(--accent);
+        border: 1px solid var(--border-color, var(--primary));
         transition: all var(--animation-time) ease-in-out;
+        margin: 0;
+        padding: 0;
+        padding: 1rem;
+        svg {
+            height: var(--svg-width, 2rem);
+            height: var(--svg-width, 2rem);
+            fill: var(--fill, var(--primary));
+        }
     }
-    .contact > svg {
-        width: 2rem;
-        fill: var(--accent);
-    }
-    .contact:hover {
-        background: var(--accent);
-        //transform: scale(1.05); /* Slight scale effect */
-        //box-shadow: 0 0 15px rgba(72, 206, 199, 0.7);
-        box-shadow: var(--shadow-5);
-        transition: all var(--animation-time) ease-in-out;
 
-        //animation: pulse 1s infinite;
+    .contact:hover {
+        background: var(--background, var(--primary));
+        box-shadow: var(--box-shadow, var(--shadow-5));
+        transition: all var(--animation-time) ease-in-out;
     }
     .contact:hover > svg {
         fill: white;
         transition: all var(--animation-time) ease-in-out;
-        //animation: shake 0.5s ease-in-out infinite;
     }
-    .number {
+    .description {
         width: 100%;
-        height: 2rem;
         border-radius: 2rem;
+        margin-top: 0.2rem;
     }
-
     .circle {
         border-radius: 50%;
     }
@@ -77,55 +83,9 @@
         align-items: center;
         flex-direction: column;
     }
-
     .contact-wrapper {
-        width: 9rem;
+        width: 10rem;
         height: 7rem;
         gap: 0.5rem;
-    }
-
-    @keyframes shake {
-        0% {
-            transform: rotate(0deg);
-        }
-        10% {
-            transform: rotate(0deg);
-        }
-        15% {
-            transform: rotate(0deg);
-        }
-        20% {
-            transform: rotate(-7deg);
-        }
-        40% {
-            transform: rotate(7deg);
-        }
-        60% {
-            transform: rotate(-5deg);
-        }
-        80% {
-            transform: rotate(5deg);
-        }
-        100% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(0deg);
-        }
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
     }
 </style>

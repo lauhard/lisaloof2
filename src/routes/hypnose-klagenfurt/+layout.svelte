@@ -23,8 +23,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: var(--content-width);
         justify-self: center;
-        padding:var(--side);
+        align-self: center;
+        position: relative;
     }
 </style>

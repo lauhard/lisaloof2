@@ -17,41 +17,42 @@
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
-<section class="section">
-    <div class="grid">
-        <div class="hero">
-            <img
-                class="hero-image"
-                src="https://dummyimage.com/600x400/000/fff"
-                alt=""
-                srcset=""
-                width="100%"
-                height="300px"
-            />
-            <span>Entspannt in die Prüfung</span>
-        </div>
-        <div class="">
-            <h1 class="">Entspannt in die Prüfung - Entspannt vortragen</h1>
-            <p class="">
+<section>
+    <div class="hero">
+        <img
+            class="hero-image"
+            src="https://dummyimage.com/600x400/000/fff"
+            alt=""
+            srcset=""
+            width="100%"
+            height="300px"
+        />
+        <span>Entspannt in die Prüfung</span>
+    </div>
+    <article class="">
+        <hgroup>
+            <h1 class="heading">
+                Entspannt in die Prüfung - Entspannt vortragen
+            </h1>
+            <p class="sub-heading">
                 Meistern Sie Prüfungen, Vorträge oder Präsentationen durch
                 Hypnose
             </p>
-            <p class="">
-                Wer kennt es nicht? Es steht eine Prüfung oder ein wichtiger
-                Vortrag an und die Aufregung steigt. Wir bekommen schwitzige
-                Hände oder unser Herzschlag erhöht sich. Bei manchen Menschen
-                kann dies sogar zu einem kompletten Blackout führen, was sie
-                nachhaltig beschäftigt oder belastet. Mittels Hypnose ist es
-                möglich, sich diese Situationen genauer anzuschauen und zu
-                verändern.
-            </p>
-            <p class="">
-                Ich möchte Sie darin unterstützen, entspannter Vorträge zu
-                halten oder Prüfungen zu meistern und zusätzlich Ihr
-                Selbstbewusstsein zu stärken.
-            </p>
-        </div>
-    </div>
+        </hgroup>
+        <p class="">
+            Wer kennt es nicht? Es steht eine Prüfung oder ein wichtiger Vortrag
+            an und die Aufregung steigt. Wir bekommen schwitzige Hände oder
+            unser Herzschlag erhöht sich. Bei manchen Menschen kann dies sogar
+            zu einem kompletten Blackout führen, was sie nachhaltig beschäftigt
+            oder belastet. Mittels Hypnose ist es möglich, sich diese
+            Situationen genauer anzuschauen und zu verändern.
+        </p>
+        <p class="">
+            Ich möchte Sie darin unterstützen, entspannter Vorträge zu halten
+            oder Prüfungen zu meistern und zusätzlich Ihr Selbstbewusstsein zu
+            stärken.
+        </p>
+    </article>
 </section>
 
 <style lang="scss">

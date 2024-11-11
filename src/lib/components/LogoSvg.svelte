@@ -7,7 +7,8 @@
         height = "100%",
         viewBox = "0 0 1730 2388",
         animation = false,
-        classNames = "",
+        classNames = "down",
+        scrolly = 0,
     } = $props();
 
     onMount(() => {
@@ -24,6 +25,8 @@
 <svg
     id="logoSvg"
     class="base {classNames}"
+    class:hide={scrolly > 50}
+    class:down={scrolly > 50}
     {width}
     {height}
     {viewBox}
@@ -292,5 +295,8 @@
         .leave {
             opacity: 0;
         }
+    }
+    .base {
+        transition: all var(--animation-time, 100ms) ease-in-out;
     }
 </style>
