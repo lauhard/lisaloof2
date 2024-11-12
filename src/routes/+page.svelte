@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import LogoSvg from "$lib/components/LogoSvg.svelte";
     import ProfileImage from "$lib/images/lisa-min.webp";
     import Praxis1 from "$lib/images/praxis1.webp";
@@ -12,6 +11,7 @@
     import Profile from "$lib/components/Profile.svelte";
     import Scroll2Anchor from "$lib/components/Buttons/Scroll2Anchor.svelte";
     import Spacer from "$lib/components/Spacer.svelte";
+    import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     let innerWidth = $state(0);
     let innerHeight = $state(0);
     let DOMloaded: boolean = $state(false);

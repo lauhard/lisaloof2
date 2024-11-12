@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { AlertTriangle } from "lucide-svelte";
     import Cert1 from "$lib/images/cert1.webp";
     import Cert2 from "$lib/images/cert2.webp";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
