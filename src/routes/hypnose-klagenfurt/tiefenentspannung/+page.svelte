@@ -5,7 +5,6 @@
 
 <svelte:head>
     <title>Leistungen - Tiefenentspannung</title>
-    <link rel="preload" as="image" href="" />
     <meta
         name="description"
         content="Tiefenentspannung mittels Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."

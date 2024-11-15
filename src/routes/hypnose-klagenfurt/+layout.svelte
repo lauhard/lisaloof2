@@ -11,13 +11,11 @@
 </script>
 
 <section>
-
     {@render children()}
-
 </section>
 
 <style lang="scss">
-    section{
+    section {
         height: 100%;
         width: 100%;
         display: flex;

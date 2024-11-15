@@ -1,9 +1,10 @@
-import type { PageServerLoad } from "./$types";
+
 import { validateFormData } from "$lib/zod/helper/forms";
 import type { Actions } from "@sveltejs/kit";
 import nodemailer from 'nodemailer';
 import { HOSTINGER_MAIL } from "$env/static/private";
 import { contactSchema } from "$lib/zod/schemas/contactSchema";
+import type { PageServerLoad } from "../hypnose-klagenfurt/[slug]/$types";
 
 export const prerender = false;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

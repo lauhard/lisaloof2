@@ -1,33 +1,18 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { PUBLIC_CANONICAL_URL } from "$env/static/public";
-    import Faq from "$lib/components/Faq.svelte";
 </script>
 
 <svelte:head>
     <title>Allgemeine Informationen</title>
-    <link
-        rel="preload"
-        as="image"
-        href="https://dummyimage.com/600x400/000/fff"
-    />
+
     <meta
         name="description"
         content="Sie wollen endlich rauchfrei werden? Raucherentwöhnung durch Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."
     />
-    <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
 <article class="">
     <div class="hero">
-        <img
-            class="hero-image"
-            src="https://dummyimage.com/600x400/000/fff"
-            alt="abgebrannte Zigarette"
-            srcset=""
-            width="100%"
-            height="300px"
-        />
         <span>Allgemeine Informationen</span>
     </div>
 
@@ -61,10 +46,6 @@
             arbeiten.
         </p>
         <hr />
-        <div class="faqs">
-            <h2>FAQs</h2>
-            <Faq></Faq>
-        </div>
     </div>
 </article>
 

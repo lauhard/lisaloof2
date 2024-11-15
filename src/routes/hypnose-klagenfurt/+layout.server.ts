@@ -1,6 +1,8 @@
 import type { LayoutServerLoad } from "./$types";
-export const prerender = true;
-export const load: LayoutServerLoad = async ({ url }) => {
+
+
+
+export const load: LayoutServerLoad = async ({ url }: { url: URL }) => {
     const currentRoute = url.pathname;
     console.log("preload: ", currentRoute);
     return {
