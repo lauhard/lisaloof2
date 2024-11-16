@@ -20,7 +20,7 @@
 
 <style lang="scss">
     .cta-button {
-        border: var(--border-color, var(--surface-3)) 1px solid;
+        border: var(--cta-border-color, var(--surface-3)) 1px solid;
         box-shadow: var(--box-shadow, var(--shadow-1));
         background-color: var(--background-color, transparent);
         background: var(--background, transparent);
@@ -33,6 +33,7 @@
         word-spacing: var(--word-spacing, normal);
         font-size: var(--font-size, 0.9rem);
         width: fit-content;
+        min-width: var(--btn-min-width);
         letter-spacing: var(--letter-spacing, normal);
         text-transform: var(--text-transform, capitalize);
         display: flex;

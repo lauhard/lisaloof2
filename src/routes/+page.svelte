@@ -148,9 +148,6 @@
     :root {
         --offset: 11rem;
     }
-    section {
-        position: relative;
-    }
     .landing-page {
         background-color: var(--primary);
         min-height: calc(100vh - var(--offset));
@@ -184,6 +181,9 @@
         }
     }
     .introduction {
+        max-width: var(--content-width);
+        padding: var(--side);
+
         margin-top: 1rem;
         width: 100%;
         height: 100%;
@@ -194,19 +194,10 @@
         align-self: center;
         justify-content: center;
         position: relative;
-
-        max-width: var(--content-width);
-        padding: var(--side);
-
-        //p {
-        //    text-align: justify;
-        //    text-wrap-mode: wrap;
-        //    max-width: 600px;
-        //    align-self: center;
-        //    text-align-last: center;
-        //}
     }
     .contact {
+        background-color: var(--surface-3);
+
         width: 100%;
         height: 100%;
         min-height: 100vh;
@@ -215,7 +206,6 @@
         justify-self: center;
         align-self: center;
         justify-content: center;
-        background-color: var(--surface-3);
         padding-block: 2rem;
         position: relative;
         .heading {
@@ -225,12 +215,13 @@
             margin-bottom: 4rem;
         }
         .grid {
+            padding: var(--side);
+
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             align-self: center;
             height: 100%;
-            padding: var(--side);
             .tile {
                 box-shadow: var(--shadow-1);
                 background-color: var(--surface-2);

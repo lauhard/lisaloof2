@@ -31,12 +31,8 @@
         <span class="spacer">|</span>
         <span class="service">Hypnose</span>
     </p>
-    <div
-        style="display:flex; flex-direction:row; justify-content:center;  align-items:center;"
-    >
-        <div style="width:35%;">
-            <CtaButton text="Zur Hypnose"></CtaButton>
-        </div>
+    <div style="" class="cta-buttons">
+        <CtaButton text="Zur Hypnose"></CtaButton>
         <CtaButton text="Zur Beratung"></CtaButton>
     </div>
 </div>
@@ -47,6 +43,7 @@
         --box-shadow: var(--shadow-1);
         --background-color: var(--brand);
         --background: var(--brand);
+        --btn-min-width: 180px;
         --color: var(--text-1);
         --text-transform: uppercase;
         --box-shadow-hover: var(--shadow-3);
@@ -56,6 +53,7 @@
         --padding-block: 0.6rem;
         --background-hover: var(--brand);
         --border-color-hover: var(--brand);
+        --cta-border-color: var(--brand);
 
         --height: auto;
         display: flex;
@@ -100,6 +98,16 @@
                 margin-inline: 0.5rem;
                 color: var(--text-3);
             }
+        }
+
+        .cta-buttons {
+            width: 450px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            justify-content: space-around;
         }
     }
 </style>

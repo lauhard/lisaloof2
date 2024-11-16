@@ -12,7 +12,7 @@ const Routes = [
         name: "Hypnose",
     },
     {
-        path: "/psychlogische-beratung",
+        path: "/psychologische-beratung",
         name: "Psychologische Beratung",
     },
     {

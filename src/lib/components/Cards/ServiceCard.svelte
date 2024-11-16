@@ -35,7 +35,7 @@
 
 <style lang="scss">
     .card {
-        --card-border-color: #d4cfa241;
+        --card-border-color: #8dcac241;
         --card-border-color-hover: #bbb7b773;
         --font-size: 1rem;
         --color: var(--text-1);
@@ -91,7 +91,8 @@
             p {
                 padding-inline: 0.5rem;
                 text-align: center;
-                line-height: 1.4rem;
+                line-height: 1.5rem;
+                font-size: var(--card-font-size, 1rem);
             }
 
             margin: 0;
@@ -102,8 +103,8 @@
             //button styles
             --box-shadow-hover: none;
             --box-shadow: none;
-            --border-color-hover: var(--card-border-color-hover);
-
+            --border-color-hover: var(--primary);
+            --cta-border-color: var(--card-border-color);
             border: none;
             display: flex;
             height: 100%;

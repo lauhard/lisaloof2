@@ -1,6 +1,6 @@
 <script lang="ts">
     import "@picocss/pico";
-    import '../app.css';
+    import "../app.css";
     import Navigation from "$lib/components/Navigation.svelte";
     import Logo from "$lib/components/Logo.svelte";
     import Footer from "$lib/components/Footer.svelte";
@@ -16,19 +16,19 @@
 <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={scrolly} />
 
 <div class="app">
-
-     <Navigation bind:show={show}>
+    <Navigation bind:show>
         {#snippet brand()}
-                <li class="">
-                    <Logo />
-                </li>
-            {/snippet}
+            <li class="">
+                <Logo />
+            </li>
+        {/snippet}
     </Navigation>
-
-
     <main>
         <LogoSvg
-            classNames="background-svg-about-me background-svg-down {scrolly <= 10 && $page.url.pathname == '/' ? "background-svg-hide" : ""}"
+            classNames="background-svg-about-me background-svg-down {scrolly <=
+                10 && $page.url.pathname == '/'
+                ? 'background-svg-hide'
+                : ''}"
             height="85vh"
             animation={false}
             {scrolly}
@@ -37,10 +37,9 @@
             --tree-color="#84BDC1"
             --tree-overlay="#b3e2e5"
             --svg-stroke-width="0rem"
-             --svg-stroke="#69aaa554"
+            --svg-stroke="#69aaa554"
         />
         {@render children()}
-
     </main>
     <Footer></Footer>
 </div>
