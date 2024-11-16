@@ -1,10 +1,13 @@
 <script lang="ts">
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
+    import Spacer from "$lib/components/Spacer.svelte";
+    import Tiefenentspannung from "$lib/images/tiefenentspannung-min.webp";
 </script>
 
 <svelte:head>
     <title>Leistungen - Tiefenentspannung</title>
+    <link rel="preload" as="image" href={Tiefenentspannung} />
     <meta
         name="description"
         content="Tiefenentspannung mittels Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."
@@ -16,11 +19,11 @@
     <div class="hero">
         <img
             class="hero-image"
-            src="https://dummyimage.com/600x400/000/fff"
+            src={Tiefenentspannung}
             alt="abgebrannte Zigarette"
             srcset=""
             width="100%"
-            height="300px"
+            height="100%"
         />
         <span>Tiefenentspannung</span>
     </div>
@@ -28,7 +31,8 @@
         <h1 class="heading">Tiefenentspannung</h1>
         <p class="sub-heading">Den Körper und Geist in Einklang bringen</p>
     </hgroup>
-    <p class="">
+    <Spacer></Spacer>
+    <p class="text">
         Wir befinden uns in einem Zeitalter, welches durch Schnelllebigkeit und
         Hektik geprägt ist. Wir nehmen uns viel zu selten den Raum und die Zeit
         für uns selbst. Einfach mal entspannen und uns eine Auszeit vom Alltag
@@ -36,7 +40,8 @@
         bietet die Tiefenentspannung mittels Hypnose die perfekten
         Rahmenbedingungen.
     </p>
-    <p class="">
+    <Spacer></Spacer>
+    <p class="text">
         Ich würde mich freuen, Sie kennenzulernen und Sie auf dem Weg der
         Tiefenentspannung zu begleiten
     </p>

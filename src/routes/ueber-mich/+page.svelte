@@ -82,7 +82,7 @@
             und Ihr volles Potenzial zu entfalten. Ich freue mich darauf, Sie
             kennenzulernen und gemeinsam mit Ihnen neue Wege zu entdecken.)
         </p>
-        <br />
+        <Spacer></Spacer>
         <p>Ich freue mich auf Sie.</p>
         <br />
     </article>
