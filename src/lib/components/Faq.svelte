@@ -70,6 +70,7 @@
         --max-width: 100%;
         --width: 100vw;
     }
+
     .faqs {
         width: var(--width);
         max-width: var(--max-width);
@@ -84,6 +85,7 @@
         box-sizing: border-box;
         text-transform: uppercase;
         color: var(--attention) !important;
+        margin-block: 0.5rem;
     }
 
     .answer {

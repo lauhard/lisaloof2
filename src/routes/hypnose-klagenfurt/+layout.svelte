@@ -24,5 +24,6 @@
         justify-self: center;
         align-self: center;
         position: relative;
+        margin-bottom: 6rem;
     }
 </style>

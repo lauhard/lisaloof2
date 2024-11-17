@@ -252,6 +252,9 @@ section{
 hgroup,p,a,article,section,header,footer,nav,aside,figure,figcaption,blockquote,dl,dt,dd,ul,ol,li,pre,fieldset,legend,button,input,textarea,form,table,th,td,iframe,video,embed,object,applet,canvas,script,code,abbr,acronym,address,bdo,cite,dfn,kbd,samp,var,mark,small,strong,sub,sup,tt,big,del,ins,em,i,q,s,strike,u,center,font,span{
     color: var(--text-1);
 }
+hgroup{
+    width:100%;
+}
 p{
     text-wrap: pretty;
     text-rendering: geometricPrecision;
@@ -260,6 +263,25 @@ p{
     -ms-text-justify: kashida;
     color:var(--text-1);
     font-size: 1.1rem;
+}
+fieldset{
+    border: #227d9431 1px solid;
+    border-radius: 2rem 0;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: center;
+    width: 100%;
+    legend{
+        text-align: center;
+        padding-inline: 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.1rem !important;
+
+    }
 }
 .text{
     text-align: justify;

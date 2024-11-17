@@ -32,27 +32,28 @@
         <span class="service">Hypnose</span>
     </p>
     <div style="" class="cta-buttons">
-        <CtaButton text="Zur Hypnose"></CtaButton>
-        <CtaButton text="Zur Beratung"></CtaButton>
+        <CtaButton text="Zur Hypnose" href="/hypnose-klagenfurt"></CtaButton>
+        <CtaButton text="Zur Beratung" href="/psychologische-beratung"
+        ></CtaButton>
     </div>
 </div>
 
 <style lang="scss">
     .slogan {
-        --border-color: var(--brand);
-        --box-shadow: var(--shadow-1);
-        --background-color: var(--brand);
-        --background: var(--brand);
-        --btn-min-width: 180px;
-        --color: var(--text-1);
-        --text-transform: uppercase;
-        --box-shadow-hover: var(--shadow-3);
-        --letter-spacing: 1px;
-        --word-spacing: 5px;
-        --font-size: 0.95rem;
-        --padding-block: 0.6rem;
-        --background-hover: var(--brand);
-        --border-color-hover: var(--brand);
+        --cta-border-color: var(--brand);
+        --cta-box-shadow: var(--shadow-1);
+        --cta-background-color: var(--brand);
+        --cta-background: var(--brand);
+        --cta-min-width: 180px;
+        --cta-color: var(--text-1);
+        --cta-text-transform: uppercase;
+        --cta-box-shadow-hover: var(--shadow-3);
+        --cta-letter-spacing: 1px;
+        --cta-word-spacing: 5px;
+        --cta-font-size: 0.95rem;
+        --cta-padding-block: 0.6rem;
+        --cta-background-hover: var(--brand);
+        --cta-border-color-hover: var(--brand);
         --cta-border-color: var(--brand);
 
         --height: auto;

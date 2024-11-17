@@ -101,9 +101,9 @@
         }
         footer {
             //button styles
-            --box-shadow-hover: none;
-            --box-shadow: none;
-            --border-color-hover: var(--primary);
+            --cta-box-shadow-hover: none;
+            --cta-box-shadow: none;
+            --cta-border-color-hover: var(--primary);
             --cta-border-color: var(--card-border-color);
             border: none;
             display: flex;

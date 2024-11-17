@@ -9,10 +9,10 @@
         <p class="text text-center mb1">
             Sie finden mich in der wunderschönen Klagenfurter Altstadt
         </p>
-        <div class="address">
+        <address class="address">
             <p class="text">Waagplatz 1, 9020 Klagenfurt</p>
             <p class="text text-center">Österreich</p>
-        </div>
+        </address>
         <div class="contact-buttons mt1">
             <a
                 class="cta"

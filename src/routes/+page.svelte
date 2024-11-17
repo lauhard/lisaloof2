@@ -222,7 +222,12 @@
             gap: 1.5rem;
             align-self: center;
             height: 100%;
+
             .tile {
+                &:nth-child(1),
+                &:nth-child(4) {
+                    padding: 2rem;
+                }
                 box-shadow: var(--shadow-1);
                 background-color: var(--surface-2);
                 display: flex;

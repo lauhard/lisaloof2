@@ -239,6 +239,10 @@ hgroup, p, a, article, section, header, footer, nav, aside, figure, figcaption, 
   color: var(--text-1);
 }
 
+hgroup {
+  width: 100%;
+}
+
 p {
   text-wrap: pretty;
   text-rendering: geometricPrecision;
@@ -249,6 +253,25 @@ p {
   -ms-text-justify: kashida;
   color: var(--text-1);
   font-size: 1.1rem;
+}
+
+fieldset {
+  border: rgba(34, 125, 148, 0.1921568627) 1px solid;
+  border-radius: 2rem 0;
+  padding-inline: 2rem;
+  padding-bottom: 2rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: center;
+  width: 100%;
+}
+fieldset legend {
+  text-align: center;
+  padding-inline: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem !important;
 }
 
 .text {

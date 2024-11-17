@@ -1,10 +1,12 @@
 <script lang="ts">
-    export let id = "";
-    export let labelText = "label text";
-    export let disabled = false;
-    export let checked = false;
-    export let required = false;
-    export let classNames = "";
+    let {
+        id = "",
+        labelText = "label text",
+        disabled = false,
+        checked = false,
+        required = false,
+        classNames = "",
+    } = $props();
 </script>
 
 <label class=" {classNames}" for={id}>

@@ -11,6 +11,8 @@
     import Leistungen from "$lib/images/leistungen.webp";
     import ServiceCard from "$lib/components/Cards/ServiceCard.svelte";
     import CtaButton2 from "$lib/components/Buttons/CtaButton.svelte";
+    import Faq from "$lib/components/Faq.svelte";
+    import Spacer from "$lib/components/Spacer.svelte";
 </script>
 
 <svelte:window bind:scrollY />
@@ -47,7 +49,8 @@
             <h1 class="heading">Hypnose und Weiterentwicklung in Klagenfurt</h1>
             <p class="sub-heading">Was ist Hypnose?</p>
         </hgroup>
-        <p>
+        <Spacer></Spacer>
+        <p class="">
             Hypnose ist ein bewusstseinsverändernder Zustand, der durch erhöhte
             Aufmerksamkeit, Konzentration und Vorstellungskraft gekennzeichnet
             ist. Eine hypnotische Trance ermöglicht es, individuelle
@@ -117,6 +120,7 @@
             ></ServiceCard>
         </div>
     </article>
+    <br />
     <article class="additional-services">
         <hgroup>
             <h3 class="heading">Haben Sie ein anderes Anliegen?</h3>
@@ -146,10 +150,17 @@
         </p>
         -->
     </article>
+    <br />
+    <article class="faqs">
+        <h2 class="">Häufig gestellte Fragen</h2>
+        <Faq></Faq>
+    </article>
 </section>
 
 <style lang="scss">
-    article {
+    .what-is-hypnose,
+    .hypnose-services,
+    .additional-services {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -197,19 +208,19 @@
     }
 
     .additional-services {
-        margin-top: 4rem;
+        margin-block: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
         background: var(--surface-3);
         padding-block: 4rem;
-        --font-size: 1rem;
-        --background: var(--primary);
-        --border-color: var(--primary);
-        --background-hover: var(--accent);
-        --border-color-hover: var(--accent);
-        --color: #fff;
-        --color-hover: #fff;
+        --cta-font-size: 1rem;
+        --cta-background: var(--primary);
+        --cta-border-color: var(--primary);
+        --cta-background-hover: var(--accent);
+        --cta-border-color-hover: var(--accent);
+        --cta-color: #fff;
+        --cta-color-hover: #fff;
         --cta-border-color: var(--primary);
         hgroup {
             .sub-heading {
@@ -223,5 +234,15 @@
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
+    }
+    .faqs {
+        h2 {
+            align-self: center;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        max-width: var(--content-width);
+        align-items: flex-start;
+        justify-self: center;
     }
 </style>

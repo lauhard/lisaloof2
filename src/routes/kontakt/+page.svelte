@@ -2,13 +2,14 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import { validate } from "$lib/zod/helper/forms";
-    import { Phone } from "lucide-svelte";
+    import { MapPin, Phone } from "lucide-svelte";
     import type { ActionData } from "./$types";
     import Form from "$lib/components/Form.svelte";
     import Dropdown from "$lib/components/Dropdown.svelte";
     import FormError from "$lib/components/FormError.svelte";
     import Checkbox from "$lib/components/Checkbox.svelte";
     import Adressbox from "$lib/components/Adressbox.svelte";
+    import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
 
     console.log("canonical url: ", PUBLIC_CANONICAL_URL + $page.url.pathname);
 
@@ -21,6 +22,8 @@
     let emailError: string | undefined = "";
     let phoneError: string | undefined = "";
     let myForm: HTMLFormElement;
+
+    var kontakt = "https://dummyimage.com/600x400/000/fff";
 
     const formActionResult = (event: CustomEvent) => {
         const { result } = event.detail;
@@ -37,11 +40,7 @@
 
 <svelte:head>
     <title>Kontakt</title>
-    <link
-        rel="preload"
-        as="image"
-        href="https://dummyimage.com/300x150/000/fff"
-    />
+    <link rel="preload" as="image" href={kontakt} />
 
     <meta
         name="description"
@@ -50,49 +49,42 @@
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
-<article class="">
-    <div class="cell hero-contact">
-        <article class="contact-box">
-            <div class="image-wrapper">
-                <!--
-                    <img class="" src={LisaContact} alt="" />
-                    -->
-            </div>
-            <div class="contact-info">
-                <h1 class="headline-center">Terminanfrage</h1>
-                <p class="text text-center attention">
-                    Buchen Sie Ihren Termin oder rufen Sie mich an
-                </p>
-                <p class="text text-center attention mb1">
-                    Ich freue mich von Ihnen zu hören
-                </p>
-
-                <a
-                    class="cta"
-                    type="button"
-                    title="Telefonnummer anrufen"
-                    aria-label="phone link"
-                    href="tel:+4367761750953"
-                >
-                    <Phone />
-                    +43 67761750953
-                </a>
-            </div>
-        </article>
+<section>
+    <div class="hero">
+        <img
+            class="hero-image"
+            src={kontakt}
+            alt="kontakt"
+            srcset=""
+            width="100%"
+            height="100%"
+        />
     </div>
-    <div class="cell service">
-        <h2 class="decorator-center">Kontaktformular</h2>
-        <p class="important-paragraph text-center mb2">
-            Schicken Sie eine unverbindliche Anfrage für Ihr kostenloses
-            Erstgespräch oder einen Termin.
-        </p>
+    <article class="contact">
+        <hgroup>
+            <h1 class="heading">Kontaktformular</h1>
+            <p class="sub-heading">
+                Rufen Sie mich an, oder Schicken Sie eine unverbindliche Anfrage
+                für Ihr kostenloses Erstgespräch oder einen Termin.
+            </p>
+        </hgroup>
+        <CtaButton
+            title="Telefonnummer anrufen"
+            ariaLabel="phone link"
+            href="tel:+4367761750953"
+            text="+4367761750953"
+        ></CtaButton>
+        <br />
+        <br />
         <Form
             bind:myForm
             on:formaction={formActionResult}
+            --form-max-width="900px"
             --form-width="100%"
             {action}
         >
-            <div class="block">
+            <fieldset class="formfields">
+                <legend>Bitte füllen Sie das Formular aus</legend>
                 <label for="serviceType"
                     >Wählen Sie einen Termintyp
                     <Dropdown
@@ -146,7 +138,7 @@
                     />
                     <FormError {form} field="lastName" error={lastnameError} />
                 </label>
-                <label for="name">
+                <label for="firstName">
                     Vorname
                     <input
                         type="text"
@@ -165,7 +157,7 @@
                         error={firstnameError}
                     />
                 </label>
-                <label for="name">
+                <label for="email">
                     Email
                     <input
                         type="text"
@@ -180,7 +172,7 @@
                     />
                     <FormError {form} field="email" error={emailError} />
                 </label>
-                <label for="name">
+                <label for="phone">
                     Telefon
                     <input
                         type="text"
@@ -195,30 +187,94 @@
                     />
                     <FormError {form} field="phone" error={phoneError} />
                 </label>
-                <label for="contact_callback">
-                    <Checkbox
-                        id="contact_callback"
-                        labelText="Bitte um Rückruf"
-                    />
-                </label>
-            </div>
-            <button tabindex="0" class="cta" type="submit">Abschicken</button>
+
+                <Checkbox id="contact_callback" labelText="Bitte um Rückruf" />
+                <br />
+                <CtaButton
+                    type="submit"
+                    text="Formular abschicken"
+                    title="Kontaktformular abschicken"
+                    tabindex={0}
+                ></CtaButton>
+            </fieldset>
+
             {#if form?.prismaError}
                 <FormError error={form?.prismaError} />
             {/if}
         </Form>
-    </div>
-    <div class="cell address">
-        <Adressbox></Adressbox>
-    </div>
-</article>
+    </article>
+
+    <article class="address-box">
+        <hgroup>
+            <h2 class="heading">Praxisadresse</h2>
+            <p class="sub-heading">
+                Sie finden mich in der wunderschönen Klagenfurter Altstadt
+            </p>
+        </hgroup>
+
+        <address class="">
+            Waagplatz 3, 9020 Klagenfurt <br />
+            Österreich
+        </address>
+        <CtaButton
+            href="https://goo.gl/maps/VhgjNbHZmWpUjEwR9"
+            target="_blank"
+            rel="noopener noreferrer"
+            type="button"
+            title="Karte öffnen"
+            text="Karte öffnen"
+            ariaLabel="navigate to contact"
+        >
+            <div style="margin-right:.5rem; margin-bottom:.1rem">
+                <MapPin />
+            </div>
+        </CtaButton>
+    </article>
+</section>
 
 <style lang="scss">
     article {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        padding: var(--side);
         align-self: center;
-        width: var(--content-width);
         justify-self: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .formfields,
+    .contact,
+    .address-box {
+        --cta-background: var(--primary);
+        --cta-background-hover: var(--accent);
+        --cta-color: #fff;
+        --cta-color-hover: #fff;
+        --cta-border-color: var(--primary);
+        --cta-border-color-hover: var(--accent);
+        --cta-font-size: 1rem;
+        --cta-text-transform: uppercase;
+        --cta-word-spacing: 0.6rem;
+
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .address-box {
+        background-color: var(--surface-3);
+        width: 100%;
+        padding-block: 3rem;
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        hgroup {
+            width: 100%;
+        }
+        address {
+            margin-block: 1rem;
+            text-align: center;
+            width: 100%;
+            display: block;
+        }
     }
 </style>
