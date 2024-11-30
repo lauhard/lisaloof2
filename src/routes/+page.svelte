@@ -1,8 +1,8 @@
 <script lang="ts">
     import LogoSvg from "$lib/components/LogoSvg.svelte";
-    import ProfileImage from "$lib/images/lisa-min.webp";
-    import Praxis1 from "$lib/images/praxis1.webp";
-    import Praxis2 from "$lib/images/praxis2.webp";
+    import ProfileImage from "$lib/images/main-cutout-2.png";
+    import Praxis1 from "$lib/images/praxis1.jpg";
+    import Praxis2 from "$lib/images/praxis2.jpg";
     import { onMount } from "svelte";
     import PhoneButton from "$lib/components/Buttons/PhoneButton.svelte";
     import EmailButton from "$lib/components/Buttons/EmailButton.svelte";
@@ -71,7 +71,7 @@
         <Spacer></Spacer>
         <p class="text">
             Mein Name ist Lisa-Marie Loof und ich freue mich, Sie auf Ihrem Weg
-            zur inneren Balance und persönlicher Entwicklung zu begleiten. In
+            zur inneren Balance und persönlichen Entwicklung zu begleiten. In
             meiner Praxis für psychologische Beratung, Coaching und Hypnose
             biete ich Ihnen einen geschützten Raum, in dem Sie sich verstanden
             und angenommen fühlen dürfen.
@@ -190,6 +190,7 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
+
         justify-self: center;
         align-self: center;
         justify-content: center;

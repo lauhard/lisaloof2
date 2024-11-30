@@ -13,7 +13,7 @@ const Routes = [
     },
     {
         path: "/psychologische-beratung",
-        name: "Psychologische Beratung",
+        name: "Beratung",
     },
     {
         path: "/kontakt",

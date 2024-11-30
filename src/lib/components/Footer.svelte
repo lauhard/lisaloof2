@@ -3,7 +3,7 @@
 </script>
 
 <footer>
-    <section class="">
+    <section class="footer">
         <div class="cell contact">
             <h4>Kontakt</h4>
             <address class="address-wrapper">
@@ -90,6 +90,7 @@
             height: 100%;
             display: flex;
             flex-direction: row;
+            align-items: flex-start;
             flex-wrap: wrap;
             justify-content: space-between;
             .cell {

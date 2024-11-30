@@ -10,6 +10,7 @@
     import Checkbox from "$lib/components/Checkbox.svelte";
     import Adressbox from "$lib/components/Adressbox.svelte";
     import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
+    import kontakt from "$lib/images/kontakt.jpg";
 
     console.log("canonical url: ", PUBLIC_CANONICAL_URL + $page.url.pathname);
 
@@ -22,8 +23,6 @@
     let emailError: string | undefined = "";
     let phoneError: string | undefined = "";
     let myForm: HTMLFormElement;
-
-    var kontakt = "https://dummyimage.com/600x400/000/fff";
 
     const formActionResult = (event: CustomEvent) => {
         const { result } = event.detail;
@@ -241,6 +240,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: var(--side);
     }
     .formfields,
     .contact,

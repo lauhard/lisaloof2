@@ -2,12 +2,12 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Spacer from "$lib/components/Spacer.svelte";
-    let placeholder = "https://dummyimage.com/600x400/000/fff";
+    import info from "$lib/images/info.png";
 </script>
 
 <svelte:head>
     <title>Allgemeine Informationen</title>
-    <link rel="preload" as="image" href={placeholder} />
+    <link rel="preload" as="image" href={info} />
     <meta
         name="description"
         content="Sie wollen endlich rauchfrei werden? Raucherentwöhnung durch Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."
@@ -18,7 +18,7 @@
 <div class="hero">
     <img
         class="hero-image"
-        src={placeholder}
+        src={info}
         alt="Information"
         srcset=""
         loading="eager"
@@ -57,6 +57,9 @@
 </article>
 
 <style lang="scss">
+    .hero-image {
+        object-position: 0 -60px;
+    }
     article {
         display: flex;
         justify-content: center;

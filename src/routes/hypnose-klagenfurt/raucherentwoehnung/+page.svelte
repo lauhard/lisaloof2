@@ -24,7 +24,6 @@
         width="100%"
         height="100%"
     />
-    <span>Raucherentwöhnung</span>
 </div>
 
 <article class="">

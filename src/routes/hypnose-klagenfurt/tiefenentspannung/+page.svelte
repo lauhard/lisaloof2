@@ -15,18 +15,18 @@
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
 
+<div class="hero">
+    <img
+        class="hero-image"
+        src={Tiefenentspannung}
+        alt="abgebrannte Zigarette"
+        srcset=""
+        width="100%"
+        height="100%"
+    />
+    <span>Tiefenentspannung</span>
+</div>
 <article class="">
-    <div class="hero">
-        <img
-            class="hero-image"
-            src={Tiefenentspannung}
-            alt="abgebrannte Zigarette"
-            srcset=""
-            width="100%"
-            height="100%"
-        />
-        <span>Tiefenentspannung</span>
-    </div>
     <hgroup>
         <h1 class="heading">Tiefenentspannung</h1>
         <p class="sub-heading">Den Körper und Geist in Einklang bringen</p>

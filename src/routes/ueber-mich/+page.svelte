@@ -2,13 +2,13 @@
     import Cert1 from "$lib/images/cert1.webp";
     import Cert2 from "$lib/images/cert2.webp";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
-    import Uebermich from "$lib/images/ueber-mich.webp";
+    import Uebermich from "$lib/images/lisa-desk2.jpg";
     import { page } from "$app/stores";
     import Spacer from "$lib/components/Spacer.svelte";
 </script>
 
 <svelte:head>
-    <title>Über mich - Lisa Marie Loof B.Sc.</title>
+    <title>Über mich - Lisa Marie Loof, M.Sc.</title>
     <link rel="preload" as="image" href={Cert1} />
     <link rel="preload" as="image" href={Cert2} />
     <link rel="preload" as="image" href={Uebermich} />
@@ -33,7 +33,7 @@
     </div>
     <article class="about-me">
         <hgroup>
-            <h1 class="heading">Lisa-Marie Loof M.Sc.</h1>
+            <h1 class="heading">Lisa-Marie Loof, M.Sc.</h1>
             <h2 class="sub-heading">
                 Psychologische Beratung, Coaching und Hypnose in Klagenfurt.
             </h2>
@@ -47,7 +47,7 @@
         <Spacer></Spacer>
         <p class="text">
             Meine Reise in die Welt der Psychologie begann mit einem tiefen
-            Interesse an den komplexen Zusammenhängen von Geist und Seele. Nach
+            Interesse an den komplexen Zusammenhängen von Körper und Geist. Nach
             meinem Abschluss in Psychologie habe ich zahlreiche Weiterbildungen
             und Schulungen absolviert, um mein Wissen zu vertiefen und meine
             Fähigkeiten zu verfeinern. Besonders faszinierte mich dabei die
@@ -72,15 +72,14 @@
             auch meine Beratungs- und Hypnosesitzungen individuell und
             maßgeschneidert auf Ihre Bedürfnisse. In einer sicheren und
             einfühlsamen Atmosphäre biete ich Ihnen Raum, um Ihre Themen offen
-            anzusprechen und gemeinsam Lösungen zu erarbeiten, um so Ihren Weg
-            zu inneren Balance zu finden .
+            anzusprechen und gemeinsam Lösungen zu erarbeiten.
         </p>
         <Spacer></Spacer>
         <p class="text">
-            (Es ist mir eine Herzensangelegenheit, Sie auf Ihrem Weg zu
-            begleiten und Ihnen zu helfen, Ihre inneren Ressourcen zu aktivieren
-            und Ihr volles Potenzial zu entfalten. Ich freue mich darauf, Sie
-            kennenzulernen und gemeinsam mit Ihnen neue Wege zu entdecken.)
+            Es ist mir eine Herzensangelegenheit, Sie auf Ihrem Weg zu begleiten
+            und Ihnen zu helfen, Ihre inneren Ressourcen zu aktivieren und Ihr
+            volles Potenzial zu entfalten. Ich freue mich darauf, Sie
+            kennenzulernen und gemeinsam mit Ihnen neue Wege zu entdecken.
         </p>
         <Spacer></Spacer>
         <p>Ich freue mich auf Sie.</p>
@@ -99,13 +98,6 @@
                     height="300px"
                 />
             </div>
-            <p>
-                Master of Science Universität Klagenfurt 2022.... Lorem ipsum,
-                dolor sit amet consectetur adipisicing elit. Fuga veritatis nemo
-                mollitia quo quos est esse impedit dolor delectus obcaecati,
-                neque nam pariatur tempore laborum dolore rem adipisci minus
-                cumque?
-            </p>
         </details>
         <details>
             <summary>Zertifikate</summary>
@@ -128,14 +120,6 @@
                     height="300px"
                 />
             </div>
-
-            <p>
-                Hypnosetrainerin, Psychologin, .. Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Voluptas velit ab nisi officia
-                cupiditate libero rerum quo aliquam perferendis optio, harum
-                esse quidem quasi, corporis dolorum. Doloremque corporis
-                quisquam inventore?
-            </p>
         </details>
     </article>
 </section>

@@ -84,7 +84,7 @@
                 href="/hypnose-klagenfurt/online-hypnose"
                 btnTitle="Erfahren Sie mehr zu Online-Hypnose"
                 descr="  Sie befinden Sich nicht in Klagenfurt oder haben
-                                keine Möglich keit mich zu besuchen?"
+                                keine Möglichkeit mich zu besuchen?"
             ></ServiceCard>
             <ServiceCard
                 src={Digitaldetox}
@@ -235,6 +235,11 @@
             margin-bottom: 2rem;
         }
     }
+    .hero-image,
+    .hero {
+        //object-position: 0px 10px !important;
+        //border-radius: 2rem;
+    }
     .faqs {
         h2 {
             align-self: center;
@@ -244,5 +249,6 @@
         max-width: var(--content-width);
         align-items: flex-start;
         justify-self: center;
+        margin: 0 auto;
     }
 </style>

@@ -25,7 +25,6 @@
             width="100%"
             height="100%"
         />
-        <span>Entspannt in die Prüfung</span>
     </div>
     <article>
         <hgroup>

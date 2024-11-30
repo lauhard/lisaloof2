@@ -1,22 +1,32 @@
 <script lang="ts">
-    import Faq from "$lib/components/Faq.svelte";
-    import PriceTable from "$lib/components/PriceTable.svelte";
+    import { page } from "$app/stores";
     import Spacer from "$lib/components/Spacer.svelte";
+    import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import { AlertTriangle } from "lucide-svelte";
+    import info from "$lib/images/info.png";
 </script>
+
+<svelte:head>
+    <title>Informationen</title>
+    <link rel="preload" as="image" href={info} />
+    <meta
+        name="description"
+        content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof B.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
+    />
+    <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+</svelte:head>
 
 <section>
     <div class=" hero">
         <img
             class="hero-image"
-            src="https://dummyimage.com/600x400/000/fff"
+            src={info}
             alt="Baum auf einem Feld"
             srcset=""
             width="100%"
             height="100%"
         />
     </div>
-    <br />
     <article class="hypnose">
         <hgroup>
             <h1 class="heading">Informationen</h1>
@@ -24,7 +34,6 @@
                 Hier finden Sie alle Informationen zu meinen Leistungen.
             </p>
         </hgroup>
-        <br />
         <article class="info">
             <div class="info-icon">
                 <AlertTriangle size="50" />
@@ -38,15 +47,12 @@
                 Verschwiegenheit gegenüber Arbeitger*innen oder Angehörigen.
             </p>
         </article>
-        <br />
-        <br />
         <details>
             <summary class="heading">Hypnose</summary>
             <section class="information-hypnose">
                 <h2 class="sub-heading">
                     Meine Einheiten sind wie folgt aufgebaut
                 </h2>
-                <br />
                 <p class="text">
                     Die erste Einheit beinhaltet ein kostenloses und
                     unverbindliches Vorgespräch. Hierbei möchte ich mir ein Bild
@@ -72,7 +78,6 @@
                     zu verankern, sodass Sie die Möglichkeit haben, auch selbst
                     in Hypnose zu gehen und zu arbeiten.
                 </p>
-                <br />
                 <article class="info">
                     <div class="info-icon">
                         <AlertTriangle size="50" />
@@ -99,9 +104,7 @@
                 </article>
             </section>
         </details>
-        <br />
         <details>
-            <br />
             <summary class="heading">Coaching</summary>
             <section>
                 <article class="info">
@@ -127,8 +130,6 @@
             </section>
         </details>
     </article>
-    <br />
-    <br />
 </section>
 
 <style lang="scss">
@@ -149,11 +150,18 @@
         justify-content: center;
         align-items: center;
     }
+    .heading {
+        margin-block: 2rem;
+    }
+    .hero-image {
+        object-position: 0 -60px;
+    }
     .info {
         background-color: var(--surface-3);
         padding: 2rem;
         border-radius: 2rem;
         position: relative;
+        margin-bottom: 1cap;
         p {
             margin-top: 2rem;
         }

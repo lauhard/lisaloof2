@@ -113,6 +113,7 @@
             margin-top: 1rem;
             justify-content: center;
             min-height: 1.3rem;
+            background-color: transparent;
         }
         transition: all var(--animation-time) ease-in-out;
         &:hover {

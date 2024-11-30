@@ -28,7 +28,7 @@
 <article class="">
     <hgroup>
         <h1 class="heading">Selbswert steigern durch Hypnose</h1>
-        <p class="sub-heading">Sie sind gut so wie Sie sind!</p>
+        <p class="sub-heading">Sie sind gut, so wie Sie sind!</p>
     </hgroup>
     <Spacer></Spacer>
     <p class="text">
