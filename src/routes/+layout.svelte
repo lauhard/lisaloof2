@@ -16,8 +16,13 @@
 
     onMount(() => {
         setTimeout(() => {
-            window.scrollTo(0, 1);
-        }, 100); // Adjust timeout if necessary
+            // Ensure the document is scrollable
+            document.body.style.height = "200vh"; // Force height
+            window.scrollTo(0, 1); // Hide the address bar
+            setTimeout(() => {
+                document.body.style.height = ""; // Reset height
+            }, 100); // Allow time for the bar to hide
+        }, 200); // Adjust timing if necessary
     });
 </script>
 
