@@ -2,13 +2,14 @@
     import { enhance } from "$app/forms";
     import { formAction } from "$lib/forms/enhance";
     import { createEventDispatcher } from "svelte";
+    export let style = "";
     export let action = "";
     const dispatch = createEventDispatcher();
     export let myForm: HTMLFormElement;
     //    console.log("action:", action)
 </script>
 
-<div class="form-wrapper">
+<div class="form-wrapper" {style}>
     <form
         bind:this={myForm}
         method="POST"

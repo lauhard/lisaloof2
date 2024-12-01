@@ -68,7 +68,7 @@
             Entwicklungen ermöglicht.
         </p>
         <Spacer></Spacer>
-        <section>
+        <div>
             <p class="sub-heading">Ich unterstütze Sie bei:</p>
             <ul>
                 <li>Emotionalen Problemen</li>
@@ -77,7 +77,7 @@
                 <li>Förderung von Selbsterkenntnis</li>
                 <li>Verbesserung zwischenmenschlicher Beziehungen</li>
             </ul>
-        </section>
+        </div>
     </article>
 </section>
 
@@ -88,22 +88,34 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        width: var(--content-width);
+        max-width: var(--content-width);
         padding: var(--side);
         justify-self: center;
         margin-bottom: 4rem;
-        section {
+        h3 {
+            margin-bottom: 0.5rem;
+        }
+        div {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 100%;
+            max-width: 700px;
+            margin: 0;
+            padding: 0;
 
             .sub-heading {
                 margin-bottom: 1rem;
+                font-weight: bold;
             }
             ul {
-                width: 70%;
+                width: 100%;
+                li {
+                    width: 100%;
+                    margin: auto;
+                    padding: auto;
+                }
             }
         }
     }

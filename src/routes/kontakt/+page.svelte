@@ -73,14 +73,13 @@
             href="tel:+4367761750953"
             text="+4367761750953"
         ></CtaButton>
-        <br />
-        <br />
         <Form
             bind:myForm
             on:formaction={formActionResult}
             --form-max-width="900px"
             --form-width="100%"
             {action}
+            style="margin-top: 4rem;"
         >
             <fieldset class="formfields">
                 <legend>Bitte füllen Sie das Formular aus</legend>
@@ -240,7 +239,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: var(--side);
     }
     .formfields,
     .contact,
@@ -258,6 +256,10 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
+    }
+    .contact {
+        padding: var(--side);
+        max-width: var(--content-width);
     }
     .address-box {
         background-color: var(--surface-3);

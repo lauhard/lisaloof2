@@ -305,7 +305,7 @@
             }
         }
         .landing-page {
-            min-height: 89vh;
+            min-height: 90vh;
         }
     }
     @media (max-width: 990px) {
