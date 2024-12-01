@@ -62,6 +62,7 @@
         Entscheidungen behält.
     </p>
 </article>
+<Spacer></Spacer>
 <article class="hypnose-services">
     <h2 class="heading">Hypnose Leistungen</h2>
     <p class="text">
@@ -87,7 +88,7 @@
         <ServiceCard
             src={Digitaldetox}
             cardTitle="Digital Detox"
-            href="/hypnose-klagenfurt/digital-hypndetoxose"
+            href="/hypnose-klagenfurt/digital-detoxose"
             btnTitle="Erfahren Sie mehr zu Digital-Detox"
             descr="Sie werden nervös wenn Ihr Smartphone nicht bei
                                     Ihnen ist?"
@@ -126,7 +127,10 @@
             Hypnose-Sitzung bei mir melden.
         </p>
     </hgroup>
-    <CtaButton2 title="Zum Kontaktformular" text="Kontaktieren Sie mich"
+    <CtaButton2
+        title="Zum Kontaktformular"
+        text="Kontaktieren Sie mich"
+        href="/kontakt"
     ></CtaButton2>
     <p>
         Kontaktieren Sie mich einfach und wir besprechen gemeinsam, das weitere
@@ -175,7 +179,7 @@
     .hypnose-services {
         max-width: var(--content-width);
         padding: var(--side);
-        margin-top: 4rem;
+        margin-top: 1rem;
         --card-font-size: 1rem;
 
         p {
