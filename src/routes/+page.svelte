@@ -20,20 +20,7 @@
 
     onMount(() => {
         DOMloaded = true;
-        /*if (isMobile()) {
-            // Ensure the body is tall enough to allow scrolling
-            document.body.style.minHeight = "200vh";
-
-            // Trigger a scroll to hide the address bar
-            setTimeout(() => {
-                window.scrollTo(0, 1); // Scroll down slightly
-            }, 50);
-
-            // Reset the body's height after a short delay
-            setTimeout(() => {
-                document.body.style.minHeight = "100vh";
-            }, 500);
-        }*/
+        
     });
     function isChromeMobile() {
         const userAgent = navigator.userAgent;
