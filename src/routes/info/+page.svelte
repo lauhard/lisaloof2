@@ -73,6 +73,7 @@
         align-self: center;
         align-items: center;
         justify-self: center;
+        padding: var(--side);
     }
     .information-hypnose {
         max-width: var(--content-width);
