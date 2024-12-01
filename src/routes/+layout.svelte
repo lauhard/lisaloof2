@@ -7,11 +7,18 @@
     import LogoSvg from "$lib/components/LogoSvg.svelte";
     import { page } from "$app/stores";
     import Aside from "$lib/components/Aside.svelte";
+    import { onMount } from "svelte";
     let { children } = $props();
     let show = $state(false);
     let scrolly = $state(0);
     let innerWidth = $state(0);
     let innerHeight = $state(0);
+
+    onMount(() => {
+        setTimeout(() => {
+            window.scrollTo(0, 1);
+        }, 100); // Adjust timeout if necessary
+    });
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={scrolly} />
