@@ -14,15 +14,23 @@
     let innerWidth = $state(0);
     let innerHeight = $state(0);
 
+    const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+
     onMount(() => {
-        setTimeout(() => {
-            // Ensure the document is scrollable
-            document.body.style.height = "200vh"; // Force height
-            window.scrollTo(0, 1); // Hide the address bar
+        if (isMobile()) {
+            // Ensure the body is tall enough to allow scrolling
+            document.body.style.minHeight = "200vh";
+
+            // Trigger a scroll to hide the address bar
             setTimeout(() => {
-                document.body.style.height = ""; // Reset height
-            }, 100); // Allow time for the bar to hide
-        }, 200); // Adjust timing if necessary
+                window.scrollTo(0, 1); // Scroll down slightly
+            }, 50);
+
+            // Reset the body's height after a short delay
+            setTimeout(() => {
+                document.body.style.minHeight = "100vh";
+            }, 500);
+        }
     });
 </script>
 

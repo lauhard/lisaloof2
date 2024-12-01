@@ -36,7 +36,7 @@
 <!-- svelte-ignore slot_element_deprecated -->
 <aside class:show class:open>
     <ul class="controls">
-        <li>
+        <li class="logo">
             <Logo />
         </li>
 
@@ -129,6 +129,10 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            .logo {
+                margin-top: 0.3rem;
+                margin-left: 0.5rem;
+            }
             .close {
                 margin: 0;
                 padding: 0;

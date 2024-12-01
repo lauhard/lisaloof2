@@ -27,7 +27,7 @@
         margin: 0;
     }
     .arrow-scroll-down {
-        z-index: 999999;
+        z-index: 10;
         cursor: pointer;
         opacity: 1;
         pointer-events: all;
