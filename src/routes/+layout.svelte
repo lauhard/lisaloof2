@@ -6,6 +6,7 @@
     import Footer from "$lib/components/Footer.svelte";
     import LogoSvg from "$lib/components/LogoSvg.svelte";
     import { page } from "$app/stores";
+    import Aside from "$lib/components/Aside.svelte";
     let { children } = $props();
     let show = $state(false);
     let scrolly = $state(0);
@@ -16,6 +17,9 @@
 <svelte:window bind:innerWidth bind:innerHeight bind:scrollY={scrolly} />
 
 <div class="app">
+    {#if show}
+        <Aside bind:show></Aside>
+    {/if}
     <Navigation bind:show>
         {#snippet brand()}
             <li class="">

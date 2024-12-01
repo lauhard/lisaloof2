@@ -113,7 +113,7 @@
     }
     @media (max-width: 1200px) {
         .slogan {
-            z-index: 100;
+            z-index: 4;
             background-color: #96c5c8;
             margin: 0;
             padding: 0;
@@ -139,7 +139,7 @@
                 }
             }
             .services {
-                font-size: 0.8rem;
+                font-size: 1rem;
                 margin-inline: 0;
             }
             .spacer {
