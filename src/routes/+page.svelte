@@ -20,7 +20,7 @@
 
     onMount(() => {
         DOMloaded = true;
-        if (isMobile()) {
+        /*if (isMobile()) {
             // Ensure the body is tall enough to allow scrolling
             document.body.style.minHeight = "200vh";
 
@@ -33,7 +33,7 @@
             setTimeout(() => {
                 document.body.style.minHeight = "100vh";
             }, 500);
-        }
+        }*/
     });
     function isChromeMobile() {
         const userAgent = navigator.userAgent;
