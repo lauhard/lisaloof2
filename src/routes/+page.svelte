@@ -38,7 +38,7 @@
 
 <section class="landing-page">
     <LogoSvg
-        classNames="background-svg {scrolly > 2 ? 'background-svg-hide' : ''} "
+        classNames="background-svg {scrolly > 10 ? 'background-svg-hide' : ''} "
         height="85vh"
         animation={false}
         {scrolly}
@@ -215,6 +215,7 @@
             padding: 0;
             text-align: center;
             margin-bottom: 4rem;
+            margin-top: 1.5rem;
         }
         .grid {
             padding: var(--side);
@@ -224,11 +225,22 @@
             gap: 1.5rem;
             align-self: center;
             height: 100%;
-
             .tile {
                 &:nth-child(1),
                 &:nth-child(4) {
                     padding: 2rem;
+                }
+                &:nth-child(1) {
+                    border-radius: 0 1.5rem 1.5rem 1.5rem;
+                }
+                &:nth-child(2) {
+                    border-radius: 1.5rem 0 1.5rem 1.5rem;
+                }
+                &:nth-child(3) {
+                    border-radius: 1.5rem 1.5rem 1.5rem 0;
+                }
+                &:nth-child(4) {
+                    border-radius: 1.5rem 1.5rem 0 1.5rem;
                 }
                 box-shadow: var(--shadow-1);
                 background-color: var(--surface-2);
@@ -238,14 +250,16 @@
                 text-align: center;
                 width: 100%;
                 max-width: 28rem;
-                border-radius: 1rem;
+                overflow: hidden;
+
                 .fraction-text {
                     text-wrap: pretty;
-                    padding-inline: 2rem;
+                    //padding-inline: 1rem;
                 }
                 .contact-buttons {
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     justify-content: center;
                     justify-content: space-around;
                     margin: 1rem;
@@ -256,12 +270,13 @@
                     max-height: 350px;
                     width: auto;
                     img {
-                        border-radius: 0.5rem;
+                        //border-radius: 0.5rem;
                         width: 100%;
                         height: 100%;
                     }
                 }
             }
+            margin-bottom: 3rem;
         }
     }
     //width <= 1500px hide background-svg
@@ -302,6 +317,18 @@
     @media (max-width: 800px) {
         .introduction {
             margin-top: 70px !important;
+        }
+    }
+    @media (max-width: 520px) {
+        .tile {
+            &:nth-child(1),
+            &:nth-child(4) {
+                padding: 0rem;
+            }
+            .fraction-text {
+                text-align: center;
+                text-wrap: nowrap;
+            }
         }
     }
 </style>

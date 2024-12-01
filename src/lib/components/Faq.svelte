@@ -55,13 +55,14 @@
     ];
 </script>
 
-<div class="faqs {classNames}" />
-{#each faqs as faq}
-    <details>
-        <summary class="question">{faq.question}</summary>
-        {@html faq.answer}
-    </details>
-{/each}
+<div class="faqs {classNames}">
+    {#each faqs as faq}
+        <details>
+            <summary class="question">{faq.question}</summary>
+            {@html faq.answer}
+        </details>
+    {/each}
+</div>
 
 <style lang="scss">
     :root {
@@ -76,6 +77,7 @@
         max-width: var(--max-width);
         height: auto;
         box-sizing: border-box;
+        padding: var(--side);
     }
 
     .question {
@@ -86,6 +88,7 @@
         text-transform: uppercase;
         color: var(--attention) !important;
         margin-block: 0.5rem;
+        margin-top: 2rem;
     }
 
     .answer {

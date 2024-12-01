@@ -167,7 +167,8 @@
                 align-self: center;
                 align-items: center;
                 width: 100%;
-                padding-top: 1rem;
+                padding-bottom: 0.5rem;
+                padding-inline: 1rem;
                 img {
                     width: 400px;
                     height: auto;

@@ -295,12 +295,19 @@ fieldset{
     }
 }
 .text{
-    text-align: justify;
+    text-align:center;
     max-width: 740px;
     justify-self: center;
     align-self: center;
     text-align-last: center;
 }
+ @media (max-width: 670px) {
+        .text {
+            text-wrap:balance;
+            text-align-last:auto;
+
+        }
+    }
 .surface-1{
     background-color: var(--surface-1);
     color: var(--text-1);
@@ -359,10 +366,7 @@ fieldset{
     bottom: -55%;
     transition: all 300ms ease-in-out;
 }
- .background-svg-hide {
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-}
+
 .hero {
     margin-top: 3rem;
     margin-bottom: 4rem;
@@ -382,6 +386,21 @@ fieldset{
     overflow: hidden;
     width: 100%;
     max-height: 100%;
+}
+
+@media (max-width: 980px) {
+    .hero {
+        width: 100%;
+        margin-top: 0;
+        border-radius: 0;
+        margin-bottom: 2rem;
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            object-position: center center !important;
+        }
+    }
 }
 .heading {
     font-size: 2rem;

@@ -304,6 +304,11 @@
         bottom: -64.5%;
         left: -15%;
     }
+    .background-svg-hide {
+        opacity: 0;
+        display: none;
+        transition: all 300ms ease-in-out;
+    }
     @media (max-width: 1200px) {
         .background-svg {
             position: absolute;
@@ -313,6 +318,11 @@
             transform: translate(-50%, -50%);
             height: 80%;
         }
+        .background-svg-hide {
+            opacity: 0;
+            display: none !important;
+            transition: all 300ms ease-in-out;
+        }
     }
 
     @media (max-width: 480px) {
@@ -320,9 +330,9 @@
             position: absolute;
             bottom: -64.5%;
             left: 50%;
-            bottom: -18%;
+            bottom: -12%;
             transform: translate(-50%, -50%);
-            height: 75%;
+            height: 70%;
         }
     }
 </style>

@@ -46,7 +46,7 @@
                     <a class="" href="/kontakt">Kontakt</a>
                 </li>
                 <li>
-                    <a class="" href="/hypnose-klagenfurt/info">Info</a>
+                    <a class="" href="/info">Info</a>
                 </li>
                 <li>
                     <a

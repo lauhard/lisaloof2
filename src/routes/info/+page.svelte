@@ -48,7 +48,7 @@
             </p>
         </article>
         <details>
-            <summary class="heading">Hypnose</summary>
+            <summary class="heading summary">Hypnose</summary>
             <section class="information-hypnose">
                 <h2 class="sub-heading">
                     Meine Einheiten sind wie folgt aufgebaut
@@ -105,7 +105,7 @@
             </section>
         </details>
         <details>
-            <summary class="heading">Coaching</summary>
+            <summary class="heading summary">Coaching</summary>
             <section>
                 <article class="info">
                     <div class="info-icon">
@@ -150,7 +150,7 @@
         justify-content: center;
         align-items: center;
     }
-    .heading {
+    .summary {
         margin-block: 2rem;
     }
     .hero-image {

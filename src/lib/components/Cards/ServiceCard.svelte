@@ -56,7 +56,6 @@
         overflow: hidden;
         max-height: 500px;
         .card-image {
-            object-fit: fill;
             width: 100%;
             height: 100%;
             min-height: 280px;
@@ -64,6 +63,7 @@
                 width: 100%;
                 height: 100%;
                 border-radius: 0.7rem;
+                object-fit: cover;
             }
         }
         .card-header {
