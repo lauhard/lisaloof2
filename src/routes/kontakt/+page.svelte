@@ -215,7 +215,7 @@
             Österreich
         </address>
         <CtaButton
-            href="https://goo.gl/maps/VhgjNbHZmWpUjEwR9"
+            href="https://maps.app.goo.gl/pRxEHQqSaaTQySaW6"
             target="_blank"
             rel="noopener noreferrer"
             type="button"
