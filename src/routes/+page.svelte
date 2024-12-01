@@ -16,9 +16,29 @@
     let innerHeight = $state(0);
     let DOMloaded: boolean = $state(false);
     let scrolly = $state(0);
+    const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+
     onMount(() => {
         DOMloaded = true;
+        if (isMobile()) {
+            // Ensure the body is tall enough to allow scrolling
+            document.body.style.minHeight = "200vh";
+
+            // Trigger a scroll to hide the address bar
+            setTimeout(() => {
+                window.scrollTo(0, 1); // Scroll down slightly
+            }, 50);
+
+            // Reset the body's height after a short delay
+            setTimeout(() => {
+                document.body.style.minHeight = "100vh";
+            }, 500);
+        }
     });
+    function isChromeMobile() {
+        const userAgent = navigator.userAgent;
+        return /Chrome/.test(userAgent) && /Android/.test(userAgent);
+    }
 </script>
 
 <svelte:head>
@@ -58,7 +78,10 @@
         <Profile {DOMloaded} {ProfileImage}></Profile>
     </div>
 </section>
-<Scroll2Anchor {DOMloaded} {scrolly}></Scroll2Anchor>
+{#if !isChromeMobile()}
+    <!-- content here -->
+    <Scroll2Anchor {DOMloaded} {scrolly}></Scroll2Anchor>
+{/if}
 <section>
     <article class="introduction">
         <hgroup>
