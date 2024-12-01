@@ -106,7 +106,7 @@
                 </p>
                 <div class="contact-buttons" style="">
                     <PhoneButton></PhoneButton>
-                    <EmailButton></EmailButton>
+                    <EmailButton email="praxis@lisaloof.com"></EmailButton>
                 </div>
             </div>
             <div class="tile">
