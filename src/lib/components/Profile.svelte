@@ -34,7 +34,7 @@
     @media (max-width: 1200px) {
         .profile-image-wrapper {
             position: absolute;
-            transform: translate(-49%, -35%);
+            transform: translate(-49%, -45%);
             left: 50%;
             top: 50%;
             overflow: hidden;

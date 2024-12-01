@@ -113,6 +113,7 @@
     }
     @media (max-width: 1200px) {
         .slogan {
+            z-index: 100;
             background-color: #96c5c8;
             margin: 0;
             padding: 0;
