@@ -30,10 +30,21 @@
     <article class="hypnose">
         <hgroup>
             <h1 class="heading">Informationen</h1>
-            <p class="sub-heading">
-                Hier finden Sie alle Informationen zu meinen Leistungen.
-            </p>
         </hgroup>
+        <Spacer></Spacer>
+        <p class="text">
+            Meine Dienste ersetzen keinesfalls die eines Arztes, einer Ärztin,
+            Psychotherapeut*innen oder Klinischen- und
+            Gesundheitspsycholog*innen. Ich handle nicht außerhalb meines
+            Tätigkeitsbereiches, ich betreibe keine Diagnostik, verschreibe
+            keine Medikamente, gebe keine Versprechen jeglicher Art ab oder
+            behandle medizinische oder psychische Leiden. Falls Sie an
+            entsprechenden Erkrankungen leiden, wenden Sie sich bitte an die
+            zuständigen Fachärzte*innen. Falls ich die Beratung/Coaching oder
+            Hypnose aufgrund oben genannter Gründe für nicht sinnvoll erachte,
+            behalte ich mir das Recht vor, die Sitzung abzulehnen.
+        </p>
+        <Spacer></Spacer>
         <article class="info">
             <div class="info-icon">
                 <AlertTriangle size="50" />
@@ -47,38 +58,13 @@
                 Verschwiegenheit gegenüber Arbeitger*innen oder Angehörigen.
             </p>
         </article>
-
-        <details>
-            <summary class="heading summary">Coaching</summary>
-            <section>
-                <article class="info">
-                    <div class="info-icon">
-                        <AlertTriangle size="50" />
-                    </div>
-                    <h3 class="heading heading__important">
-                        Wichtige Informationen
-                    </h3>
-                    <p>
-                        Meine Dienste ersetzen keinesfalls die eines Arztes,
-                        einer Ärztin, Psychotherapeut*innen oder Klinischen- und
-                        Gesundheitspsycholog*innen. Ich handle nicht außerhalb
-                        meines Tätigkeitsbereiches, ich betreibe keine
-                        Diagnostik, verschreibe keine Medikamente, gebe keine
-                        Versprechen jeglicher Art ab oder behandle medizinische
-                        oder psychische Leiden. Falls Sie an entsprechenden
-                        Erkrankungen leiden, wenden Sie sich bitte an die
-                        zuständigen Fachärzte*innen. Falls ich die
-                        Beratung/Coaching oder Hypnose aufgrund oben genannter
-                        Gründe für nicht sinnvoll erachte, behalte ich mir das
-                        Recht vor, die Sitzung abzulehnen.
-                    </p>
-                </article>
-            </section>
-        </details>
     </article>
 </section>
 
 <style lang="scss">
+    section {
+        margin-bottom: 6rem;
+    }
     article {
         display: flex;
         justify-content: center;
@@ -107,9 +93,9 @@
         padding: 2rem;
         border-radius: 2rem;
         position: relative;
-        margin-bottom: 1cap;
+        margin-top: 1rem;
         p {
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
         .info-icon {
             position: absolute;

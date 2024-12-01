@@ -88,7 +88,7 @@
         <ServiceCard
             src={Digitaldetox}
             cardTitle="Digital Detox"
-            href="/hypnose-klagenfurt/digital-detoxose"
+            href="/hypnose-klagenfurt/digital-detox"
             btnTitle="Erfahren Sie mehr zu Digital-Detox"
             descr="Sie werden nervös wenn Ihr Smartphone nicht bei
                                     Ihnen ist?"

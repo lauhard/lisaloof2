@@ -26,7 +26,7 @@
         height="100%"
     />
 </div>
-<article class="online-hypnose">
+<article class="">
     <hgroup>
         <h1 class="heading">Online Hypnose</h1>
         <p class="sub-heading">Hypnose bequem von Zuhause</p>
@@ -96,14 +96,18 @@
         align-self: center;
         background-color: var(--surface-3);
         width: 100%;
+        padding: var(--side);
         padding-block: 3rem;
+
         section {
             margin-top: 2rem;
             align-self: center;
+            max-width: 700px;
+            width: 100%;
             .prequisit {
                 display: flex;
                 flex-direction: row;
-
+                width: 100%;
                 p {
                     margin-left: 1rem;
                 }
