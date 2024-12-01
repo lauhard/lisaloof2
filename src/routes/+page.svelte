@@ -38,7 +38,9 @@
 
 <section class="landing-page">
     <LogoSvg
-        classNames="background-svg {scrolly > 10 ? 'background-svg-hide' : ''} "
+        classNames="background-svg {scrolly > (innerWidth > 1200 ? 5 : 500)
+            ? 'background-svg-hide'
+            : ''} "
         height="85vh"
         animation={false}
         {scrolly}

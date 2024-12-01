@@ -114,7 +114,7 @@
     @media (max-width: 1200px) {
         .slogan {
             z-index: 4;
-            background-color: #96c5c8;
+            background-color: var(--primary);
             margin: 0;
             padding: 0;
             padding-top: 1.5rem;

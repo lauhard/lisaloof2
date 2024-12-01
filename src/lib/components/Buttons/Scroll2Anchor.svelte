@@ -49,7 +49,7 @@
     }
     @media (max-width: 1200px) {
         .arrow-scroll-down {
-            bottom: 0.75rem;
+            bottom: 1rem;
         }
     }
 </style>
