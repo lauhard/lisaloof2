@@ -117,7 +117,8 @@
             background-color: #96c5c8;
             margin: 0;
             padding: 0;
-            padding-block: 2rem;
+            padding-top: 1.5rem;
+            padding-bottom: 2rem;
             width: 100%;
             .via-vitae {
                 font-size: 3rem;
@@ -126,6 +127,9 @@
     }
     @media (max-width: 540px) {
         .slogan {
+            padding-block: 1rem;
+            width: 100%;
+            margin-bottom: 1rem;
             .via-vitae {
                 .via {
                     margin-right: 0.2rem;
@@ -150,11 +154,21 @@
     }
     @media (max-width: 380px) {
         .slogan {
+            --cta-min-width: 155px;
+            --cta-word-spacing: 5px;
+            --cta-font-size: 0.8rem;
+            --cta-padding-block: 0.3rem;
             background-color: #96c5c8;
-
+            padding-block: 1rem;
             width: 100%;
+            margin-bottom: 1rem;
             .via-vitae {
-                font-size: 3rem;
+                margin: 0;
+                font-size: 2.5rem;
+            }
+            .services {
+                margin-block: 1rem;
+                padding: 0;
             }
         }
     }

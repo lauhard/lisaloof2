@@ -300,6 +300,7 @@ fieldset{
     justify-self: center;
     align-self: center;
     text-align-last: center;
+
 }
  @media (max-width: 670px) {
         .text {
@@ -412,6 +413,7 @@ fieldset{
     min-inline-size: 100%;
     max-inline-size: 100%;
     width: 100%;
+    text-wrap: pretty;
 }
 .sub-heading {
     font-family: PlusJakartaSans-Regular;
@@ -422,6 +424,7 @@ fieldset{
     margin-top: 1rem;
     font-weight: 100;
     text-align: center;
+    text-wrap: pretty;
     justify-self: center;
     width: 80%;
     color:var(--text-1);

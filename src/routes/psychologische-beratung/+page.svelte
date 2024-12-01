@@ -115,6 +115,7 @@
                     width: 100%;
                     margin: auto;
                     padding: auto;
+                    margin-left: 1rem;
                 }
             }
         }
