@@ -25,8 +25,10 @@
     </Navigation>
     <main>
         <LogoSvg
-            classNames="background-svg-about-me background-svg-down {scrolly <=
-                10 && $page.url.pathname == '/'
+            classNames="background-svg-about-me background-svg-down {(scrolly <=
+                10 &&
+                $page.url.pathname == '/') ||
+            innerWidth < 1560
                 ? 'background-svg-hide'
                 : ''}"
             height="85vh"

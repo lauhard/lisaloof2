@@ -47,4 +47,9 @@
         pointer-events: none;
         transition: all var(--animation-time) ease-in-out;
     }
+    @media (max-width: 1200px) {
+        .arrow-scroll-down {
+            bottom: 0.75rem;
+        }
+    }
 </style>

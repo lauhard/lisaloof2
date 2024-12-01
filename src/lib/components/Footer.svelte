@@ -176,7 +176,7 @@
         }
         footer {
             text-align: start;
-            margin-top: 10px;
+            //margin-top: 10px;
         }
     }
 </style>

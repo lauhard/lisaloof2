@@ -148,6 +148,7 @@
     :root {
         --offset: 11rem;
     }
+
     .landing-page {
         background-color: var(--primary);
         min-height: calc(100vh - var(--offset));
@@ -263,10 +264,44 @@
             }
         }
     }
+    //width <= 1500px hide background-svg
+    @media (max-width: 1200px) {
+        .landing-page {
+            background: none;
+            background-color: var(--primary);
+            .background-svg {
+                display: none;
+            }
+            flex-direction: column-reverse;
+            width: 100%;
+            .landing-page__slogan {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 6rem;
+            }
+            .landing-page__profile-image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .landing-page {
+            min-height: 89vh;
+        }
+    }
     @media (max-width: 990px) {
         .grid {
             grid-template-columns: 1fr !important;
             grid-auto-flow: dense;
+        }
+    }
+    @media (max-width: 800px) {
+        .introduction {
+            margin-top: 70px !important;
         }
     }
 </style>

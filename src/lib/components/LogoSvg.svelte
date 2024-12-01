@@ -299,4 +299,30 @@
     .base {
         transition: all var(--animation-time, 100ms) ease-in-out;
     }
+    .background-svg {
+        position: absolute;
+        bottom: -64.5%;
+        left: -15%;
+    }
+    @media (max-width: 1200px) {
+        .background-svg {
+            position: absolute;
+            bottom: -64.5%;
+            left: 50%;
+            bottom: -23%;
+            transform: translate(-50%, -50%);
+            height: 80%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .background-svg {
+            position: absolute;
+            bottom: -64.5%;
+            left: 50%;
+            bottom: -18%;
+            transform: translate(-50%, -50%);
+            height: 75%;
+        }
+    }
 </style>

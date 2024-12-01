@@ -111,4 +111,50 @@
             justify-content: space-around;
         }
     }
+    @media (max-width: 1200px) {
+        .slogan {
+            background-color: #96c5c8;
+            margin: 0;
+            padding: 0;
+            padding-block: 2rem;
+            width: 100%;
+            .via-vitae {
+                font-size: 3rem;
+            }
+        }
+    }
+    @media (max-width: 540px) {
+        .slogan {
+            .via-vitae {
+                .via {
+                    margin-right: 0.2rem;
+                }
+                .vitae {
+                    margin-left: 0.2rem;
+                }
+            }
+            .services {
+                font-size: 0.8rem;
+                margin-inline: 0;
+            }
+            .spacer {
+                margin-inline: 0rem;
+                color: var(--text-3);
+            }
+            .cta-buttons {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    }
+    @media (max-width: 380px) {
+        .slogan {
+            background-color: #96c5c8;
+
+            width: 100%;
+            .via-vitae {
+                font-size: 3rem;
+            }
+        }
+    }
 </style>

@@ -338,11 +338,8 @@ fieldset{
 .brand{
     color: var(--brand);
 }
-.background-svg {
-    position: absolute !important;
-    bottom: -64.5%;
-    left: -15%;
-}
+
+
 .background-svg-about-me {
     background-attachment: fixed; /* Keeps the background in a fixed position */
     overflow-x: hidden; /* Avoids horizontal scroll, optional */
