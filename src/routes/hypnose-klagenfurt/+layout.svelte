@@ -28,10 +28,11 @@
 <style lang="scss">
     .back-button {
         margin-top: 2rem;
-        padding-block: 0.8rem;
+        padding-block: 0.5rem;
         padding-inline: 1.5rem;
-        background-color: var(--primary);
-        color: #f5f5f5;
+        color: var(--text-1);
+        box-shadow: var(--shadow-2);
+        border: 1px solid var(--surface-3);
         font-size: 0.9rem;
         word-spacing: 0.5rem;
         text-transform: uppercase;

@@ -54,6 +54,13 @@
 
 <style lang="scss">
     article {
+        hgroup {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            word-break: break-word;
+        }
         display: flex;
 
         justify-content: center;

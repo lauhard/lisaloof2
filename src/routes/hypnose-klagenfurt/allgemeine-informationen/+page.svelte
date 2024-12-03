@@ -2,6 +2,7 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Spacer from "$lib/components/Spacer.svelte";
+    import SubNav from "$lib/components/SubNav.svelte";
     import info from "$lib/images/info.png";
 </script>
 
@@ -26,7 +27,7 @@
         height="100%"
     />
 </div>
-
+<SubNav></SubNav>
 <article class="hypnose-information">
     <hgroup>
         <h1 class="heading">Allgemeine Informationen zu Hypnose</h1>

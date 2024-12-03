@@ -8,9 +8,7 @@
 
 {#if innerWidth <= 815}
     <details class="dropdown">
-        <summary
-            >{$page.url.pathname.split("/").pop()?.toLocaleUpperCase()}</summary
-        >
+        <summary>WEITERE LEISTUNGEN</summary>
         <ul>
             {#each Subroutes as route}
                 <li>
@@ -23,4 +21,7 @@
 {/if}
 
 <style lang="scss">
+    summary {
+        word-spacing: 0.5rem;
+    }
 </style>

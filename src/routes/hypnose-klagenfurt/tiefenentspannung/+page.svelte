@@ -25,7 +25,6 @@
         width="100%"
         height="100%"
     />
-    <span>Tiefenentspannung</span>
 </div>
 <SubNav></SubNav>
 <article class="">
