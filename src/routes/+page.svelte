@@ -16,11 +16,9 @@
     let innerHeight = $state(0);
     let DOMloaded: boolean = $state(false);
     let scrolly = $state(0);
-    const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
 
     onMount(() => {
         DOMloaded = true;
-        
     });
     let chromeBrowser = $state(false);
     let isChromeMobile = () => {

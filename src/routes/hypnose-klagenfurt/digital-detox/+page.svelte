@@ -3,6 +3,7 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Digitaldetox from "$lib/images/digitaldetox-min.webp";
+    import SubNav from "$lib/components/SubNav.svelte";
 </script>
 
 <svelte:head>
@@ -25,6 +26,7 @@
         height="100%"
     />
 </div>
+<SubNav></SubNav>
 <article>
     <div class="">
         <hgroup>

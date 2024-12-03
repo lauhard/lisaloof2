@@ -2,6 +2,7 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Spacer from "$lib/components/Spacer.svelte";
+    import SubNav from "$lib/components/SubNav.svelte";
     import Selbstwert from "$lib/images/selbstwert-min.webp";
 </script>
 
@@ -23,8 +24,8 @@
         width="100%"
         height="100%"
     />
-    <span>Selbstwertsteigerung</span>
 </div>
+<SubNav></SubNav>
 <article class="">
     <hgroup>
         <h1 class="heading">Selbswert steigern durch Hypnose</h1>

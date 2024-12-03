@@ -4,6 +4,7 @@
     import { Check } from "lucide-svelte";
     import OnlineHypnose from "$lib/images/online-hypnose.webp";
     import Spacer from "$lib/components/Spacer.svelte";
+    import SubNav from "$lib/components/SubNav.svelte";
 </script>
 
 <svelte:head>
@@ -26,6 +27,7 @@
         height="100%"
     />
 </div>
+<SubNav></SubNav>
 <article class="">
     <hgroup>
         <h1 class="heading">Online Hypnose</h1>
@@ -88,6 +90,10 @@
 </article>
 
 <style lang="scss">
+    article {
+        padding: var(--side);
+        max-width: var(--content-width);
+    }
     .prequisits {
         display: flex;
         flex-direction: column;

@@ -2,6 +2,7 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Spacer from "$lib/components/Spacer.svelte";
+    import SubNav from "$lib/components/SubNav.svelte";
     import Rauchfrei from "$lib/images/rauchfrei-min.webp";
 </script>
 
@@ -25,7 +26,7 @@
         height="100%"
     />
 </div>
-
+<SubNav></SubNav>
 <article class="">
     <hgroup>
         <h1 class="heading">Raucherentwöhnung durch Hypnose</h1>
@@ -52,9 +53,9 @@
 </article>
 
 <style lang="scss">
-    section {
+    article {
         display: flex;
-        height: var(--section-height);
+
         justify-content: center;
         margin: 0 auto;
         flex-direction: column;
@@ -62,12 +63,5 @@
         align-items: center;
         max-width: var(--content-width);
         padding: var(--side);
-        p {
-            text-align: justify;
-            align-self: center;
-            text-align-last: center;
-            justify-self: center;
-            width: 100%;
-        }
     }
 </style>
