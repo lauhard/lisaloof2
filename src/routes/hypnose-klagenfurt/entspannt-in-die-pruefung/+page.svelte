@@ -58,4 +58,8 @@
     .hero-image {
         object-position: center -360px;
     }
+    article {
+        padding: var(--side);
+        max-width: var(--content-width);
+    }
 </style>

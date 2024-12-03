@@ -98,6 +98,7 @@
         width: 100%;
         padding: var(--side);
         padding-block: 3rem;
+        max-width: var(--content-width);
 
         section {
             margin-top: 2rem;

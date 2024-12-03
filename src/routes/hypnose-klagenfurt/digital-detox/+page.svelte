@@ -65,4 +65,8 @@
 </article>
 
 <style lang="scss">
+    article {
+        padding: var(--side);
+        max-width: var(--content-width);
+    }
 </style>

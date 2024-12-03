@@ -67,6 +67,9 @@
         justify-content: center;
         align-items: center;
         justify-self: center;
+        padding: var(--side);
+        max-width: var(--content-width);
+
         .faqs {
             margin-bottom: 2rem;
             display: flex;

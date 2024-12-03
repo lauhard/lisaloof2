@@ -25,5 +25,6 @@
         align-self: center;
         position: relative;
         margin-bottom: 6rem;
+        //padding: var(--side);
     }
 </style>
