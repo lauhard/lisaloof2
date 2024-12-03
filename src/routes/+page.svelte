@@ -22,10 +22,18 @@
         DOMloaded = true;
         
     });
-    function isChromeMobile() {
-        const userAgent = navigator.userAgent;
-        return /Chrome/.test(userAgent) && /Android/.test(userAgent);
-    }
+    let chromeBrowser = $state(false);
+    let isChromeMobile = () => {
+        if (typeof navigator !== "undefined") {
+            const userAgent = navigator.userAgent;
+            return /Chrome/.test(userAgent) && /Android/.test(userAgent);
+        } else {
+            return false;
+        }
+    };
+    $effect(() => {
+        chromeBrowser = isChromeMobile();
+    });
 </script>
 
 <svelte:head>
@@ -66,7 +74,6 @@
     </div>
 </section>
 {#if !isChromeMobile()}
-    <!-- content here -->
     <Scroll2Anchor {DOMloaded} {scrolly}></Scroll2Anchor>
 {/if}
 <section>
