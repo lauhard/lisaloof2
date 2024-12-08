@@ -259,6 +259,8 @@
             gap: 1.5rem;
             align-self: center;
             height: 100%;
+            min-height: fit-content;
+
             .tile {
                 &:nth-child(1),
                 &:nth-child(4) {
