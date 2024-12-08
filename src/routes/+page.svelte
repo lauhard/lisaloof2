@@ -362,6 +362,7 @@
             grid-template-columns: 1fr !important;
             grid-auto-flow: dense;
             min-height: fit-content;
+            gap: 1rem;
             height: 100%;
             background-color: red;
         }
