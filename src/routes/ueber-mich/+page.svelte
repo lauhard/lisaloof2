@@ -56,13 +56,13 @@
         {
             "@context": "https://schema.org",
             "@type": "Person",
-            name: "Lisa Marie Loof, M.Sc.",
-            jobTitle: "Psychologin, Coach und Hypnosetrainerin",
-            description:
+            "name": "Lisa Marie Loof, M.Sc.",
+            "jobTitle": "Psychologin, Coach und Hypnosetrainerin",
+            "description":
                 "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
-            url: absoluteUrl,
-            image: absoluteImageUrl,
-            sameAs: [instagram],
+            "url": absoluteUrl,
+            "image": absoluteImageUrl,
+            "sameAs": [instagram],
         }
     </script>
 </svelte:head>
