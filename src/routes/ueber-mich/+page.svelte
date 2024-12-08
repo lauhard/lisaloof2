@@ -53,17 +53,7 @@
     <link rel="preload" as="image" href={Uebermich} />
 
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Lisa Marie Loof, M.Sc.",
-            "jobTitle": "Psychologin, Coach und Hypnosetrainerin",
-            "description":
-                "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
-            "url": absoluteUrl,
-            "image": absoluteImageUrl,
-            "sameAs": [instagram],
-        }
+        ${JSON.stringify(structuredData)}
     </script>
 </svelte:head>
 
