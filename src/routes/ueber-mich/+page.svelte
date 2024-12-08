@@ -7,24 +7,18 @@
     import Uebermich from "$lib/images/ueber-mich-optimized.webp";
     import { page } from "$app/stores";
     import Spacer from "$lib/components/Spacer.svelte";
-    import { get } from "svelte/store";
+    import { serializeSchema } from "$lib";
 
-    // Resolve dynamic data
-    const pageUrl = get(page).url.pathname; // Use Svelte store `get` method
-    const absoluteUrl = url + pageUrl;
-    const absoluteImageUrl = new URL(Uebermich, url).href; // Resolve full image URL
-
-    // Structured Data
-    let structuredData = {
+    const structuredData = {
         "@context": "https://schema.org",
         "@type": "Person",
         name: "Lisa Marie Loof, M.Sc.",
         jobTitle: "Psychologin, Coach und Hypnosetrainerin",
         description:
             "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
-        url: absoluteUrl,
-        image: absoluteImageUrl,
-        sameAs: [instagram],
+        url: `${url}${$page.url.pathname}`, // Fixed concatenation here
+        image: Uebermich,
+        sameAs: [`${instagram}`],
     };
 </script>
 
@@ -52,9 +46,7 @@
     <link rel="preload" as="image" href={Diplom} />
     <link rel="preload" as="image" href={Uebermich} />
 
-    <script type="application/ld+json">
-        ${JSON.stringify(structuredData)}
-    </script>
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <section>
