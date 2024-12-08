@@ -2,25 +2,94 @@
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Spacer from "$lib/components/Spacer.svelte";
-    import psychologischeberatung from "$lib/images/lisa-desk2-hor2.jpg";
+    import Beratung from "$lib/images/beratung-optimized.webp";
+    import { serializeSchema } from "$lib";
+    import {
+        address,
+        city,
+        country,
+        email,
+        maps,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Psychologische Beratung und Coaching in Klagenfurt",
+        serviceType: "Hypnosis Services",
+        specialty: "Psychology, Coaching",
+        description:
+            "Professionelle psychologische Beratung & Coaching in Klagenfurt für emotionale, psychische und berufliche Herausforderungen.",
+        url: `${url}${$page.url.pathname}`,
+        provider: {
+            "@type": "Person",
+            name: "Lisa Marie Loof",
+            jobTitle: "diplomierte Hypnosetrainerin, Psychologin & Coach",
+        },
+        areaServed: {
+            "@type": "Place",
+            name: "Klagenfurt",
+        },
+        audience: {
+            "@type": "Audience",
+            audienceType:
+                "Persoen mit emotionalen, psychischen oder beruflichen Herausforderungen.",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Service",
+            telephone: phone,
+            email: email,
+            areaServed: "AT",
+            availableLanguage: "de",
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: address, // Beispiel: genaue Straße
+            postalCode: postalCode, // Beispiel: Postleitzahl
+            addressLocality: city, // Stadt
+            addressCountry: country, // Land
+        },
+        sameAs: url,
+    };
 </script>
 
 <svelte:head>
-    <title>Psychologische Beratung</title>
-    <link rel="preload" as="image" href={psychologischeberatung} />
+    <title>Psychologische Beratung & Coaching in Klagenfurt</title>
+    <meta
+        property="og:title"
+        content="Psychologische Beratung & Coaching in Klagenfurt – Lisa Marie Loof M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Ich biete professionelle psychologische Beratung und Coaching in Klagenfurt an. Ich unterstütze Sie bei emotionalen, psychischen und berufliche Herausforderungen."
+    />
+    <meta property="og:image" content={Beratung} />
+    <meta
+        property="og:image:alt"
+        content="Psychologische Beratung & Coaching in Klagenfurt - Bild von Lisa Marie Loof M.Sc auf einem Sessel"
+    />
+    <meta property="og:url" content="{url}{$page.url.pathname}" />
+    <meta property="og:type" content="website" />
     <meta
         name="description"
-        content="Hallo, mein Name ist Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
+        content="Professionelle psychologische Beratung und Coaching in Klagenfurt für emotionale, psychische und berufliche Herausforderungen."
     />
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+    <link rel="preload" as="image" href={Beratung} />
+
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <section>
     <div class="hero">
         <img
             class="hero-image"
-            src={psychologischeberatung}
-            alt="abgebrannte Zigarette"
+            src={Beratung}
+            alt="Psychologische Beratung & Coaching in Klagenfurt - Bild von Lisa Marie Loof M.Sc auf einem Sessel"
             srcset=""
             width="100%"
             height="100%"
@@ -29,7 +98,10 @@
 
     <article>
         <hgroup>
-            <h2 class="heading">Beratung / Coaching</h2>
+            <h2 class="heading">Psychologische Beratung & Coaching</h2>
+            <h2 class="sub-heading">
+                Professionelle Unterstützung für Ihre persönliche Entwicklung
+            </h2>
         </hgroup>
         <Spacer></Spacer>
         <h3>Psychologische Beratung</h3>
@@ -92,9 +164,6 @@
         padding: var(--side);
         justify-self: center;
         margin-bottom: 4rem;
-        h3 {
-            margin-bottom: 0.5rem;
-        }
         div {
             display: flex;
             flex-direction: column;

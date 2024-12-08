@@ -5,23 +5,102 @@
     import OnlineHypnose from "$lib/images/online-hypnose.webp";
     import Spacer from "$lib/components/Spacer.svelte";
     import SubNav from "$lib/components/SubNav.svelte";
+    import { serializeSchema } from "$lib";
+    import {
+        address,
+        city,
+        country,
+        email,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Online Hypnose",
+        serviceType: "Hypnosis Services",
+        description:
+            "Online Hypnose mit Lisa Marie Loof – Hypnose bequem von zu Hause aus.",
+        url: `${url}${$page.url.pathname}`,
+        provider: {
+            "@type": "Person",
+            name: "Lisa Marie Loof",
+            jobTitle: "diplomierte Hypnosetrainerin, Psychologin & Coach",
+        },
+        areaServed: {
+            "@type": "Place",
+            name: "Klagenfurt",
+        },
+        audience: {
+            "@type": "Audience",
+            audienceType:
+                "Personen, die nicht aus dem Raum Klagenfurt kommen oder nicht mobil sind.",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Service",
+            telephone: phone,
+            email: email,
+            areaServed: "AT",
+            availableLanguage: "de",
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: address, // Beispiel: genaue Straße
+            postalCode: postalCode, // Beispiel: Postleitzahl
+            addressLocality: city, // Stadt
+            addressCountry: country, // Land
+        },
+        sameAs: url,
+    };
 </script>
 
+<!--
+Diese Seite bitte für SEO optimieren
+Die Seite beschreibt die Leistung "Online Hypnose" mittels Hypnose und ist eine untergeordnete Seite der Hauptseite "Hypnose Klagenfurt"
+Ich benötige eine kurze Beschreibung der Leistung, die ich in den Meta-Tags verwenden kann
+Ich benötige og:tags
+ich benötige strukturierte Daten
+-->
 <svelte:head>
-    <title>Leistungen - Online Hypnose</title>
+    <title>Online Hypnose | Lisa Marie Loof M.Sc.</title>
     <link rel="preload" as="image" href={OnlineHypnose} />
     <meta
         name="description"
-        content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof B.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
+        content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin, Psychologin und Coach aus Klagenfurt"
     />
+    <meta
+        property="og:title"
+        content="Online Hypnose | Lisa Marie Loof M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Erleben Sie Online Hypnose mit Lisa Marie Loof M.Sc. – Hypnose bequem von zu Hause aus. Arbeiten Sie an Ihren Themen unabhängig von Ihrem Standort.."
+    />
+    <meta
+        property="og:url"
+        content="{PUBLIC_CANONICAL_URL}{$page.url.pathname}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={OnlineHypnose} />
+    <meta
+        property="og:image:alt"
+        content="Online Hypnose - Bild von einer Frau mit Kopfhörern liegend auf einem Sofa."
+    />
+    <meta property="og:locale" content="de_DE" />
+
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <div class="hero">
     <img
         class="hero-image"
         src={OnlineHypnose}
-        alt="Frau mit Laptop auf der Couch"
+        alt="Online Hypnose - Bild von einer Frau mit Kopfhörern liegend auf einem Sofa."
         srcset=""
         width="100%"
         height="100%"

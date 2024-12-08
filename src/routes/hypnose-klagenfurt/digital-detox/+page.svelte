@@ -4,23 +4,96 @@
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Digitaldetox from "$lib/images/digitaldetox-min.webp";
     import SubNav from "$lib/components/SubNav.svelte";
+
+    import { serializeSchema } from "$lib";
+    import {
+        address,
+        city,
+        country,
+        email,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Digital Detox",
+        serviceType: "Hypnosis Services",
+        description:
+            "Entfliehen Sie der digitalen Welt und reduzieren Sie Stress durch eine Hypnose-Sitzung, die Ihnen hilft, sich zu erholen und zu entspannen.",
+        url: `${url}${$page.url.pathname}`,
+        provider: {
+            "@type": "Person",
+            name: "Lisa Marie Loof",
+            jobTitle: "diplomierte Hypnosetrainerin, Psychologin & Coach",
+        },
+        areaServed: {
+            "@type": "Place",
+            name: "Klagenfurt",
+        },
+        audience: {
+            "@type": "Audience",
+            audienceType:
+                "Personen, die weniger Zeit am Smartphone verbringen möchten.",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Service",
+            telephone: phone,
+            email: email,
+            areaServed: "AT",
+            availableLanguage: "de",
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: address, // Beispiel: genaue Straße
+            postalCode: postalCode, // Beispiel: Postleitzahl
+            addressLocality: city, // Stadt
+            addressCountry: country, // Land
+        },
+        sameAs: url,
+    };
 </script>
 
 <svelte:head>
-    <title>Leistungen - Digital Detox</title>
+    <title>Digital Detox duch Hypnose | Lisa Marie Loof M.Sc.</title>
     <link rel="preload" as="image" href={Digitaldetox} />
     <meta
         name="description"
-        content="Ein Tag ohne Smartphone ist kein Weltuntergang. Digital Detox durch Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."
+        content="Ein Tag ohne Smartphone ist kein Weltuntergang. Digital Detox durch Hypnose mit Lisa Marie Loof, diplomierte Hypnosetrainerin, Psychologin & Coach in Klagenfurt."
     />
+
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:title"
+        content="Digital Detox durch Hypnose | Lisa Marie Loof M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Befreien Sie sich von der Smartphone-Sucht durch Hypnose. Erfahren Sie mehr über Digital Detox mit Lisa Marie Loof, Hypnosetrainerin in Klagenfurt."
+    />
+    <meta property="og:image" content={Digitaldetox} />
+    <meta
+        property="og:image:alt"
+        content="Digital Detox - Bild von einem Smartphone in Nahaufnahme"
+    />
+    <meta
+        property="og:url"
+        content="{PUBLIC_CANONICAL_URL}{$page.url.pathname}"
+    />
+
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <div class="hero">
     <img
         class="hero-image"
         src={Digitaldetox}
-        alt="Smartphone Nahaufnahme"
+        alt="Digital Detox - Bild von einem Smartphone in Nahaufnahme"
         srcset=""
         width="100%"
         height="100%"

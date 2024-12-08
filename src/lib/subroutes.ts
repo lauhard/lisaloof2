@@ -22,10 +22,6 @@ const Subroutes = [
     {
         path: "/hypnose-klagenfurt/tiefenentspannung",
         name: "Tiefenenspannung",
-    },
-    {
-        path: "/hypnose-klagenfurt/allgemeine-informationen",
-        name: "Info",
     }
 ];
 export default Subroutes;

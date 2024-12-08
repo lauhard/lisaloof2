@@ -3,6 +3,7 @@
     import ProfileImage from "$lib/images/main-cutout-2.png";
     import Praxis1 from "$lib/images/praxis1.jpg";
     import Praxis2 from "$lib/images/praxis2.jpg";
+    import Logo from "$lib/images/logo2.webp";
     import { onMount } from "svelte";
     import PhoneButton from "$lib/components/Buttons/PhoneButton.svelte";
     import EmailButton from "$lib/components/Buttons/EmailButton.svelte";
@@ -12,6 +13,16 @@
     import Scroll2Anchor from "$lib/components/Buttons/Scroll2Anchor.svelte";
     import Spacer from "$lib/components/Spacer.svelte";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
+    import {
+        address,
+        city,
+        country,
+        email,
+        maps,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
     let innerWidth = $state(0);
     let innerHeight = $state(0);
     let DOMloaded: boolean = $state(false);
@@ -40,8 +51,24 @@
     >
     <meta
         name="description"
-        content="Lisa Marie Loof M.Sc. – Psychologin & Coach in Klagenfurt. Praxis für Hypnose, Coaching & psychologische Beratung. Vereinbaren Sie ein Erstgespräch am Waagplatz 3!"
+        content="Lisa Marie Loof M.Sc. – Psychologin & Coach in Klagenfurt. Praxis für Hypnose, Coaching & psychologische Beratung."
     />
+    <meta
+        property="og:title"
+        content="Ihre Psychologin & Coach in Klagenfurt - Lisa Marie Loof, M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Lisa Marie Loof, M.Sc. – Ihre Psychologin, Coach & Hypnosetrainerin in Klagenfurt."
+    />
+    <meta property="og:image" content={Logo} />
+    <meta property="og:url" content={url} />
+    <meta
+        property="og:image:alt"
+        content="Schriftzug 'Via Vitae - Beratung|Coaching|Hypnose' mit Baumlogo und Blättern"
+    />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="website" />
     <link rel="canonical" href={PUBLIC_CANONICAL_URL} />
     <link rel="preload" as="image" href={ProfileImage} />
 </svelte:head>
@@ -120,7 +147,7 @@
                 </p>
                 <div class="contact-buttons" style="">
                     <PhoneButton></PhoneButton>
-                    <EmailButton email="praxis@lisaloof.com"></EmailButton>
+                    <EmailButton></EmailButton>
                 </div>
             </div>
             <div class="tile">

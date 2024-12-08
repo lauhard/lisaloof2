@@ -202,6 +202,21 @@ h6 {
   margin-bottom: 0.5rem;
   /*margin-top: 0.5rem;*/
 }
+@media (max-width: 480px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 460px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word !important;
+  }
+}
 
 ul {
   padding-inline-start: 0px;

@@ -14,5 +14,6 @@ export const maps = "https://maps.app.goo.gl/pRxEHQqSaaTQySaW6";
 export const phone = "+43 67761750953";
 export const address = "Waaggasse 3";
 export const city = "Klagenfurt";
-export const country = "Kärnten";
+export const province = "Kärnten";
+export const country = "Österreich";
 export const postalCode = "9020";

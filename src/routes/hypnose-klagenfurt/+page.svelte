@@ -9,16 +9,135 @@
     import Tiefenentspannung from "$lib/images/tiefenentspannung-min.webp";
     import OnlineHypnose from "$lib/images/online-hypnose.webp";
     import Leistungen from "$lib/images/leistungen.webp";
+    import Logo from "$lib/images/logo2.webp";
     import ServiceCard from "$lib/components/Cards/ServiceCard.svelte";
     import CtaButton2 from "$lib/components/Buttons/CtaButton.svelte";
     import Faq from "$lib/components/Faq.svelte";
     import Spacer from "$lib/components/Spacer.svelte";
+    import {
+        address,
+        city,
+        country,
+        email,
+        maps,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
+    import { serializeSchema } from "$lib";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Professionelle Hypnose-Dienstleistungen in Klagenfurt",
+        serviceType: "Hypnosis Services",
+        url: `${url}${$page.url.pathname}`,
+        description:
+            "Erfahren Sie, wie Ihnen Hypnose bei Raucherentwöhnung, Stressabbau und vielem mehr helfen kann. Individuelle Hypnosesitzungen vor Ort oder online.",
+        provider: {
+            "@type": "Person",
+            name: "Lisa Marie Loof",
+            jobTitle: "diplomierte Hypnosetrainerin, Psychologin & Coach",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: address, // Beispiel: genaue Straße
+                postalCode: postalCode, // Beispiel: Postleitzahl
+                addressLocality: city, // Stadt
+                addressCountry: country, // Land
+            },
+            contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Service",
+                telephone: phone,
+                email: email,
+                areaServed: "AT",
+                availableLanguage: "de",
+            },
+            sameAs: maps,
+        },
+        sameAs: url,
+        offers: [
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/raucherentwoehnung`,
+                serviceType: "Hypnosis Services",
+                name: "Hypnose zur Raucherentwöhnung",
+                description:
+                    "Raucherentwöhnung durch Hypnose mit Lisa Marie Loof. Sie erhalten professionelle Unterstützung, um rauchfrei zu werden und Ihre Lebensqualität zu verbessern.",
+            },
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/online-hypnose`,
+                serviceType: "Hypnosis Services",
+                name: "Online Hypnose",
+                description:
+                    "Genießen Sie die Vorteile professioneller Hypnose bequem von zu Hause aus. Ideal für Personen, die nicht in Klagenfurt ansässig sind.",
+            },
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/entspannt-in-die-pruefung`,
+                serviceType: "Hypnosis Services",
+                name: "Entspannt in die Prüfung / Entspannt vortragen",
+                description:
+                    "Bereiten Sie sich mit Hypnose auf Prüfungen vor und steigern Sie Ihre Konzentration und Leistungsfähigkeit.",
+            },
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/digital-detox`,
+                serviceType: "Hypnosis Services",
+                name: "Digital Detox",
+                description:
+                    "Entfliehen Sie der digitalen Welt und reduzieren Sie Stress durch eine Hypnose-Sitzung, die Ihnen hilft, sich zu erholen und zu entspannen.",
+            },
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/tiefenentspannung`,
+                serviceType: "Hypnosis Services",
+                name: "Tiefenentspannung",
+                description:
+                    "Entspannen Sie sich und tanken Sie neue Energie mit einer Hypnose-Sitzung, die Ihnen hilft, Stress abzubauen und besser zu schlafen.",
+            },
+            {
+                "@type": "Offer",
+                url: `${url}/hypnose-klagenfurt/selbstwert-steigern`,
+                serviceType: "Hypnosis Services",
+                name: "Selbstwert steigern",
+                description:
+                    "Steigern Sie Ihr Selbstwertgefühl und Ihr Selbstbewusstsein durch Hypnose.",
+            },
+        ],
+    };
 </script>
 
 <svelte:window bind:scrollY />
 
 <svelte:head>
-    <title>Hypnose Leistungen</title>
+    <title
+        >Pofessionelle Hypnose-Dienstleistungen in Klagenfurt -
+        Raucherentwöhnung, OnlineHypnose & mehr</title
+    >
+    <meta
+        name="description"
+        content="Professionelle Hypnose-Dienstleistungen in Klagenfurt. Egal welches Thema Sie angehen möchten, wir erarbeiten ein individuelles Hypnose Konzept."
+    />
+    <meta
+        property="og:title"
+        content="Professionelle Hypnose-Dienstleistungen in Klagenfurt – Lisa Marie Loof M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Erfahren Sie, wie Ihnen Hypnose bei Raucherentwöhnung, Stressabbau und vielem mehr helfen kann. Jetzt mehr erfahren!"
+    />
+    <meta property="og:image" content={Leistungen} />
+    <meta property="og:url" content="{url}{$page.url.pathname}" />
+    <meta property="og:type" content="website" />
+    <meta
+        property="og:image:alt"
+        content="Hypnose Leistungen - Bild von einem Baum auf einem Feld "
+    />
+    <meta property="og:locale" content="de_DE" />
+
+    <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
     <link rel="preload" as="image" href={Rauchfrei} />
     <link rel="preload" as="image" href={Digitaldetox} />
     <link rel="preload" as="image" href={Pruefungsangst} />
@@ -26,18 +145,15 @@
     <link rel="preload" as="image" href={Tiefenentspannung} />
     <link rel="preload" as="image" href={OnlineHypnose} />
     <link rel="preload" as="image" href={Leistungen} />
-    <meta
-        name="description"
-        content="Raucherentwöhnung, Selbstwert oder Reinkarnation, egal welches Thema Sie angehen möchten, ich arbeite mit Ihnen und einem individuellen Hypnose Konzept."
-    />
-    <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <div class="hero">
     <img
         class="hero-image"
         src={Leistungen}
-        alt="Baum auf einem Feld"
+        alt="Hypnose Leistungen - Bild von einem Baum auf einem Feld"
         srcset=""
         width="100%"
         height="100%"
@@ -46,7 +162,10 @@
 <article class="what-is-hypnose">
     <hgroup>
         <h1 class="heading">Hypnose und Weiterentwicklung in Klagenfurt</h1>
-        <p class="sub-heading">Was ist Hypnose?</p>
+        <p class="sub-heading">
+            Entdecken Sie, wie Hypnose Ihre Lebensqualität verbessern und Sie
+            bei der persönlichen Weiterentwicklung unterstützen kann.
+        </p>
     </hgroup>
     <Spacer></Spacer>
     <p class="text">

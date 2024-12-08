@@ -2,12 +2,21 @@
     import Cert1 from "$lib/images/cert1.webp";
     import Cert2 from "$lib/images/cert2.webp";
     import Diplom from "$lib/images/diplom-optimized.webp";
-    import { instagram, url } from "$lib/project.config";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import Uebermich from "$lib/images/ueber-mich-optimized.webp";
     import { page } from "$app/stores";
     import Spacer from "$lib/components/Spacer.svelte";
     import { serializeSchema } from "$lib";
+    import {
+        address,
+        city,
+        country,
+        email,
+        maps,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
 
     const structuredData = {
         "@context": "https://schema.org",
@@ -18,28 +27,48 @@
             "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
         url: `${url}${$page.url.pathname}`, // Fixed concatenation here
         image: Uebermich,
-        sameAs: [`${instagram}`],
+        sameAs: url,
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Service",
+            telephone: phone,
+            email: email,
+            areaServed: "AT",
+            availableLanguage: "de",
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: address, // Beispiel: genaue Straße
+            postalCode: postalCode, // Beispiel: Postleitzahl
+            addressLocality: city, // Stadt
+            addressCountry: country, // Land
+        },
     };
 </script>
 
 <svelte:head>
     <title>Über mich - Lisa Marie Loof, M.Sc.</title>
-
+    <meta
+        name="description"
+        content="Lisa Marie Loof, M.Sc. – Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching."
+    />
     <meta
         property="og:title"
-        content="Lisa Marie Loof, M.Sc. – Psychologin & Hypnose in Klagenfurt"
+        content="Ihre Psychologin & Coach in Klagenfurt - Lisa Marie Loof, M.Sc."
     />
     <meta
         property="og:description"
-        content="Lisa Marie Loof, M.Sc. – Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching. Jetzt Termin vereinbaren!"
+        content="Lisa Marie Loof, M.Sc. – Ihre Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching"
     />
     <meta property="og:image" content={Uebermich} />
     <meta property="og:url" content="{url}{$page.url.pathname}" />
-    <meta property="og:type" content="website" />
     <meta
-        name="description"
-        content="Lisa Marie Loof, M.Sc. – Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching"
+        property="og:image:alt"
+        content="Bild von Lisa Marie Loof am Schreibtisch in Ihrer Praxis"
     />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:type" content="website" />
+
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
     <link rel="preload" as="image" href={Cert1} />
     <link rel="preload" as="image" href={Cert2} />
@@ -54,7 +83,7 @@
         <img
             class="hero-image"
             src={Uebermich}
-            alt="Bild von Lisa Marie Loof"
+            alt="Bild von Lisa Marie Loof am Schreibtisch in Ihrer Praxis"
             srcset=""
             loading="eager"
             width="100%"
@@ -185,10 +214,11 @@
         details {
             width: 100%;
             max-width: var(--content-width);
-            background-color: var(--surface-2);
+            background-color: #525b58;
             transition: all var(--animation-time) ease-in-out;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             border-radius: 1rem;
+            --pico-accordion-open-summary-color: #fff !important;
             .image-wrapper {
                 display: flex;
                 flex-direction: row;
@@ -207,6 +237,8 @@
                 transition: all var(--animation-time) ease-in-out;
             }
             summary {
+                padding: 0;
+                margin: 0;
                 font-size: 1.2rem;
                 padding: 1rem;
                 width: 100%;
@@ -215,7 +247,15 @@
                 justify-content: space-between;
                 justify-self: center;
                 transition: all var(--animation-time) ease-in-out;
+                color: #fff;
+                &:active,
+                &:hover,
+                &:focus,
+                &:visited {
+                    color: #fff !important;
+                }
             }
+
             p {
                 font-size: 1rem;
                 padding: 3rem;

@@ -1,26 +1,94 @@
 <script lang="ts">
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
+    import { serializeSchema } from "$lib";
     import Spacer from "$lib/components/Spacer.svelte";
     import SubNav from "$lib/components/SubNav.svelte";
     import Rauchfrei from "$lib/images/rauchfrei-min.webp";
+    import {
+        address,
+        city,
+        country,
+        email,
+        maps,
+        phone,
+        postalCode,
+        url,
+    } from "$lib/project.config";
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Raucherentwöhnung durch Hypnose",
+        serviceType: "Hypnosis Services",
+        description:
+            "Raucherentwöhnung durch Hypnose mit Lisa Marie Loof. Sie erhalten professionelle Unterstützung, um rauchfrei zu werden und Ihre Lebensqualität zu verbessern.",
+        url: `${url}${$page.url.pathname}`,
+        provider: {
+            "@type": "Person",
+            name: "Lisa Marie Loof",
+            jobTitle: "diplomierte Hypnosetrainerin, Psychologin & Coach",
+        },
+        areaServed: {
+            "@type": "Place",
+            name: "Klagenfurt",
+        },
+        audience: {
+            "@type": "Audience",
+            audienceType: "Personen, die mit dem Rauchen aufhören möchten",
+        },
+        contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "Service",
+            telephone: phone,
+            email: email,
+            areaServed: "AT",
+            availableLanguage: "de",
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: address, // Beispiel: genaue Straße
+            postalCode: postalCode, // Beispiel: Postleitzahl
+            addressLocality: city, // Stadt
+            addressCountry: country, // Land
+        },
+        sameAs: url,
+    };
 </script>
 
 <svelte:head>
-    <title>Leistungen - Raucherentwoehnung</title>
+    <title>Raucherentwöhnung durch Hypnose | Lisa Marie Loof M.Sc.</title>
     <link rel="preload" as="image" href={Rauchfrei} />
     <meta
         name="description"
-        content="Sie wollen endlich rauchfrei werden? Raucherentwöhnung durch Hypnose mit Lisa Marie Loof BSc, diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt."
+        content="Sie möchten rauchfrei werden? Raucherentwöhnung durch Hypnose mit Lisa Marie Loof, diplomierte Hypnosetrainerin, Psychologin & Coach in Klagenfurt."
     />
+    <meta
+        property="og:title"
+        content="Raucherentwöhnung durch Hypnose | Lisa Marie Loof M.Sc."
+    />
+    <meta
+        property="og:description"
+        content="Sie möchten rauchfrei werden? Nutzen Sie die bewährte Methode der Raucherentwöhnung durch Hypnose. Lisa Marie Loof, diplomierte Hypnosetrainerin, Psychologin & Coach, hilft Ihnen, nachhaltig von der Zigarette loszukommen."
+    />
+    <meta property="og:url" content="{url}{$page.url.pathname}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={Rauchfrei} />
+    <meta
+        property="og:image:alt"
+        content="Symbolische Darstellung einer abgebrannten Zigarett"
+    />
+    <meta property="og:locale" content="de_DE" />
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+
+    {@html serializeSchema(structuredData)}
 </svelte:head>
 
 <div class="hero">
     <img
         class="hero-image"
         src={Rauchfrei}
-        alt="abgebrannte Zigarette"
+        alt="Hypnose Raucherentwöhnung - symbolische Darstellung einer abgebrannten Zigarette"
         srcset=""
         width="100%"
         height="100%"
