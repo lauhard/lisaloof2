@@ -358,6 +358,11 @@
         }
     }
     @media (max-width: 520px) {
+        .grid {
+            grid-template-columns: 1fr !important;
+            grid-auto-flow: dense;
+            height: max-content;
+        }
         .tile {
             &:nth-child(1),
             &:nth-child(4) {
