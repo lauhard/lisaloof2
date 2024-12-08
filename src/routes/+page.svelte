@@ -13,16 +13,7 @@
     import Scroll2Anchor from "$lib/components/Buttons/Scroll2Anchor.svelte";
     import Spacer from "$lib/components/Spacer.svelte";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
-    import {
-        address,
-        city,
-        country,
-        email,
-        maps,
-        phone,
-        postalCode,
-        url,
-    } from "$lib/project.config";
+    import { url } from "$lib/project.config";
     let innerWidth = $state(0);
     let innerHeight = $state(0);
     let DOMloaded: boolean = $state(false);
@@ -292,6 +283,8 @@
                 justify-content: center;
                 text-align: center;
                 width: 100%;
+                min-height: fit-content;
+                height: 100%;
                 max-width: 28rem;
                 overflow: hidden;
 
