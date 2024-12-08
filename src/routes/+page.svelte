@@ -239,9 +239,9 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-self: center;
+        /* justify-self: center;
         align-self: center;
-        justify-content: center;
+        justify-content: center;*/
         padding-block: 2rem;
         position: relative;
         .heading {
@@ -361,8 +361,9 @@
         .grid {
             grid-template-columns: 1fr !important;
             grid-auto-flow: dense;
-            max-height: fit-content;
+            min-height: fit-content;
             height: 100%;
+            background-color: red;
         }
         .tile {
             &:nth-child(1),
