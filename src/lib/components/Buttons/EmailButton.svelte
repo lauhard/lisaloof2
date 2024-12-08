@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { email } from "$lib/project.config";
     let {
-        email = "john@doe.com",
         title = "Kontaktformular öffnen",
         arialLabel = "navigate to contact-form",
         href = "#",

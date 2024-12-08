@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { maps } from "$lib/project.config";
     let {
         address = "Karte öffnen",
         title = "Karte öffnen",
         arialLabel = "navigate to contact",
-        href = "https://maps.app.goo.gl/pRxEHQqSaaTQySaW6",
+        href = maps,
     } = $props();
 </script>
 

@@ -1,10 +1,6 @@
 <script lang="ts">
-    let {
-        phone = "+43 67761750953",
-        title = "Anrufen",
-        arialLabel = "phone link",
-        href = "#",
-    } = $props();
+    import { phone } from "$lib/project.config";
+    let { title = "Anrufen", arialLabel = "phone link", href = "#" } = $props();
 </script>
 
 <div class="contact-wrapper flex-center">

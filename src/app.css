@@ -199,8 +199,8 @@ h6 {
   color: var(--text-1);
   margin: 0;
   padding: 0;
-  /*margin-bottom: 1.5rem;
-  margin-top: 0.5rem;*/
+  margin-bottom: 0.5rem;
+  /*margin-top: 0.5rem;*/
 }
 
 ul {
@@ -419,6 +419,7 @@ fieldset legend {
   min-inline-size: 100%;
   max-inline-size: 100%;
   width: 100%;
+  word-break: break-word;
   text-wrap: pretty;
 }
 

@@ -1,22 +1,70 @@
 <script lang="ts">
     import Cert1 from "$lib/images/cert1.webp";
     import Cert2 from "$lib/images/cert2.webp";
+    import Diplom from "$lib/images/diplom-optimized.webp";
+    import { instagram, url } from "$lib/project.config";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
-    import Uebermich from "$lib/images/lisa-desk2.jpg";
+    import Uebermich from "$lib/images/ueber-mich-optimized.webp";
     import { page } from "$app/stores";
     import Spacer from "$lib/components/Spacer.svelte";
+    import { get } from "svelte/store";
+
+    // Resolve dynamic data
+    const pageUrl = get(page).url.pathname; // Use Svelte store `get` method
+    const absoluteUrl = url + pageUrl;
+    const absoluteImageUrl = new URL(Uebermich, url).href; // Resolve full image URL
+
+    // Structured Data
+    let structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Lisa Marie Loof, M.Sc.",
+        jobTitle: "Psychologin, Coach und Hypnosetrainerin",
+        description:
+            "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
+        url: absoluteUrl,
+        image: absoluteImageUrl,
+        sameAs: [instagram],
+    };
 </script>
 
 <svelte:head>
     <title>Über mich - Lisa Marie Loof, M.Sc.</title>
-    <link rel="preload" as="image" href={Cert1} />
-    <link rel="preload" as="image" href={Cert2} />
-    <link rel="preload" as="image" href={Uebermich} />
+
+    <meta
+        property="og:title"
+        content="Lisa Marie Loof, M.Sc. – Psychologin & Hypnose in Klagenfurt"
+    />
+    <meta
+        property="og:description"
+        content="Lisa Marie Loof, M.Sc. – Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching. Jetzt Termin vereinbaren!"
+    />
+    <meta property="og:image" content={Uebermich} />
+    <meta property="og:url" content="{url}{$page.url.pathname}" />
+    <meta property="og:type" content="website" />
     <meta
         name="description"
-        content="Hallo, mein Name ist Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
+        content="Lisa Marie Loof, M.Sc. – Psychologin, Coach & Hypnosetrainerin in Klagenfurt. Spezialisiert auf psychologische Beratung, Hypnose, Coaching"
     />
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
+    <link rel="preload" as="image" href={Cert1} />
+    <link rel="preload" as="image" href={Cert2} />
+    <link rel="preload" as="image" href={Diplom} />
+    <link rel="preload" as="image" href={Uebermich} />
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Lisa Marie Loof, M.Sc.",
+            jobTitle: "Psychologin, Coach und Hypnosetrainerin",
+            description:
+                "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
+            url: absoluteUrl,
+            image: absoluteImageUrl,
+            sameAs: [instagram],
+        }
+    </script>
 </svelte:head>
 
 <section>
@@ -35,7 +83,7 @@
         <hgroup>
             <h1 class="heading">Lisa-Marie Loof, M.Sc.</h1>
             <h2 class="sub-heading">
-                Psychologische Beratung, Coaching und Hypnose in Klagenfurt.
+                Psychologische Beratung, Coaching & Hypnose in Klagenfurt.
             </h2>
         </hgroup>
         <Spacer></Spacer>
@@ -91,8 +139,8 @@
             <summary>Akademischer Abschluss</summary>
             <div class="image-wrapper">
                 <img
-                    src={Cert2}
-                    alt="zertifikat-2"
+                    src={Diplom}
+                    alt="Zeugnis Master of Science in Psychologie"
                     srcset=""
                     width="100%"
                     height="300px"
@@ -105,7 +153,7 @@
             <div class="image-wrapper">
                 <img
                     src={Cert1}
-                    alt="zertifikat-1"
+                    alt="Zertifikat Lisa Marie Loof für Hypnose"
                     srcset=""
                     loading="lazy"
                     width="100%"
@@ -113,7 +161,7 @@
                 />
                 <img
                     src={Cert2}
-                    alt="zertifikat-2"
+                    alt="Zertifikat Lisa Marie Loof für Hypnose Aufbaukurs"
                     srcset=""
                     loading="lazy"
                     width="100%"

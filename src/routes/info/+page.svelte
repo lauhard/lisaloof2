@@ -11,7 +11,7 @@
     <link rel="preload" as="image" href={info} />
     <meta
         name="description"
-        content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof B.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
+        content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin und Psychologin aus Klagenfurt"
     />
     <link rel="canonical" href="{PUBLIC_CANONICAL_URL}{$page.url.pathname}" />
 </svelte:head>
@@ -31,7 +31,6 @@
         <hgroup>
             <h1 class="heading">Informationen</h1>
         </hgroup>
-        <Spacer></Spacer>
         <p class="text">
             Meine Dienste ersetzen keinesfalls die eines Arztes, einer Ärztin,
             Psychotherapeut*innen oder Klinischen- und
@@ -45,12 +44,31 @@
             behalte ich mir das Recht vor, die Sitzung abzulehnen.
         </p>
         <Spacer></Spacer>
+        <aside>
+            <h3 class="">Termine</h3>
+            <p class="text">
+                Termine sind von Montag bis Freitag möglich.
+                <br />
+                In Ausnahmefällen sind Termine auch am Samstag und Sonntag möglich.
+                <br />
+                <span
+                    ><strong>
+                        Ich bitte Sie darum, vereinbarte Termin bis zu 24 Stunde
+                        vorher abzusagen.
+                        <br />
+                        Falls der Termin nicht eingehalten oder kurzfristiger abgesagt
+                        wird, ist das Honorar zu begleichen.
+                    </strong></span
+                ><br />
+            </p>
+        </aside>
+        <Spacer></Spacer>
         <article class="info">
             <div class="info-icon">
                 <AlertTriangle size="50" />
             </div>
             <h3 class="heading heading__important">Verschwiegenheit</h3>
-            <p class="">
+            <p class="text">
                 Selbstverständlich richte ich mich bei allen meinen Angeboten
                 nach dem Psycholog*innen Gesetz §37 sowie dem
                 Psychotherapiegesetzt §14. Demnach bin ich der absoluten
@@ -74,6 +92,12 @@
         align-items: center;
         justify-self: center;
         padding: var(--side);
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
     .information-hypnose {
         max-width: var(--content-width);

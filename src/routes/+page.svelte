@@ -36,12 +36,11 @@
 
 <svelte:head>
     <title
-        >Lisa Marie Loof B.Sc. - Zeit für Hypnose und Weiterentwicklung in
-        Klagenfurt</title
+        >Psychologische Beratung, Coaching & Hypnose – Lisa Marie Loof M.Sc.</title
     >
     <meta
         name="description"
-        content="Via Vitae - Coaching, Hypnose, Psychologische Beratung - Besuchen Sie mich in meiner Praxis in Klagenfunrt am Waaagplatz 3."
+        content="Lisa Marie Loof M.Sc. – Psychologin & Coach in Klagenfurt. Praxis für Hypnose, Coaching & psychologische Beratung. Vereinbaren Sie ein Erstgespräch am Waagplatz 3!"
     />
     <link rel="canonical" href={PUBLIC_CANONICAL_URL} />
     <link rel="preload" as="image" href={ProfileImage} />
