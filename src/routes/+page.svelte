@@ -361,7 +361,8 @@
         .grid {
             grid-template-columns: 1fr !important;
             grid-auto-flow: dense;
-            height: max-content;
+            max-height: fit-content;
+            height: 100%;
         }
         .tile {
             &:nth-child(1),
@@ -371,6 +372,9 @@
             .fraction-text {
                 text-align: center;
                 text-wrap: nowrap;
+            }
+            .image-wrapper {
+                max-height: 300px; // Adjust image max height for small screens
             }
         }
     }
