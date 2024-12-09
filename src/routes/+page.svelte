@@ -249,12 +249,12 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             margin-top: 1.5rem;
+            padding-inline: 1.5rem;
         }
         .grid {
             padding: var(--side);
-
             display: grid;
             grid-template-columns: var(--grid-columns);
             gap: 1.5rem;
@@ -285,7 +285,6 @@
                 justify-content: center;
                 text-align: center;
                 width: 100%;
-                min-height: fit-content;
                 height: 100%;
                 max-width: 28rem;
                 overflow: hidden;
@@ -300,7 +299,7 @@
                     flex-wrap: wrap;
                     justify-content: center;
                     justify-content: space-around;
-                    margin: 1rem;
+                    margin-top: 1rem;
                 }
                 .image-wrapper {
                     display: flex;
@@ -348,7 +347,7 @@
     }
     @media (max-width: 990px) {
         .grid {
-            --grid-columns: 1fr !important;
+            --grid-columns: 1fr;
             grid-auto-flow: dense;
         }
     }
@@ -362,23 +361,25 @@
             margin-bottom: 3rem;
         }
         .grid {
-            --grid-columns: minmax(200px, 1fr);
             grid-auto-flow: dense;
             min-height: fit-content;
             gap: 1rem;
             height: 100%;
-        }
-        .tile {
-            &:nth-child(1),
-            &:nth-child(4) {
-                padding: 0rem;
-            }
-            .fraction-text {
-                text-align: center;
-                text-wrap: nowrap;
-            }
-            .image-wrapper {
-                max-height: 300px; // Adjust image max height for small screens
+            .tile {
+                &:nth-child(1) {
+                    padding: 0rem;
+                    height: 490px;
+                }
+                &:nth-child(4) {
+                    padding: 0rem;
+                    height: 390px !important;
+                }
+                .fraction-text {
+                    text-align: center;
+                }
+                .image-wrapper {
+                    max-height: 300px; // Adjust image max height for small screens
+                }
             }
         }
     }

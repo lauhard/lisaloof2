@@ -158,7 +158,7 @@
             --cta-word-spacing: 5px;
             --cta-font-size: 0.8rem;
             --cta-padding-block: 0.3rem;
-            background-color: #96c5c8;
+            background-color: var(--primary);
             padding-block: 1rem;
             width: 100%;
             margin-bottom: 1rem;

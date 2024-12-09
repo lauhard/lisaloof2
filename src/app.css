@@ -212,9 +212,10 @@ h6 {
     max-width: 460px;
     width: 100%;
     overflow: hidden;
+    text-wrap: pretty;
     -webkit-hyphens: auto;
     hyphens: auto;
-    word-wrap: break-word !important;
+    word-wrap: break-word;
   }
 }
 
