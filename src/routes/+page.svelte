@@ -181,6 +181,7 @@
 <style lang="scss">
     :root {
         --offset: 11rem;
+        --grid-columns: repeat(2, 1fr);
     }
 
     .landing-page {
@@ -239,9 +240,9 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        /* justify-self: center;
+        justify-self: center;
         align-self: center;
-        justify-content: center;*/
+        justify-content: center;
         padding-block: 2rem;
         position: relative;
         .heading {
@@ -255,12 +256,11 @@
             padding: var(--side);
 
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: var(--grid-columns);
             gap: 1.5rem;
             align-self: center;
             height: 100%;
             min-height: fit-content;
-
             .tile {
                 &:nth-child(1),
                 &:nth-child(4) {
@@ -348,23 +348,25 @@
     }
     @media (max-width: 990px) {
         .grid {
-            grid-template-columns: 1fr !important;
+            --grid-columns: 1fr !important;
             grid-auto-flow: dense;
         }
     }
     @media (max-width: 800px) {
         .introduction {
-            margin-top: 70px !important;
+            margin-top: 70px;
         }
     }
     @media (max-width: 520px) {
+        .introduction {
+            margin-bottom: 3rem;
+        }
         .grid {
-            grid-template-columns: 1fr !important;
+            --grid-columns: minmax(200px, 1fr);
             grid-auto-flow: dense;
             min-height: fit-content;
             gap: 1rem;
             height: 100%;
-            background-color: red;
         }
         .tile {
             &:nth-child(1),
