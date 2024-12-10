@@ -217,10 +217,19 @@ h6 {
     margin: 0;
     padding: 0;
     margin-bottom: .5rem;
+    text-align: center;
+    font-family: "Zodiak-Bold";
+    color:var(--text-1);
+    min-inline-size: 100%;
+    max-inline-size: 100%;
+    width: 100%;
+    word-break: break-word;
+    text-wrap: pretty;
     /*margin-top: 0.5rem;*/
     @media (max-width: 480px) {
         max-width: 460px;
         width: 100%;
+        text-align: center;
         overflow: hidden;
         text-wrap: pretty;
         -webkit-hyphens: auto;
@@ -285,6 +294,7 @@ p{
     -ms-text-justify: kashida;
     color:var(--text-1);
     font-size: 1.1rem;
+
 }
 fieldset{
     border: #227d9431 1px solid;
@@ -311,7 +321,8 @@ fieldset{
     justify-self: center;
     align-self: center;
     text-align-last: center;
-
+    @media (max-width: 480px) {
+    }
 }
  @media (max-width: 670px) {
         .text {

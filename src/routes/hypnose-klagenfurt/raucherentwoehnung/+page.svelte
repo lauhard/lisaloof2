@@ -114,10 +114,8 @@
     <Spacer></Spacer>
     <p class="text">
         Ich freue mich darauf, Sie bei Ihrem Vorhaben, das Rauchen aufzugeben,
-        zu unterstützen.
+        zu unterstützen. Zusammen können wir Ihr Ziel erreichen.
     </p>
-    <Spacer></Spacer>
-    <p class="text">Zusammen können wir Ihr Ziel erreichen.</p>
 </article>
 
 <style lang="scss">

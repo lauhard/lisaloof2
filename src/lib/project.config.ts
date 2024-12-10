@@ -1,6 +1,6 @@
 import { dev } from '$app/environment';
 export const title = "Via Vitae";
-export const author = "Lisa Loof";
+export const author = "Lisa-Marie Loof";
 export const domain = "lisaloof.com";
 export const description = "Page description";
 export const url = dev ? "http://localhost:5173" : `https://${domain}`;

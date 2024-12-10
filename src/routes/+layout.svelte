@@ -8,14 +8,38 @@
     import { page } from "$app/stores";
     import Aside from "$lib/components/Aside.svelte";
     import { onMount } from "svelte";
+    import { afterNavigate, beforeNavigate } from "$app/navigation";
+    import SocialMedia from "$lib/components/SocialMedia.svelte";
     let { children } = $props();
     let show = $state(false);
+    let showInsta = $state(false);
     let scrolly = $state(0);
     let innerWidth = $state(0);
     let innerHeight = $state(0);
 
     const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
+    const offset = 400;
 
+    let oldScroll: number | undefined = undefined;
+
+    $effect(() => {
+        if (scrolly) {
+            if (oldScroll === undefined) {
+                oldScroll = scrolly;
+            }
+            if (oldScroll < scrolly && scrolly > offset) {
+                showInsta = true;
+            } else {
+                showInsta = false;
+            }
+            oldScroll = scrolly;
+        }
+    });
+    afterNavigate(() => {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 100);
+    });
     onMount(() => {
         if (isMobile()) {
             // Ensure the body is tall enough to allow scrolling
@@ -40,6 +64,7 @@
     {#if show}
         <Aside bind:show></Aside>
     {/if}
+    <SocialMedia hide={showInsta}></SocialMedia>
     <Navigation bind:show>
         {#snippet brand()}
             <li class="">

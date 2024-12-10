@@ -24,6 +24,6 @@
 
 <style lang="scss">
     .base {
-        color: var(--fill);
+        color: var(--primary);
     }
 </style>

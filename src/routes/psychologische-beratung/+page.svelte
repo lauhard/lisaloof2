@@ -142,7 +142,7 @@
         <Spacer></Spacer>
         <div>
             <p class="sub-heading">Ich unterstütze Sie bei:</p>
-            <ul>
+            <ul class="">
                 <li>Emotionalen Problemen</li>
                 <li>Klärung Ihrer Lebenszielen und Werte</li>
                 <li>Entwicklung von Bewältigungsstrategien</li>
@@ -185,6 +185,8 @@
                     margin: auto;
                     padding: auto;
                     margin-left: 1rem;
+                    padding-left: 1rem;
+                    font-size: 1.1rem;
                 }
             }
         }

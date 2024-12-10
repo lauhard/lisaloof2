@@ -112,6 +112,7 @@ ich benötige strukturierte Daten
         <h1 class="heading">Online Hypnose</h1>
         <p class="sub-heading">Hypnose bequem von Zuhause</p>
     </hgroup>
+    <Spacer></Spacer>
     <p class="text">
         Wir arbeiten in Hypnose mit Ihrem Unterbewusstsein und dafür müssen Sie
         sich nicht physisch mit mir in einem Raum befinden. Es ist also möglich,
@@ -179,14 +180,10 @@ ich benötige strukturierte Daten
         justify-self: center;
         align-items: center;
         align-self: center;
-        background-color: var(--surface-3);
         width: 100%;
-        padding: var(--side);
-        padding-block: 3rem;
         max-width: var(--content-width);
-
         section {
-            margin-top: 2rem;
+            margin-top: 1rem;
             align-self: center;
             max-width: 700px;
             width: 100%;
@@ -194,10 +191,16 @@ ich benötige strukturierte Daten
                 display: flex;
                 flex-direction: row;
                 width: 100%;
+
                 p {
                     margin-left: 1rem;
                 }
             }
+        }
+    }
+    @media (max-width: 975px) {
+        .prequisits {
+            border-radius: 0;
         }
     }
 </style>

@@ -200,6 +200,14 @@ h6 {
   margin: 0;
   padding: 0;
   margin-bottom: 0.5rem;
+  text-align: center;
+  font-family: "Zodiak-Bold";
+  color: var(--text-1);
+  min-inline-size: 100%;
+  max-inline-size: 100%;
+  width: 100%;
+  word-break: break-word;
+  text-wrap: pretty;
   /*margin-top: 0.5rem;*/
 }
 @media (max-width: 480px) {
@@ -211,6 +219,7 @@ h6 {
   h6 {
     max-width: 460px;
     width: 100%;
+    text-align: center;
     overflow: hidden;
     text-wrap: pretty;
     -webkit-hyphens: auto;
@@ -309,7 +318,6 @@ fieldset legend {
   -moz-text-align-last: center;
        text-align-last: center;
 }
-
 @media (max-width: 670px) {
   .text {
     text-wrap: balance;

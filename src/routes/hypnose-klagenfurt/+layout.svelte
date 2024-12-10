@@ -1,44 +1,41 @@
 <script lang="ts">
-    import { afterNavigate } from "$app/navigation";
-    import { base } from "$app/paths";
+    import { afterNavigate, beforeNavigate } from "$app/navigation";
     import { page } from "$app/stores";
+    import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
+    import { phone } from "$lib/project.config.js";
+    import { onMount } from "svelte";
     let { children, data } = $props();
     console.log("data", data);
-
-    let previousPage: string = base;
-    afterNavigate(({ from }) => {
-        previousPage = from?.url.pathname || previousPage;
+    let telNr = `tel:${phone}`;
+    onMount(() => {
+        console.log("data", data);
+    });
+    afterNavigate(() => {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }, 500);
     });
 </script>
 
 <section>
     {@render children()}
     {#if $page.url.pathname !== "/hypnose-klagenfurt"}
-        <a
-            class="back-button"
-            title="Zurück"
-            aria-label="zurück zur hypnose"
-            href="/hypnose-klagenfurt">Zurück zu Hypnose</a
-        >
-
-        <!-- content here -->
+        <div class="terminvereinbarung">
+            <h2 class="heading">Vereinbaren Sie einen Termin</h2>
+            <div>
+                <CtaButton
+                    title="Zum Kontaktformular"
+                    text="Zum Kontaktformular"
+                    href="/kontakt"
+                ></CtaButton>
+                <CtaButton title="Zum Kontaktformular" text={phone} href={telNr}
+                ></CtaButton>
+            </div>
+        </div>
     {/if}
 </section>
 
 <style lang="scss">
-    .back-button {
-        margin-top: 2rem;
-        padding-block: 0.5rem;
-        padding-inline: 1.5rem;
-        color: var(--text-1);
-        box-shadow: var(--shadow-2);
-        border: 1px solid var(--surface-3);
-        font-size: 0.9rem;
-        word-spacing: 0.5rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        border-radius: 0.5rem;
-    }
     section {
         height: 100%;
         width: 100%;
@@ -48,7 +45,49 @@
         justify-self: center;
         align-self: center;
         position: relative;
-        margin-bottom: 6rem;
         position: relative;
+    }
+    .terminvereinbarung {
+        --cta-font-size: 1rem;
+        --cta-background: var(--primary);
+        --cta-border-color: var(--primary);
+        --cta-background-hover: var(--accent);
+        --cta-border-color-hover: var(--accent);
+        --cta-color-hover: #fff;
+        --cta-border-color: var(--primary);
+        --cta-letter-spacing: 0.05rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        min-width: 100vw;
+        padding-block: 5rem;
+        background-color: #c9e4d4;
+        h2 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+        div {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    @media (max-width: 520px) {
+        .terminvereinbarung {
+            padding-block: 2rem;
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media (max-width: 460px) {
+        .terminvereinbarung {
+            div {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
     }
 </style>

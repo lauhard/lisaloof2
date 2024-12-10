@@ -1,6 +1,7 @@
 <script lang="ts">
     import { phone } from "$lib/project.config";
     let { title = "Anrufen", arialLabel = "phone link", href = "#" } = $props();
+    let phoneNumber = `tel:${phone}`;
 </script>
 
 <div class="contact-wrapper flex-center">
@@ -9,7 +10,7 @@
         {title}
         class="contact circle flex-center"
         aria-label={arialLabel}
-        {href}
+        href={phoneNumber}
     >
         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"
             ><path

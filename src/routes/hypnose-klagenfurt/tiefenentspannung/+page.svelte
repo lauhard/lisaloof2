@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { afterNavigate } from "$app/navigation";
     import { page } from "$app/stores";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import { serializeSchema } from "$lib";
@@ -14,6 +15,7 @@
         postalCode,
         url,
     } from "$lib/project.config";
+    import { onMount } from "svelte";
 
     const structuredData = {
         "@context": "https://schema.org",

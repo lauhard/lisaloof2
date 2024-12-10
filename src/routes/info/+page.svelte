@@ -3,7 +3,7 @@
     import Spacer from "$lib/components/Spacer.svelte";
     import { PUBLIC_CANONICAL_URL } from "$env/static/public";
     import { AlertTriangle } from "lucide-svelte";
-    import info from "$lib/images/info.png";
+    import info from "$lib/images/info-optimized.webp";
 </script>
 
 <svelte:head>
@@ -30,44 +30,32 @@
     <article class="hypnose">
         <hgroup>
             <h1 class="heading">Informationen</h1>
-        </hgroup>
-        <p class="text">
-            Meine Dienste ersetzen keinesfalls die eines Arztes, einer Ärztin,
-            Psychotherapeut*innen oder Klinischen- und
-            Gesundheitspsycholog*innen. Ich handle nicht außerhalb meines
-            Tätigkeitsbereiches, ich betreibe keine Diagnostik, verschreibe
-            keine Medikamente, gebe keine Versprechen jeglicher Art ab oder
-            behandle medizinische oder psychische Leiden. Falls Sie an
-            entsprechenden Erkrankungen leiden, wenden Sie sich bitte an die
-            zuständigen Fachärzte*innen. Falls ich die Beratung/Coaching oder
-            Hypnose aufgrund oben genannter Gründe für nicht sinnvoll erachte,
-            behalte ich mir das Recht vor, die Sitzung abzulehnen.
-        </p>
-        <Spacer></Spacer>
-        <aside>
-            <h3 class="">Termine</h3>
-            <p class="text">
-                Termine sind von Montag bis Freitag möglich.
-                <br />
-                In Ausnahmefällen sind Termine auch am Samstag und Sonntag möglich.
-                <br />
-                <span
-                    ><strong>
-                        Ich bitte Sie darum, vereinbarte Termin bis zu 24 Stunde
-                        vorher abzusagen.
-                        <br />
-                        Falls der Termin nicht eingehalten oder kurzfristiger abgesagt
-                        wird, ist das Honorar zu begleichen.
-                    </strong></span
-                ><br />
+            <p class="sub-heading">
+                Leistungsgrenzen, Vertraulichkeit und Termine
             </p>
-        </aside>
+        </hgroup>
         <Spacer></Spacer>
         <article class="info">
             <div class="info-icon">
                 <AlertTriangle size="50" />
             </div>
-            <h3 class="heading heading__important">Verschwiegenheit</h3>
+            <h2 class=" heading__important">Abgrenzung meiner Leistungen</h2>
+            <p class="text">
+                Meine Dienste ersetzen keinesfalls die eines Arztes, einer
+                Ärztin, Psychotherapeut*innen oder Klinischen- und
+                Gesundheitspsycholog*innen. Ich handle nicht außerhalb meines
+                Tätigkeitsbereiches, ich betreibe keine Diagnostik, verschreibe
+                keine Medikamente, gebe keine Versprechen jeglicher Art ab oder
+                behandle medizinische oder psychische Leiden. Falls Sie an
+                entsprechenden Erkrankungen leiden, wenden Sie sich bitte an die
+                zuständigen Fachärzte*innen. Falls ich die Beratung/Coaching
+                oder Hypnose aufgrund oben genannter Gründe für nicht sinnvoll
+                erachte, behalte ich mir das Recht vor, die Sitzung abzulehnen.
+            </p>
+        </article>
+        <Spacer></Spacer>
+        <article class="">
+            <h2 class=" heading__important">Verschwiegenheit</h2>
             <p class="text">
                 Selbstverständlich richte ich mich bei allen meinen Angeboten
                 nach dem Psycholog*innen Gesetz §37 sowie dem
@@ -77,6 +65,36 @@
             </p>
         </article>
     </article>
+    <Spacer></Spacer>
+    <aside>
+        <h2 class="">Termine</h2>
+        <p class="text">
+            Terminvereinbarungen sind telefonisch oder per E-Mail möglich.
+        </p>
+        <ul>
+            <li>Montag bis Freitag von 9:00 bis 18:00 Uhr</li>
+            <li>
+                <a class="" href="tel:+4367761750953"
+                    >Tel: +43 (0) 67761750953</a
+                >
+            </li>
+            <li>
+                <a class="" href="mailto:praxis@lisaloof.com"
+                    >Mail: praxis@lisaloof.com</a
+                >
+            </li>
+        </ul>
+        <ul></ul>
+        <p class="text attention">
+            <strong>
+                Ich bitte Sie darum, vereinbarte Termin bis zu 24 Stunde vorher
+                abzusagen.
+                <br />
+                Falls der Termin nicht eingehalten oder kurzfristiger abgesagt wird,
+                ist das Honorar zu begleichen.
+            </strong>
+        </p>
+    </aside>
 </section>
 
 <style lang="scss">
@@ -87,17 +105,28 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        max-width: var(--content-width);
         align-self: center;
         align-items: center;
         justify-self: center;
+        max-width: var(--content-width);
         padding: var(--side);
     }
     aside {
+        h2 {
+            margin-bottom: 1rem;
+        }
         display: flex;
         justify-content: center;
         flex-direction: column;
         text-align: center;
+        max-width: var(--content-width);
+        padding: var(--side);
+        .attention {
+            max-width: 600px;
+            border: 1px solid #e04444;
+            padding: 1rem;
+            border-radius: 0.7rem;
+        }
     }
     .information-hypnose {
         max-width: var(--content-width);
@@ -119,8 +148,9 @@
         border-radius: 2rem;
         position: relative;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         p {
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
         .info-icon {
             position: absolute;
@@ -134,8 +164,8 @@
             background-color: var(--primary);
             color: var(--surface-3);
             padding: 0.5rem 0 0.7rem 0;
-            height: 3.5rem;
-            width: 3.5rem;
+            height: 3rem;
+            width: 3rem;
             border-radius: 50%;
         }
     }

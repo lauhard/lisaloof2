@@ -138,7 +138,7 @@
                 </p>
                 <div class="contact-buttons" style="">
                     <PhoneButton></PhoneButton>
-                    <EmailButton></EmailButton>
+                    <EmailButton href="/kontakt"></EmailButton>
                 </div>
             </div>
             <div class="tile">

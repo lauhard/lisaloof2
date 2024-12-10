@@ -1,5 +1,8 @@
 <script>
-    import instagram from "$lib/svg/instagram.svg";
+    import { author, instagram } from "$lib/project.config";
+    import Instagram from "$lib/svg/instagram.svg";
+    //current year
+    let year = new Date().getFullYear();
 </script>
 
 <footer>
@@ -52,11 +55,11 @@
                     <a
                         class="insta-button"
                         role="button"
-                        href="https://www.instagram.com/hypnose_loof/"
+                        href={instagram}
                         target="_blank"
                     >
-                        <img src={instagram} alt="" />
-                        <p class="">Instagram</p>
+                        <img src={Instagram} alt="Instagram Logo" />
+                        <p>Instagram</p>
                     </a>
                 </li>
             </ul>
@@ -73,6 +76,7 @@
             </ul>
         </div>
     </section>
+    <p class="copyright">© {year} {author}. All rights reserved.</p>
 </footer>
 
 <style lang="scss">
@@ -81,11 +85,19 @@
         display: flex;
         padding-top: 6rem;
         padding-bottom: 2rem;
-        min-height: 14rem;
+        min-height: 15rem;
         width: 100%;
+        position: relative;
+        .copyright {
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            bottom: 1px;
+            color: var(--brand);
+        }
 
         section {
-            margin-left: 30rem;
+            margin-left: 25rem;
             width: 100%;
             height: 100%;
             display: flex;
@@ -93,6 +105,9 @@
             align-items: flex-start;
             flex-wrap: wrap;
             justify-content: space-between;
+            min-height: 15rem;
+            margin-bottom: 3rem;
+
             .cell {
                 display: flex;
                 flex-direction: column;
@@ -123,6 +138,7 @@
                     width: 33.3%;
                     font-size: 1.5rem;
                     color: var(--brand);
+                    text-align: left;
                 }
                 .insta-button {
                     background: none;
@@ -134,8 +150,11 @@
                         height: 3rem;
                         width: 3rem;
                         margin-top: 1rem;
+                    }
+                    p {
+                        text-decoration: underline;
                         &:hover {
-                            border-radius: 1rem;
+                            color: var(--primary);
                         }
                     }
                 }
@@ -162,6 +181,7 @@
                     text-align: center;
                     h4 {
                         width: auto;
+                        text-align: center;
                         margin-top: 2rem;
                     }
                 }

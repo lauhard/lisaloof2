@@ -25,6 +25,8 @@
         url,
     } from "$lib/project.config";
     import { serializeSchema } from "$lib";
+    import { beforeNavigate } from "$app/navigation";
+    import { onMount } from "svelte";
 
     const structuredData = {
         "@context": "https://schema.org",
@@ -358,5 +360,6 @@
         align-items: flex-start;
         justify-self: center;
         margin: 0 auto;
+        margin-bottom: 5rem;
     }
 </style>
