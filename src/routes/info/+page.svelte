@@ -27,7 +27,7 @@
             height="100%"
         />
     </div>
-    <article class="hypnose">
+    <article>
         <hgroup>
             <h1 class="heading">Informationen</h1>
             <p class="sub-heading">
@@ -36,9 +36,6 @@
         </hgroup>
         <Spacer></Spacer>
         <article class="info">
-            <div class="info-icon">
-                <AlertTriangle size="50" />
-            </div>
             <h2 class=" heading__important">Abgrenzung meiner Leistungen</h2>
             <p class="text">
                 Meine Dienste ersetzen keinesfalls die eines Arztes, einer
@@ -55,7 +52,7 @@
         </article>
         <Spacer></Spacer>
         <article class="">
-            <h2 class=" heading__important">Verschwiegenheit</h2>
+            <h2 class=" ">Verschwiegenheit</h2>
             <p class="text">
                 Selbstverständlich richte ich mich bei allen meinen Angeboten
                 nach dem Psycholog*innen Gesetz §37 sowie dem
@@ -150,7 +147,9 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         p {
-            margin-top: 2rem;
+            margin-top: 1rem;
+            text-align: left;
+            text-wrap: pretty;
         }
         .info-icon {
             position: absolute;
@@ -160,7 +159,7 @@
             vertical-align: center;
             flex-direction: column;
             left: 1rem;
-            top: 1rem;
+            top: 1.5rem;
             background-color: var(--primary);
             color: var(--surface-3);
             padding: 0.5rem 0 0.7rem 0;
@@ -172,7 +171,7 @@
     @media (max-width: 768px) {
         .heading__important {
             font-size: 1.4rem;
-            margin-left: 2rem;
+            margin-top: 0rem;
         }
     }
 </style>
