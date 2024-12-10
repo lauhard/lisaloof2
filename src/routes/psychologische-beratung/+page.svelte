@@ -14,7 +14,8 @@
         postalCode,
         url,
     } from "$lib/project.config";
-
+    import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
+    let telNr = `tel:${phone}`;
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -151,9 +152,50 @@
             </ul>
         </div>
     </article>
+    <div class="terminvereinbarung">
+        <h2 class="heading">Vereinbaren Sie einen Termin</h2>
+        <div>
+            <CtaButton
+                title="Zum Kontaktformular"
+                text="Zum Kontaktformular"
+                href="/kontakt"
+            ></CtaButton>
+            <CtaButton title="Zum Kontaktformular" text={phone} href={telNr}
+            ></CtaButton>
+        </div>
+    </div>
 </section>
 
 <style lang="scss">
+    section {
+        .terminvereinbarung {
+            --cta-font-size: 1rem;
+            --cta-background: var(--primary);
+            --cta-border-color: var(--primary);
+            --cta-background-hover: var(--accent);
+            --cta-border-color-hover: var(--accent);
+            --cta-color-hover: #fff;
+            --cta-border-color: var(--primary);
+            --cta-letter-spacing: 0.05rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5rem;
+            min-width: 100vw;
+            padding-block: 5rem;
+            background-color: #c9e4d4;
+            h2 {
+                margin: 0;
+                padding: 0;
+                margin-bottom: 2rem;
+            }
+            div {
+                display: flex;
+                gap: 1rem;
+            }
+        }
+    }
     article {
         display: flex;
         flex-direction: column;
@@ -163,7 +205,6 @@
         max-width: var(--content-width);
         padding: var(--side);
         justify-self: center;
-        margin-bottom: 4rem;
         div {
             display: flex;
             flex-direction: column;

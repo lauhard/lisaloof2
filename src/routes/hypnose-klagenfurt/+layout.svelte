@@ -3,13 +3,9 @@
     import { page } from "$app/stores";
     import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
     import { phone } from "$lib/project.config.js";
-    import { onMount } from "svelte";
-    let { children, data } = $props();
-    console.log("data", data);
+    let { children } = $props();
     let telNr = `tel:${phone}`;
-    onMount(() => {
-        console.log("data", data);
-    });
+
     afterNavigate(() => {
         setTimeout(() => {
             window.scrollTo({ top: 0, behavior: "smooth" });

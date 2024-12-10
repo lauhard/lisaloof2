@@ -1,8 +1,8 @@
 <script lang="ts">
     import LogoSvg from "$lib/components/LogoSvg.svelte";
-    import ProfileImage from "$lib/images/main-cutout-2.png";
-    import Praxis1 from "$lib/images/praxis1.jpg";
-    import Praxis2 from "$lib/images/praxis2.jpg";
+    import ProfileImage from "$lib/images/main-cutout-2-optimized.webp";
+    import Praxis1 from "$lib/images/praxis1-optimized.webp";
+    import Praxis2 from "$lib/images/praxis2-optimized.webp";
     import Logo from "$lib/images/logo2.webp";
     import { onMount } from "svelte";
     import PhoneButton from "$lib/components/Buttons/PhoneButton.svelte";
