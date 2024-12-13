@@ -437,6 +437,9 @@ fieldset{
     width: 100%;
     word-break: break-word;
     text-wrap: pretty;
+    @media (max-width: 480px) {
+        font-size: 1.6rem;
+    }
 }
 .sub-heading {
     font-family: PlusJakartaSans-Regular;

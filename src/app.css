@@ -446,6 +446,11 @@ fieldset legend {
   word-break: break-word;
   text-wrap: pretty;
 }
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+}
 
 .sub-heading {
   font-family: PlusJakartaSans-Regular;

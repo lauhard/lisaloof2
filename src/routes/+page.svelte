@@ -98,7 +98,7 @@
                 Herzlich Willkommen
             </div>
             <h1 class="sub-heading">
-                zu Ihrer Psychologische Beratung, Coaching und Hypnose in
+                zu Ihrer Psychologischen Beratung, Coaching und Hypnose in
                 Klagenfurt. Schön, dass Sie den Weg zu mir gefunden haben!
             </h1>
         </hgroup>
@@ -124,7 +124,7 @@
             Sehen Sie sich auf meiner Seite um und erfahren Sie mehr über mein
             Angebot und meine Arbeitsweise. Bei Fragen stehe ich Ihnen gerne zur
             Verfügung. Vereinbaren Sie einen Termin für ein unverbindliches
-            Erstgespräch, und lassen Sie uns gemeinsam den ersten Schritt zu
+            Erstgespräch und lassen Sie uns gemeinsam den ersten Schritt zu
             Ihrer inneren Balance gehen.
         </p>
     </article>
