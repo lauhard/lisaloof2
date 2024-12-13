@@ -13,7 +13,7 @@ export const formAction = async ({ form, data, action, cancel, submitter }: any,
         // console.log("isvalid", isValid)
         if (isValid === "success") {
             if (result?.data?.success) {
-                form.reset();
+                //form.reset();
             }
             // console.log("result.data",result.data)
             await invalidateAll(); // run all load functions

@@ -30,6 +30,7 @@
         const { success } = result.data;
         if (success) {
             console.log("success", success);
+            myForm.reset();
             //toast.push(
             //    "Vielen Dank für Ihre Anfrage. Ich werde mich schnellstmöglich bei Ihnen melden."
             //);
