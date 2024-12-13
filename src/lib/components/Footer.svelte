@@ -10,7 +10,7 @@
         <div class="cell contact">
             <h4>Kontakt</h4>
             <address class="address-wrapper">
-                Lisa-Marie Loof <br />
+                Lisa-Marie Loof M.Sc. <br />
                 Waagplatz 3, 9020 Klagenfurt <br />
                 Österreich
             </address>

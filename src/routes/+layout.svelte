@@ -20,7 +20,7 @@
     let innerHeight = $state(0);
 
     const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
-    const offset = 250;
+    let offset = $state(250);
 
     let oldScroll: number | undefined = undefined;
 
@@ -35,6 +35,9 @@
                 showInsta = false;
             }
             oldScroll = scrolly;
+        }
+        if (innerWidth < 600) {
+            offset = 50;
         }
     });
     afterNavigate(() => {
