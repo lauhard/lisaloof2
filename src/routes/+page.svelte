@@ -19,7 +19,6 @@
     let DOMloaded: boolean = $state(false);
     let scrolly = $state(0);
     //absolute path to image url
-    let absoluteImagePath = `${url}${ProfileImage}`;
 
     onMount(() => {
         DOMloaded = true;
@@ -54,7 +53,7 @@
         property="og:description"
         content="Lisa Marie Loof, M.Sc. – Ihre Psychologin, Coach & Hypnosetrainerin in Klagenfurt."
     />
-    <meta property="og:image" content={absoluteImagePath} />
+    <meta property="og:image" content="{url}{Logo}" />
     <meta property="og:url" content={url} />
     <meta
         property="og:image:alt"
