@@ -848,7 +848,6 @@
         flex-direction: column;
         justify-content: center;
         justify-self: center;
-        width: 800px;
     }
 
     .datenschutz {
