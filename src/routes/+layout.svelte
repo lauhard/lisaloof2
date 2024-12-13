@@ -20,7 +20,7 @@
     let innerHeight = $state(0);
 
     const isMobile = () => /Mobi|Android/i.test(navigator.userAgent);
-    const offset = 400;
+    const offset = 250;
 
     let oldScroll: number | undefined = undefined;
 

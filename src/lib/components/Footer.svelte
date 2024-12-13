@@ -76,7 +76,7 @@
             </ul>
         </div>
     </section>
-    <p class="copyright">© {year} {author}. All rights reserved.</p>
+    <p class="copyright">© {year} {author} M.Sc. All rights reserved.</p>
 </footer>
 
 <style lang="scss">
