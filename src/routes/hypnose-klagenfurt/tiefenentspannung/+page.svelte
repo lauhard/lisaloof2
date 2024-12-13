@@ -56,7 +56,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: Tiefenentspannung,
+            url: `${url}${Tiefenentspannung}`,
             width: 1200,
             height: 628,
         },

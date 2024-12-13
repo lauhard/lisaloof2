@@ -56,7 +56,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: Digitaldetox,
+            url: `${url}${Digitaldetox}`,
             width: 1200,
             height: 628,
         },

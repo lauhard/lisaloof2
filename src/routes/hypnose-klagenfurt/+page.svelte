@@ -60,7 +60,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: Leistungen,
+            url: `${url}${Leistungen}`,
             width: 1200,
             height: 628,
         },

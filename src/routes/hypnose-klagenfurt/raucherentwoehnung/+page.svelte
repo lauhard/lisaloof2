@@ -55,7 +55,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: Rauchfrei,
+            url: `${url}${Rauchfrei}`,
             width: 1200,
             height: 628,
         },

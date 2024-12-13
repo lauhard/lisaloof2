@@ -56,7 +56,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: OnlineHypnose,
+            url: `${url}${OnlineHypnose}`,
             width: 1200,
             height: 628,
         },

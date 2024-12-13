@@ -55,7 +55,7 @@
         sameAs: url,
         image: {
             "@type": "ImageObject",
-            url: Selbstwert,
+            url: `${url}${Selbstwert}`,
             width: 1200,
             height: 628,
         },

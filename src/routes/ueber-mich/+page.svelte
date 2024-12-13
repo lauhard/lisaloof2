@@ -44,7 +44,7 @@
         },
         image: {
             "@type": "ImageObject",
-            url: Uebermich,
+            url: `${url}${Uebermich}`,
             width: 1200,
             height: 628,
         },
