@@ -53,7 +53,7 @@
         property="og:description"
         content="Lisa Marie Loof, M.Sc. – Ihre Psychologin, Coach & Hypnosetrainerin in Klagenfurt."
     />
-    <meta property="og:image" content="{url}{Logo}" />
+    <meta property="og:image" content="{url}{ProfileImage}" />
     <meta property="og:url" content={url} />
     <meta
         property="og:image:alt"
