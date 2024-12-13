@@ -53,6 +53,13 @@
             addressCountry: country, // Land
         },
         sameAs: url,
+        image: {
+            "@type": "ImageObject",
+            url: Selbstwert,
+            width: 1200,
+            height: 628,
+        },
+        inLanguage: "de",
     };
 </script>
 

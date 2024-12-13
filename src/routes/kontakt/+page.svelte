@@ -9,7 +9,7 @@
     import FormError from "$lib/components/FormError.svelte";
     import Checkbox from "$lib/components/Checkbox.svelte";
     import CtaButton from "$lib/components/Buttons/CtaButton.svelte";
-    import kontakt from "$lib/images/kontakt.jpg";
+    import kontakt from "$lib/images/kontakt-min.webp";
 
     console.log("canonical url: ", PUBLIC_CANONICAL_URL + $page.url.pathname);
 

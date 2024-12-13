@@ -26,7 +26,6 @@
         description:
             "Psychologische Beratung, Coaching und Hypnose in Klagenfurt.",
         url: `${url}${$page.url.pathname}`, // Fixed concatenation here
-        image: Uebermich,
         sameAs: url,
         contactPoint: {
             "@type": "ContactPoint",
@@ -43,6 +42,13 @@
             addressLocality: city, // Stadt
             addressCountry: country, // Land
         },
+        image: {
+            "@type": "ImageObject",
+            url: Uebermich,
+            width: 1200,
+            height: 628,
+        },
+        inLanguage: "de",
     };
 </script>
 

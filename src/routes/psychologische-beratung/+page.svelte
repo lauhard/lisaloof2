@@ -56,6 +56,13 @@
             addressCountry: country, // Land
         },
         sameAs: url,
+        image: {
+            "@type": "ImageObject",
+            url: Beratung,
+            width: 1200,
+            height: 628,
+        },
+        inLanguage: "de",
     };
 </script>
 

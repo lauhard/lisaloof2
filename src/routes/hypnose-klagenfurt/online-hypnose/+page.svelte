@@ -54,6 +54,13 @@
             addressCountry: country, // Land
         },
         sameAs: url,
+        image: {
+            "@type": "ImageObject",
+            url: OnlineHypnose,
+            width: 1200,
+            height: 628,
+        },
+        inLanguage: "de",
     };
 </script>
 

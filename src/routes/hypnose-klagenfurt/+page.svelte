@@ -58,6 +58,12 @@
             sameAs: maps,
         },
         sameAs: url,
+        image: {
+            "@type": "ImageObject",
+            url: Leistungen,
+            width: 1200,
+            height: 628,
+        },
         offers: [
             {
                 "@type": "Offer",
