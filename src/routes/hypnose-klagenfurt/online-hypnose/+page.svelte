@@ -73,7 +73,7 @@ ich benötige strukturierte Daten
 -->
 <svelte:head>
     <title>Online Hypnose | Lisa Marie Loof M.Sc.</title>
-    <link rel="preload" as="image" href={OnlineHypnose} />
+    <link rel="preload" as="image" href="{url}{OnlineHypnose}" />
     <meta
         name="description"
         content="Hypnose egal von welchem Ort. Online Hypnose mit Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin, Psychologin und Coach aus Klagenfurt"

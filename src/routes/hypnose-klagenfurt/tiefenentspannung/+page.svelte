@@ -92,7 +92,7 @@ ich benötige strukturierte Daten
         content="{PUBLIC_CANONICAL_URL}{$page.url.pathname}"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={Tiefenentspannung} />
+    <meta property="og:image" content="{url}{Tiefenentspannung}" />
     <meta
         property="og:image:alt"
         content="Tiefenentspannung - Bild von einem See bei Nacht"

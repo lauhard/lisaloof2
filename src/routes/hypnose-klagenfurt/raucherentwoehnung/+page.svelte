@@ -65,7 +65,7 @@
 
 <svelte:head>
     <title>Raucherentwöhnung durch Hypnose | Lisa Marie Loof M.Sc.</title>
-    <link rel="preload" as="image" href={Rauchfrei} />
+    <link rel="preload" as="image" href="{url}{Rauchfrei}" />
     <meta
         name="description"
         content="Sie möchten rauchfrei werden? Raucherentwöhnung durch Hypnose mit Lisa Marie Loof, diplomierte Hypnosetrainerin, Psychologin & Coach in Klagenfurt."

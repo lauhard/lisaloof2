@@ -66,7 +66,7 @@
 
 <svelte:head>
     <title>Digital Detox duch Hypnose | Lisa Marie Loof M.Sc.</title>
-    <link rel="preload" as="image" href={Digitaldetox} />
+    <link rel="preload" as="image" href="{url}{Digitaldetox}" />
     <meta
         name="description"
         content="Ein Tag ohne Smartphone ist kein Weltuntergang. Digital Detox durch Hypnose mit Lisa Marie Loof, diplomierte Hypnosetrainerin, Psychologin & Coach in Klagenfurt."

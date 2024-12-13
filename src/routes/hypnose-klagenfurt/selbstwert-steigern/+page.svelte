@@ -78,7 +78,7 @@
         property="og:description"
         content="Verbessern Sie Ihr Selbstwertgefühl mit professioneller Hypnose bei Lisa Marie Loof M.Sc."
     />
-    <meta property="og:image" content={Selbstwert} />
+    <meta property="og:image" content="{url}{Selbstwert}" />
     <meta property="og:url" content="{url}{$page.url.pathname}" />
     <meta property="og:type" content="website" />
     <meta

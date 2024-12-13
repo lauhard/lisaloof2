@@ -72,7 +72,7 @@ ich benötige strukturierte Daten
 -->
 <svelte:head>
     <title>Entspannt in die Prüfung / Entspannt vortragen</title>
-    <link rel="preload" as="image" href={Pruefungsangst} />
+    <link rel="preload" as="image" href="{url}{Pruefungsangst}" />
     <meta
         name="description"
         content="Meistern Sie Prüfungen, Vorträge oder Präsentationen durch Hypnose mit Lisa Marie Loof M.Sc., diplomierte Hypnosetrainerin, Psychologin & Coach in Klagenfurt"

@@ -136,7 +136,7 @@
         property="og:description"
         content="Erfahren Sie, wie Ihnen Hypnose bei Raucherentwöhnung, Stressabbau und vielem mehr helfen kann. Jetzt mehr erfahren!"
     />
-    <meta property="og:image" content={Leistungen} />
+    <meta property="og:image" content="{url}{Leistungen}" />
     <meta property="og:url" content="{url}{$page.url.pathname}" />
     <meta property="og:type" content="website" />
     <meta
