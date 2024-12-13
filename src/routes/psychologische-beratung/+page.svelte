@@ -76,7 +76,7 @@
         property="og:description"
         content="Ich biete professionelle psychologische Beratung und Coaching in Klagenfurt an. Ich unterstütze Sie bei emotionalen, psychischen und berufliche Herausforderungen."
     />
-    <meta property="og:image" content={Beratung} />
+    <meta property="og:image" content="{url}{Beratung}" />
     <meta
         property="og:image:alt"
         content="Psychologische Beratung & Coaching in Klagenfurt - Bild von Lisa Marie Loof M.Sc auf einem Sessel"
