@@ -30,6 +30,11 @@
         },
         {
             id: 6,
+            key: "Psychologische-Beratung",
+            value: "Psychologische Beratung",
+        },
+        {
+            id: 7,
             key: "sonstiges",
             value: "Sonstige Anfragen",
         },

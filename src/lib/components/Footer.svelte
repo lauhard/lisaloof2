@@ -41,9 +41,7 @@
                     <a class="" href="/hypnose-klagenfurt">Hypnose</a>
                 </li>
                 <li>
-                    <a class="" href="/psychologische-beratung"
-                        >Psychologische Beratung</a
-                    >
+                    <a class="" href="/psychologische-beratung">Beratung</a>
                 </li>
                 <li>
                     <a class="" href="/kontakt">Kontakt</a>

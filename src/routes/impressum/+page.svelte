@@ -66,6 +66,14 @@
 </section>
 
 <style lang="scss">
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--content-width);
+        padding: var(--side);
+    }
     h1,
     h2 {
         text-align: center;
@@ -74,7 +82,26 @@
     .address-contact {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        article {
+            width: 45%;
+            min-width: 300px;
+            h3 {
+                margin: 1rem;
+            }
+            address {
+                margin: 1rem;
+            }
+        }
+        section {
+            width: 45%;
+            min-width: 300px;
+        }
     }
 
     ul {

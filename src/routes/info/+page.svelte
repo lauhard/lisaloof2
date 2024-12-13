@@ -150,6 +150,10 @@
             margin-top: 1rem;
             text-align: left;
             text-wrap: pretty;
+            @media (max-width: 480px) {
+                text-align: center;
+                text-wrap: balance;
+            }
         }
         .info-icon {
             position: absolute;

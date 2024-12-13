@@ -808,6 +808,15 @@
 </section>
 
 <style lang="scss">
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--content-width);
+        padding: var(--side);
+        text-align: center;
+    }
     h2 {
         text-align: center;
         margin: 2rem;
@@ -835,19 +844,13 @@
         min-height: auto;
     }
     ul {
-        li {
-            margin-left: 1.2rem;
-            font-size: 18px;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-self: center;
+        width: 800px;
     }
-    .no-list {
-        li {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            font-size: 18px;
-        }
-    }
+
     .datenschutz {
         max-width: var(--content-width);
         justify-self: center;
